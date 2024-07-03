@@ -1,0 +1,90 @@
+{
+	"ip" : "127.0.0.1",
+	"port_http" : 8000,
+	"port_https" : 8001,
+	"domen" : "socialized",
+	"issuer" : "socialized",
+	"audience" : "http://localhost:8000/",
+	"auth_key" : "mysql.connection",
+	"auth_lifetime" : 1,
+	"mail_address" : "trst65748392@gmail.com", 
+	"mail_password" : "6q",
+	"smtp_server" : "smtp.gmail.com",
+	"smtp_port": 587,
+	"log_files" : true,
+	"email_enable" : false,
+	"statistics_receiver_fullpath" : "/home/neytchi/project/service-ag/statistics-receiver/bin/release/netcoreapp2.2/ubuntu.18.04-x64/publish/statistics-receiver",
+	"allow_origin" : [
+		"http://.space",
+		"https://.space",
+		"https://.space:8026",
+		"https://.space:8026"
+	],
+	"aws_host_url" : "https://s3-us-west-1.amazonaws.com/.space/",
+	"aws_access_key_id" : "",
+	"aws_secret_key_id" : "",
+	"aws_bucket_name" : ".space",
+	"aws_bucket_region" : "us-west-1",
+	"fb_app_id" : "",
+	"fb_app_secret" : "",
+	"service_access" : {
+		"packages" : [
+			{
+				"package_id" : 1,
+				"package_name" : "Easy",
+				"package_price" : 0.0,
+				"package_ig_accounts" : 1,
+				"package_posts" : 5,
+				"package_stories" : 5,
+				"analytics_days" : 3
+			},
+			{
+				"package_id" : 2,
+				"package_name" : "Bloger",
+				"package_price" : 24.0,
+				"package_ig_accounts" : 3,
+				"package_posts" : -1,
+				"package_stories" : -1,
+				"analytics_days" : -1
+			},
+			{
+				"package_id" : 3,
+				"package_name" : "Business",
+				"package_price" : 45.0,
+				"package_ig_accounts" : 7,
+				"package_posts" : -1,
+				"package_stories" : -1,
+				"analytics_days" : -1
+			},
+			{
+				"package_id" : 4,
+				"package_name" : "Agency",
+				"package_price" : 75.0,
+				"package_ig_accounts" : 15,
+				"package_posts" : -1,
+				"package_stories" : -1,
+				"analytics_days" : -1
+			}
+		],
+		"discounts" : [
+			{
+				"discount_id" : 1,
+				"discount_percent" : 10.0,
+				"discount_day" : 0,
+				"discount_month" : 3
+			},
+			{
+				"discount_id" : 2,
+				"discount_percent" : 15.0,
+				"discount_day" : 0,
+				"discount_month" : 6
+			},
+			{
+				"discount_id" : 3,
+				"discount_percent" : 20.0,
+				"discount_day" : 0,
+				"discount_month" : 12
+			}
+		]
+	}
+}

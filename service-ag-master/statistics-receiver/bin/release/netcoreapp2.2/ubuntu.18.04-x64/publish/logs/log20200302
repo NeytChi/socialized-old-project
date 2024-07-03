@@ -1,0 +1,38 @@
+2020-03-02 13:50:24.090 +02:00 [INF] Start collect statistics for account -> 1
+2020-03-02 13:50:25.710 +02:00 [INF] Send GET request.
+2020-03-02 13:50:27.073 +02:00 [INF] Send GET request.
+2020-03-02 13:50:27.399 +02:00 [INF] Create a new day statistics for end time ->2/4/20 10:00:00 AM
+2020-03-02 13:50:27.421 +02:00 [INF] Create a new day statistics for end time ->2/5/20 10:00:00 AM
+2020-03-02 13:50:27.427 +02:00 [INF] Create a new day statistics for end time ->2/6/20 10:00:00 AM
+2020-03-02 13:50:27.432 +02:00 [INF] Create a new day statistics for end time ->2/7/20 10:00:00 AM
+2020-03-02 13:50:27.438 +02:00 [INF] Create a new day statistics for end time ->2/8/20 10:00:00 AM
+2020-03-02 13:50:27.443 +02:00 [INF] Create a new day statistics for end time ->2/9/20 10:00:00 AM
+2020-03-02 13:50:27.449 +02:00 [INF] Create a new day statistics for end time ->2/10/20 10:00:00 AM
+2020-03-02 13:50:27.455 +02:00 [INF] Create a new day statistics for end time ->2/11/20 10:00:00 AM
+2020-03-02 13:50:27.461 +02:00 [INF] Create a new day statistics for end time ->2/12/20 10:00:00 AM
+2020-03-02 13:50:27.467 +02:00 [INF] Create a new day statistics for end time ->2/13/20 10:00:00 AM
+2020-03-02 13:50:27.473 +02:00 [INF] Create a new day statistics for end time ->2/14/20 10:00:00 AM
+2020-03-02 13:50:27.478 +02:00 [INF] Create a new day statistics for end time ->2/15/20 10:00:00 AM
+2020-03-02 13:50:27.484 +02:00 [INF] Create a new day statistics for end time ->2/16/20 10:00:00 AM
+2020-03-02 13:50:27.494 +02:00 [INF] Create a new day statistics for end time ->2/17/20 10:00:00 AM
+2020-03-02 13:50:27.505 +02:00 [INF] Create a new day statistics for end time ->2/18/20 10:00:00 AM
+2020-03-02 13:50:27.517 +02:00 [INF] Create a new day statistics for end time ->2/19/20 10:00:00 AM
+2020-03-02 13:50:27.524 +02:00 [INF] Create a new day statistics for end time ->2/20/20 10:00:00 AM
+2020-03-02 13:50:27.530 +02:00 [INF] Create a new day statistics for end time ->2/21/20 10:00:00 AM
+2020-03-02 13:50:27.536 +02:00 [INF] Create a new day statistics for end time ->2/22/20 10:00:00 AM
+2020-03-02 13:50:27.542 +02:00 [INF] Create a new day statistics for end time ->2/23/20 10:00:00 AM
+2020-03-02 13:50:27.548 +02:00 [INF] Create a new day statistics for end time ->2/24/20 10:00:00 AM
+2020-03-02 13:50:27.554 +02:00 [INF] Create a new day statistics for end time ->2/25/20 10:00:00 AM
+2020-03-02 13:50:27.560 +02:00 [INF] Create a new day statistics for end time ->2/26/20 10:00:00 AM
+2020-03-02 13:50:27.569 +02:00 [INF] Create a new day statistics for end time ->2/27/20 10:00:00 AM
+2020-03-02 13:50:27.577 +02:00 [INF] Create a new day statistics for end time ->2/28/20 10:00:00 AM
+2020-03-02 13:50:27.585 +02:00 [INF] Create a new day statistics for end time ->2/29/20 10:00:00 AM
+2020-03-02 13:50:27.596 +02:00 [INF] Create a new day statistics for end time ->3/1/20 10:00:00 AM
+2020-03-02 13:50:27.606 +02:00 [INF] Create a new day statistics for end time ->3/2/20 10:00:00 AM
+2020-03-02 13:50:28.907 +02:00 [INF] Send GET request.
+2020-03-02 13:50:28.977 +02:00 [INF] Update day statistics. Timestamp -> 3/1/20 10:00:00 AM
+2020-03-02 13:50:28.986 +02:00 [INF] Update day statistics. Timestamp -> 3/2/20 10:00:00 AM
+2020-03-02 13:50:29.920 +02:00 [INF] Send GET request.
+2020-03-02 13:50:31.506 +02:00 [INF] Send GET request.
+2020-03-02 13:50:31.992 +02:00 [INF] Can't send GET request, ex ->The remote server returned an error: (400) Bad Request.
+2020-03-02 13:50:32.027 +02:00 [INF] End collect statistics for account -> 1

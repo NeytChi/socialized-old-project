@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/neytchi/project/test-pdf/test-pdf.csproj": {}
+  },
+  "projects": {
+    "/home/neytchi/project/test-pdf/test-pdf.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/neytchi/project/test-pdf/test-pdf.csproj",
+        "projectName": "test-pdf",
+        "projectPath": "/home/neytchi/project/test-pdf/test-pdf.csproj",
+        "packagesPath": "/home/neytchi/.nuget/packages/",
+        "outputPath": "/home/neytchi/project/test-pdf/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/neytchi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[7.1.10, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

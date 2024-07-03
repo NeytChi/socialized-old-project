@@ -1,0 +1,8 @@
+{ 
+	"Server" : "localhost",
+	"Database" : "socialized", 
+	"User" : "root", 
+	"Password" : "root", 
+   	"Pooling" : "false",
+	"SslMode" : "none"
+}

@@ -1,0 +1,85 @@
+2020-03-02 16:14:36.696 +02:00 [INF] Check to run auto-posts.
+2020-03-02 16:20:15.275 +02:00 [INF] Check to run auto-posts.
+2020-03-02 16:20:15.459 +02:00 [INF] Create album for post.
+2020-03-02 16:20:15.694 +02:00 [INF] Create album for post.
+2020-03-02 16:20:16.602 +02:00 [INF] Create album for post.
+2020-03-02 16:20:19.353 +02:00 [INF] Create album for post.
+2020-03-02 16:20:20.096 +02:00 [INF] Get location short.
+2020-03-02 16:20:21.678 +02:00 [INF] Get location short.
+8.565 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:20:19.351 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:20:20.105 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:20:21.011 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:20:21.789 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:24:30.001 +02:00 [INF] Check to run auto-posts.
+2020-03-02 16:27:43.140 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:28:04.543 +02:00 [INF] Create album for post.
+2020-03-02 16:37:13.599 +02:00 [INF] Create album for post.
+2020-03-02 16:37:38.007 +02:00 [INF] Create album for post.
+2020-03-02 16:39:40.563 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:39:54.877 +02:00 [INF] Get location short.
+2020-03-02 16:41:21.036 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:41:32.553 +02:00 [INF] Create album for post.
+2020-03-02 16:44:29.656 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:44:30.787 +02:00 [INF] Create album for post.
+2020-03-02 16:55:58.715 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:56:27.939 +02:00 [INF] Create album for post.
+2020-03-02 16:58:59.663 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:59:08.879 +02:00 [INF] Create album for post.
+2020-03-02 16:59:13.916 +02:00 [INF] Get location short.
+2020-03-02 16:59:20.446 +02:00 [INF] Get unusable session, id -> 1
+2020-03-02 16:59:20.462 +02:00 [WRN] Unknown session's behavior, id -> 1
+2020-03-02 16:59:20.462 +02:00 [INF] Session state with unexcepted was handled, id -> 1
+2020-03-02 16:59:50.144 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 16:59:58.900 +02:00 [INF] Create album for post.
+2020-03-02 17:00:02.655 +02:00 [INF] Get location short.
+2020-03-02 17:01:05.516 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:01:08.478 +02:00 [INF] Create album for post.
+2020-03-02 17:01:09.562 +02:00 [INF] Get location short.
+2020-03-02 17:05:49.967 +02:00 [INF] Perform posting, id -> 1
+2020-03-02 17:06:46.592 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:06:49.217 +02:00 [INF] Create album for post.
+2020-03-02 17:06:50.098 +02:00 [INF] Get location short.
+2020-03-02 17:06:53.196 +02:00 [INF] Get unusable session, id -> 1
+2020-03-02 17:06:53.208 +02:00 [WRN] Unknown session's behavior, id -> 1
+2020-03-02 17:06:53.208 +02:00 [INF] Session state with unexcepted was handled, id -> 1
+2020-03-02 17:08:00.702 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:08:24.563 +02:00 [INF] Create album for post.
+2020-03-02 17:10:45.060 +02:00 [INF] Check to run auto-posts.
+2020-03-02 17:11:20.110 +02:00 [INF] Create album for post.
+2020-03-02 17:11:41.154 +02:00 [INF] Create album for post.
+2020-03-02 17:12:19.449 +02:00 [INF] Create album for post.
+2020-03-02 17:12:35.992 +02:00 [WRN] Can't create story image, session id ->1
+2020-03-02 17:12:37.194 +02:00 [WRN] Can't create story image, session id ->1
+2020-03-02 17:12:38.054 +02:00 [WRN] Can't create story video, sessio2020-03-02020-03-02 17:12:55.492 +02:00 [INF] Create album for post.
+2020-03-02 17:13:13.335 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:13:14.779 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:13:16.346 +02:00 [INF] Load session to server, id -> 1
+ 17:13:16.283 +02:00 [INF] Get location short.
+2020-03-02 17:13:18.118 +02:00 [WRN] Can't create story image, session id ->1
+:38.054 +02:00 [WRN] Unknown session's behavior, id -> 1
+2020-03-02 17:12:38.054 +02:00 [INF] Session state with unexcepted was handled, id -> 1
+2020-03-02 17:13:14.099 +02:00 [INF] Get unusable session, id -> 1
+2020-03-02 17:13:14.099 +02:00 [WRN] Unknown session's behavior, id -> 1
+2020-03-02 17:13:14.100 +02:00 [INF] Session state with unexcepted was handled, id -> 1
+2020-03-02 17:13:14.745 +02:00 [INF] Get unusable session, id -> 1
+2020-03-02 17:13:14.745 +02:00 [WRN] Unknown session's behavior, id -> 1
+2020-03-02 17:13:14.745 +02:00 [INF] Session state with unexcepted was handled, id -> 1
+2020-03-02 17:13:18.117 +02:00 [INF] Get unusable session, id -> 1
+2020-03-02 17:13:18.117 +02:00 [WRN] Unknown session's behavior, id -> 1
+2020-03-02 17:13:18.118 +02:00 [INF] Session state with unexcepted was handled, id -> 1
+2020-03-02 17:14:39.245 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:24:46.676 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:31:23.887 +02:00 [INF] Check to run auto-posts.
+2020-03-02 17:31:46.790 +02:00 [INF] Create album for post.
+2020-03-02 17:32:09.162 +02:00 [INF] Create album for post.
+ id -> 1
+2020-03-02 17:32:28.386 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:34:15.409 +02:00 [INF] Check to run auto-posts.
+2020-03-02 17:34:49.158 +02:00 [INF] Create album for post.
+2020-03-02 17:35:46.382 +02:00 [INF] Create album for post.
+2020-03-02 17:37:00.330 +02:00 [INF] Create album for post.
+o server, id -> 1
+2020-03-02 17:38:48.388 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:39:54.904 +02:00 [INF] Load session to server, id -> 1
+2020-03-02 17:44:02.592 +02:00 [INF] Load session to server, id -> 1

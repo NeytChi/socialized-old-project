@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = ig_api
+build_property.ProjectDir = D:\VS Projects\service-ag-master\ig-api\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

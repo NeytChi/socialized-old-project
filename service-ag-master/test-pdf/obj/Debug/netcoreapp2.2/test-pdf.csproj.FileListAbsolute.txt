@@ -1,0 +1,11 @@
+/home/neytchi/project/test-pdf/bin/Debug/netcoreapp2.2/test-pdf.deps.json
+/home/neytchi/project/test-pdf/bin/Debug/netcoreapp2.2/test-pdf.runtimeconfig.json
+/home/neytchi/project/test-pdf/bin/Debug/netcoreapp2.2/test-pdf.runtimeconfig.dev.json
+/home/neytchi/project/test-pdf/bin/Debug/netcoreapp2.2/test-pdf.dll
+/home/neytchi/project/test-pdf/bin/Debug/netcoreapp2.2/test-pdf.pdb
+/home/neytchi/project/test-pdf/obj/Debug/netcoreapp2.2/test-pdf.csprojAssemblyReference.cache
+/home/neytchi/project/test-pdf/obj/Debug/netcoreapp2.2/test-pdf.csproj.CoreCompileInputs.cache
+/home/neytchi/project/test-pdf/obj/Debug/netcoreapp2.2/test-pdf.AssemblyInfoInputs.cache
+/home/neytchi/project/test-pdf/obj/Debug/netcoreapp2.2/test-pdf.AssemblyInfo.cs
+/home/neytchi/project/test-pdf/obj/Debug/netcoreapp2.2/test-pdf.dll
+/home/neytchi/project/test-pdf/obj/Debug/netcoreapp2.2/test-pdf.pdb

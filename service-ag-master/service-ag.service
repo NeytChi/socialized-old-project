@@ -1,0 +1,13 @@
+[Unit]
+Description=service-ag ASP.NET Core
+After=multi-user.target
+Requires=mysql.service
+
+[Service]
+WorkingDirectory=/var/www/service-ag/publish
+ExecStart=sudo /var/www/service-ag/publish/service-ag
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

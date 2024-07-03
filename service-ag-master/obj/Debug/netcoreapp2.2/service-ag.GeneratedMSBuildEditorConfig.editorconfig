@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = service-ag
+build_property.ProjectDir = D:\VS Projects\service-ag-master\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

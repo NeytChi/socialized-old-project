@@ -1,0 +1,515 @@
+{
+    "cultures" :
+    [
+        {
+            "cultureKey" : "registration",
+            "cultureValue" : "You have successfully registered. Confirm your registration in your mail.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "registration",
+            "cultureValue" : "Вы успешно зарегистрировались. Подтвердите вашу регистрацию на почте.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "registration",
+            "cultureValue" : "Ви успішно зареєструвалися. Підтвердіть вашу реєстрацію на пошті.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "confirm_email",
+            "cultureValue" : "Account confirmation email sent.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "confirm_email",
+            "cultureValue" : "Письмо, на подтверждение аккаунта, отправленно.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "confirm_email",
+            "cultureValue" : "Лист, на підтвердження аккаунта, надіслано.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "code_email",
+            "cultureValue" : "An email with a code has been sent to your email address.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "code_email",
+            "cultureValue" : "Письмо с кодом отправлено на ваш электронный адрес.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "code_email",
+            "cultureValue" : "Лист з кодом відправлено на вашу електронну адресу.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "activate",
+            "cultureValue" : "Your account has been successfully activated.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "activate",
+            "cultureValue" : "Ваш аккаунт успешно активирован.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "activate",
+            "cultureValue" : "Ваш аккаунт успішно активований.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "invalid_email",
+            "cultureValue" : "Not valid email.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "invalid_email",
+            "cultureValue" : "Неверный адрес электронной почты.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "invalid_email",
+            "cultureValue" : "Неправильна адреса електронної пошти.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "empty_email",
+            "cultureValue" : "User email is empty.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "empty_email",
+            "cultureValue" : "Электронный адрес пользователя пуст.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "empty_email",
+            "cultureValue" : "Електронна адреса користувача порожня.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "invalid_name",
+            "cultureValue" : "The name is spelled incorrectly.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "invalid_name",
+            "cultureValue" : "Имя написано неправильно.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "invalid_name",
+            "cultureValue" : "Ім'я написано неправильно.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "empty_name",
+            "cultureValue" : "User's fullname can't be empty.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "empty_name",
+            "cultureValue" : "Полное имя не может быть пустым.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "empty_name",
+            "cultureValue" : "Повне ім'я не може бути порожнім.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "empty_password",
+            "cultureValue" : "Password is empty.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "empty_password",
+            "cultureValue" : "Пустой пароль.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "empty_password",
+            "cultureValue" : "Пустий пароль.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "length_password",
+            "cultureValue" : "Password can't be less than 6 characters and more that 20.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "length_password",
+            "cultureValue" : "Пароль не может быть меньше 6 символов и больше 20.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "length_password",
+            "cultureValue" : "Пароль не може бути менш ніж 6 символів і більш 20.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "letter_password",
+            "cultureValue" : "Current password doesn't has letter.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "letter_password",
+            "cultureValue" : "Пароль не имеет букв.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "letter_password",
+            "cultureValue" : "Пароль не має букв.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "digit_password",
+            "cultureValue" : "Current password doesn't has digit.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "digit_password",
+            "cultureValue" : "Пароль не имеет цифр.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "digit_password",
+            "cultureValue" : "Пароль не має цифр.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "english_login",
+            "cultureValue" : "Login contains only english charaters and numbers.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "english_login",
+            "cultureValue" : "Логин состоит только из латинских букв и цифр.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "english_login",
+            "cultureValue" : "Логин складаеться лише з латинських букв та цифр.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "length_login",
+            "cultureValue" : "Login must be more than 3 characters.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "length_login",
+            "cultureValue" : "Логин должен иметь больше 3 символов.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "length_login",
+            "cultureValue" : "Логин повинен мати більше 3 символів.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "exist_email",
+            "cultureValue" : "This email already exists.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "exist_email",
+            "cultureValue" : "Такой электронный адресс существует.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "exist_email",
+            "cultureValue" : "Така електронна адреса вже існує.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "confirm_account",
+            "cultureValue" : "Confirm account",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "confirm_account",
+            "cultureValue" : "Подтверждение аккаунта",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "confirm_account",
+            "cultureValue" : "Підтверждення аккаунту",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "recovery_password",
+            "cultureValue" : "Recovery password",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "recovery_password",
+            "cultureValue" : "Восстановление пароля",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "recovery_password",
+            "cultureValue" : "Відновлення паролю",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "recovery_code",
+            "cultureValue" : "Recovery code: ",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "recovery_code",
+            "cultureValue" : "Код восстановления: ",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "recovery_code",
+            "cultureValue" : "Код відновлення: ",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "define_hash",
+            "cultureValue" : "Server can't define user by hash.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "define_hash",
+            "cultureValue" : "Сервер не может определить пользователя по хешу.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "define_hash",
+            "cultureValue" : "Сервер не може ідентифікувати користовача по хєшу.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "define_email",
+            "cultureValue" : "Server can't define user by email.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "define_email",
+            "cultureValue" : "Сервер не может определить пользователя по електронному адресу.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "define_email",
+            "cultureValue" : "Сервер не може ідентифікувати користовача по електронній адресі.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "define_token",
+            "cultureValue" : "Server can't define user by promotion token.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "define_token",
+            "cultureValue" : "Сервер не может определить пользователя по маркеру.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "define_token",
+            "cultureValue" : "Сервер не може ідентифікувати користовача по маркеру.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "define_code",
+            "cultureValue" : "Server can't define user by code.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "define_code",
+            "cultureValue" : "Сервер не может определить пользователя по коду.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "define_code",
+            "cultureValue" : "Сервер не може ідентифікувати користовача по коду",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "wrong_password",
+            "cultureValue" : "Wrong password.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "wrong_password",
+            "cultureValue" : "Неправильный пароль.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "wrong_password",
+            "cultureValue" : "Невірний пароль.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "wrong_code",
+            "cultureValue" : "Wrong recovery code.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "wrong_code",
+            "cultureValue" : "Неправильный код восстановления.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "wrong_code",
+            "cultureValue" : "Невірний код відновлення.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "match_password",
+            "cultureValue" : "Password are not match to each other.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "match_password",
+            "cultureValue" : "Пароли не совпадают друг с другом.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "match_password",
+            "cultureValue" : "Паролі не дорівнюють одне одному.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "length_country",
+            "cultureValue" : "Country name is required length from 1 to 100 symbols.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "length_country",
+            "cultureValue" : "Длина названия страны с 1 по 100 символов.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "length_country",
+            "cultureValue" : "Довжина назви країни с 1 по 10 символів.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "empty_country",
+            "cultureValue" : "Country name is empty.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "empty_country",
+            "cultureValue" : "Названия страны пустое.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "empty_country",
+            "cultureValue" : "Назва країни порожне.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "exist_follower",
+            "cultureValue" : "Follower with this email already exist",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "exist_follower",
+            "cultureValue" : "Такой электронний адрес уже существует.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "exist_follower",
+            "cultureValue" : "Така електронна адреса вже існує.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "exist_statistics",
+            "cultureValue" : "Statistics are already being collected.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "exist_statistics",
+            "cultureValue" : "Статистика уже собрана.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "exist_statistics",
+            "cultureValue" : "Статистика вже зобрана.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "end_statistics",
+            "cultureValue" : "All account statistics have been collected.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "end_statistics",
+            "cultureValue" : "Статистика собрана.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "end_statistics",
+            "cultureValue" : "Статистика зобрана.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "unknow_account",
+            "cultureValue" : "Server can't define business account.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "unknow_account",
+            "cultureValue" : "Сервер не может определить бизнес аккаунт.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "unknow_account",
+            "cultureValue" : "Сервер не может ідентифікувати бізнес аккаунт.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "exist_account",
+            "cultureValue" : "This business account has already exist.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "exist_account",
+            "cultureValue" : "Этот бизнес аккаунт уже существует.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "exist_account",
+            "cultureValue" : "Цей бізнес аккаунт вже існує.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "unknow_token",
+            "cultureValue" : "Server can't define Facebook account by access token.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "unknow_token",
+            "cultureValue" : "Сервер не может определить Facebook аккаунт по маркеру.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "unknow_token",
+            "cultureValue" : "Сервер не може ідентифікувати Facebook по маркеру.",
+            "cultureName" : "ua_UA"
+        },
+        {
+            "cultureKey" : "define_big",
+            "cultureValue" : "Server can't define Instagram business account by access token.",
+            "cultureName" : "en_US"
+        },
+        {
+            "cultureKey" : "define_big",
+            "cultureValue" : "Сервер не может определить Instagram бизнес аккаунт по маркеру.",
+            "cultureName" : "ru_RU"
+        },
+        {
+            "cultureKey" : "define_big",
+            "cultureValue" : "Сервер не може ідентифікувати Instagram бізнес по маркеру.",
+            "cultureName" : "ua_UA"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+	"ip" : "127.0.0.1",
+	"port_http" : 8000,
+	"port_https" : 8001,
+	"domen" : "socialized",
+	"issuer" : "socialized",
+	"audience" : "http://localhost:8000/",
+	"auth_key" : "mysql.connection",
+	"auth_lifetime" : 1,
+	"mail_address" : "trst65748392@gmail.com", 
+	"mail_password" : "6q",
+	"smtp_server" : "smtp.gmail.com",
+	"smtp_port": 587,
+	"log_files" : true,
+	"email_enable" : false,
+	"statistics_receiver_fullpath" : "/home/neytchi/project/service-ag/statistics-receiver/bin/release/netcoreapp2.2/ubuntu.18.04-x64/publish/statistics-receiver",
+	"allow_origin" : [
+		"http://socialized.space",
+		"https://socialized.space",
+		"https://socialized.space:8026",
+		"https://socialized.space:8026"
+	],
+	"aws_host_url" : "https://s3-us-west-1.amazonaws.com/socialized.space/",
+	"aws_access_key_id" : "AKIAYDG4F65E2HU5LNNQ",
+	"aws_secret_key_id" : "W29D0ODKFurzU93zGpkvSFkX0h3peiYRAfaW6GMB",
+	"aws_bucket_name" : "socialized.space",
+	"aws_bucket_region" : "us-west-1",
+	"fb_app_id" : "1396128467217012",
+	"fb_app_secret" : "604d15f94f121dc09da49efdfc71e20b"
+}
