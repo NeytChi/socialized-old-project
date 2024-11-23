@@ -1,0 +1,75 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Core/1.0.0": {
+        "dependencies": {
+          "AWSSDK.S3": "3.7.407",
+          "Serilog": "4.1.0"
+        },
+        "runtime": {
+          "Core.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.400.56": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.400.56"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.407": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.400.56"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.407.0"
+          }
+        }
+      },
+      "Serilog/4.1.0": {
+        "runtime": {
+          "lib/net8.0/Serilog.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWSSDK.Core/3.7.400.56": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zDKX9wcIvCsu9u/AM2m+jfTPnltaycSjI9+atuK4So45TJWJpp/XdZ1Sfz+PtF3Fqn/aM7Yk547ojv6rJE+qeA==",
+      "path": "awssdk.core/3.7.400.56",
+      "hashPath": "awssdk.core.3.7.400.56.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.407": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-s0QLDmmFayUmBZJijCVokkmCS5uQRF93ancGh+maXaI4vLW1fXIXfjd1xL8oHbpduFrT0H8jtNXc7m0HqaW/jg==",
+      "path": "awssdk.s3/3.7.407",
+      "hashPath": "awssdk.s3.3.7.407.nupkg.sha512"
+    },
+    "Serilog/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u1aZI8HZ62LWlq5dZLFwm6jMax/sUwnWZSw5lkPsCt518cJBxFKoNmc7oSxe5aA5BgSkzy9rzwFGR/i/acnSPw==",
+      "path": "serilog/4.1.0",
+      "hashPath": "serilog.4.1.0.nupkg.sha512"
+    }
+  }
+}

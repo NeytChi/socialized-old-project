@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VS Projects\\socialized-old-project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\server.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service-ag-master\\socialized\\server.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\database.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service-ag-master\\socialized\\database.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\culture.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service-ag-master\\socialized\\culture.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\certificate.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service-ag-master\\socialized\\certificate.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service-ag-master\\socialized\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service-ag-master\\socialized\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\development\\controllers\\UsersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:service-ag-master\\socialized\\development\\controllers\\UsersController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "server.json",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\server.json",
+              "RelativeDocumentMoniker": "service-ag-master\\socialized\\server.json",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\server.json",
+              "RelativeToolTip": "service-ag-master\\socialized\\server.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-16T10:47:28.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "database.json",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\database.json",
+              "RelativeDocumentMoniker": "service-ag-master\\socialized\\database.json",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\database.json",
+              "RelativeToolTip": "service-ag-master\\socialized\\database.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-16T10:47:25.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "culture.json",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\culture.json",
+              "RelativeDocumentMoniker": "service-ag-master\\socialized\\culture.json",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\culture.json",
+              "RelativeToolTip": "service-ag-master\\socialized\\culture.json",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-16T10:47:17.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "certificate.json",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\certificate.json",
+              "RelativeDocumentMoniker": "service-ag-master\\socialized\\certificate.json",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\certificate.json",
+              "RelativeToolTip": "service-ag-master\\socialized\\certificate.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-16T10:47:13.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\appsettings.json",
+              "RelativeDocumentMoniker": "service-ag-master\\socialized\\appsettings.json",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\appsettings.json",
+              "RelativeToolTip": "service-ag-master\\socialized\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-16T10:47:08.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "service-ag-master\\socialized\\appsettings.Development.json",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\appsettings.Development.json",
+              "RelativeToolTip": "service-ag-master\\socialized\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-16T10:47:05.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\development\\controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "service-ag-master\\socialized\\development\\controllers\\UsersController.cs",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\development\\controllers\\UsersController.cs",
+              "RelativeToolTip": "service-ag-master\\socialized\\development\\controllers\\UsersController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T14:37:34.432Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

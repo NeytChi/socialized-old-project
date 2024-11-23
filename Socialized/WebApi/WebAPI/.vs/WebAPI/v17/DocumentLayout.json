@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized-old-project\\service-ag-master\\socialized\\webapi\\webapi\\jwtadmins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:jwtadmins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized-old-project\\service-ag-master\\socialized\\webapi\\webapi\\custombadrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:custombadrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized-old-project\\service-ag-master\\socialized\\webapi\\webapi\\authoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:authoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 235,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JWTAdmins.cs",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\JWTAdmins.cs",
+              "RelativeDocumentMoniker": "JWTAdmins.cs",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\JWTAdmins.cs",
+              "RelativeToolTip": "JWTAdmins.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T19:38:19.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomBadRequest.cs",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\CustomBadRequest.cs",
+              "RelativeDocumentMoniker": "CustomBadRequest.cs",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\CustomBadRequest.cs",
+              "RelativeToolTip": "CustomBadRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:19:17.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthOptions.cs",
+              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\AuthOptions.cs",
+              "RelativeDocumentMoniker": "AuthOptions.cs",
+              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\AuthOptions.cs",
+              "RelativeToolTip": "AuthOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:16:39.854Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

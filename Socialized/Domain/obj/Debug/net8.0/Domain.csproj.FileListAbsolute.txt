@@ -1,0 +1,12 @@
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\bin\Debug\net8.0\Domain.dll
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\bin\Debug\net8.0\Domain.pdb
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\obj\Debug\net8.0\Domain.dll
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\obj\Debug\net8.0\Domain.pdb
+D:\VS Projects\socialized-old-project\service-ag-master\socialized\Domain\obj\Debug\net8.0\ref\Domain.dll
