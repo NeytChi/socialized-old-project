@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\FfmpegConverter\\FfmpegConverter.csproj": {}
+    "D:\\VS Projects\\Socialized\\FfmpegConverter\\FfmpegConverter.csproj": {}
   },
   "projects": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\FfmpegConverter\\FfmpegConverter.csproj": {
+    "D:\\VS Projects\\Socialized\\FfmpegConverter\\FfmpegConverter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\FfmpegConverter\\FfmpegConverter.csproj",
+        "projectUniqueName": "D:\\VS Projects\\Socialized\\FfmpegConverter\\FfmpegConverter.csproj",
         "projectName": "FfmpegConverter",
-        "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\FfmpegConverter\\FfmpegConverter.csproj",
+        "projectPath": "D:\\VS Projects\\Socialized\\FfmpegConverter\\FfmpegConverter.csproj",
         "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\FfmpegConverter\\obj\\",
+        "outputPath": "D:\\VS Projects\\Socialized\\FfmpegConverter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio SDK\\NuGetPackages"

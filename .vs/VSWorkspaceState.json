@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AutoPosting\\AutoPostingTests",
-    "\\Socialized",
     "\\Socialized\\development",
     "\\Socialized\\development\\defaults",
     "\\Socialized\\UseCases",
     "\\Socialized\\UseCases\\AutoPosts"
   ],
-  "SelectedNode": "\\Socialized\\UseCases\\AutoPosts\\SessionManager.cs",
+  "SelectedNode": "\\Socialized",
   "PreviewInSolutionExplorer": false
 }

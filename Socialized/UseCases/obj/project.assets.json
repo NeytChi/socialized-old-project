@@ -2,6 +2,35 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "AWSSDK.Core/3.7.400.56": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.407": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.7.400.56, 4.0.0)"
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Braintree/5.28.0": {
         "type": "package",
         "dependencies": {
@@ -473,10 +502,118 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AWSSDK.S3": "3.7.407",
+          "Serilog": "4.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "FfmpegConverter/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Serilog": "4.1.0"
+        },
+        "compile": {
+          "bin/placeholder/FfmpegConverter.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FfmpegConverter.dll": {}
+        }
+      },
+      "InstagramSessionApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/InstagramSessionApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InstagramSessionApi.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "AWSSDK.Core/3.7.400.56": {
+      "sha512": "zDKX9wcIvCsu9u/AM2m+jfTPnltaycSjI9+atuK4So45TJWJpp/XdZ1Sfz+PtF3Fqn/aM7Yk547ojv6rJE+qeA==",
+      "type": "package",
+      "path": "awssdk.core/3.7.400.56",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.3.7.400.56.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "images/AWSLogo.png",
+        "lib/net35/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.pdb",
+        "lib/net35/AWSSDK.Core.xml",
+        "lib/net45/AWSSDK.Core.dll",
+        "lib/net45/AWSSDK.Core.pdb",
+        "lib/net45/AWSSDK.Core.xml",
+        "lib/net8.0/AWSSDK.Core.dll",
+        "lib/net8.0/AWSSDK.Core.pdb",
+        "lib/net8.0/AWSSDK.Core.xml",
+        "lib/netcoreapp3.1/AWSSDK.Core.dll",
+        "lib/netcoreapp3.1/AWSSDK.Core.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.pdb",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "tools/account-management.ps1"
+      ]
+    },
+    "AWSSDK.S3/3.7.407": {
+      "sha512": "s0QLDmmFayUmBZJijCVokkmCS5uQRF93ancGh+maXaI4vLW1fXIXfjd1xL8oHbpduFrT0H8jtNXc7m0HqaW/jg==",
+      "type": "package",
+      "path": "awssdk.s3/3.7.407",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
+        "analyzers/dotnet/cs/SharedAnalysisCode.dll",
+        "awssdk.s3.3.7.407.nupkg.sha512",
+        "awssdk.s3.nuspec",
+        "images/AWSLogo.png",
+        "lib/net35/AWSSDK.S3.dll",
+        "lib/net35/AWSSDK.S3.pdb",
+        "lib/net35/AWSSDK.S3.xml",
+        "lib/net45/AWSSDK.S3.dll",
+        "lib/net45/AWSSDK.S3.pdb",
+        "lib/net45/AWSSDK.S3.xml",
+        "lib/net8.0/AWSSDK.S3.dll",
+        "lib/net8.0/AWSSDK.S3.pdb",
+        "lib/net8.0/AWSSDK.S3.xml",
+        "lib/netcoreapp3.1/AWSSDK.S3.dll",
+        "lib/netcoreapp3.1/AWSSDK.S3.pdb",
+        "lib/netcoreapp3.1/AWSSDK.S3.xml",
+        "lib/netstandard2.0/AWSSDK.S3.dll",
+        "lib/netstandard2.0/AWSSDK.S3.pdb",
+        "lib/netstandard2.0/AWSSDK.S3.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Braintree/5.28.0": {
       "sha512": "mS2AlPUlqucjo7/Zedu01tiTGOgsO5Tv8zsDFipKga2cixsdtWrW32MHZnC/PvC90YWqXPSwdNF3zlYBS6NtwQ==",
       "type": "package",
@@ -2130,14 +2267,35 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "FfmpegConverter/1.0.0": {
+      "type": "project",
+      "path": "../../FfmpegConverter/FfmpegConverter.csproj",
+      "msbuildProject": "../../FfmpegConverter/FfmpegConverter.csproj"
+    },
+    "InstagramSessionApi/1.0.0": {
+      "type": "project",
+      "path": "../../InstagramSessionApi/InstagramSessionApi.csproj",
+      "msbuildProject": "../../InstagramSessionApi/InstagramSessionApi.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Braintree >= 5.28.0",
-      "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj",
-      "D:\\VS Projects\\Socialized\\Socialized\\Core\\Core.csproj",
-      "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj",
+      "Core >= 1.0.0",
+      "Domain >= 1.0.0",
+      "FfmpegConverter >= 1.0.0",
+      "InstagramSessionApi >= 1.0.0",
       "Microsoft.AspNetCore.Http.Features >= 5.0.17",
       "Serilog >= 4.1.0"
     ]
@@ -2175,8 +2333,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj": {
-              "projectPath": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj"
+            "D:\\VS Projects\\Socialized\\FfmpegConverter\\FfmpegConverter.csproj": {
+              "projectPath": "D:\\VS Projects\\Socialized\\FfmpegConverter\\FfmpegConverter.csproj"
+            },
+            "D:\\VS Projects\\Socialized\\InstagramSessionApi\\InstagramSessionApi.csproj": {
+              "projectPath": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\InstagramSessionApi.csproj"
             },
             "D:\\VS Projects\\Socialized\\Socialized\\Core\\Core.csproj": {
               "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\Core\\Core.csproj"
@@ -2234,34 +2395,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\VS Projects\\Socialized\\Socialized\\Core\\Core.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\VS Projects\\Socialized\\Socialized\\Core\\Core.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

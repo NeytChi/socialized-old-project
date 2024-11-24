@@ -4,6 +4,9 @@ using System.Text.RegularExpressions;
 using UseCases.Packages;
 using Domain.AutoPosting;
 using Microsoft.AspNetCore.Http;
+using Domain.SessionComponents;
+using Core;
+using FfmpegConverter;
 
 namespace UseCases.AutoPosts
 {
@@ -11,27 +14,43 @@ namespace UseCases.AutoPosts
     {
         private ILogger Logger;
         private IAutoPostRepository AutoPostRepository;
-        
+        private ICategoryRepository CategoryRepository;
+        private IPostFileRepository PostFileRepository;
+        private IIGAccountRepository IGAccountRepository;
+        private IFileManager FileManager;
+        private IFileConverter FileConverter;
+
         private string DOMEN;
-        public TaskDataCondition handler;
-        public AwsUploader fileManager;
-        public SessionManager sessionManager;
-        public PackageCondition access;
-        public ConverterFiles converter;
         public int availableHashtags;
         public int availableTags;
-
-        public AutoPostingManager(ILogger logger, IAutoPostRepository autoPostRepository)
+        
+        public SessionManager sessionManager;
+        public PackageCondition access;
+        public TaskDataCondition handler;
+        public ConverterFiles converter;
+        
+        public AutoPostingManager(ILogger logger, 
+            IAutoPostRepository autoPostRepository,
+            ICategoryRepository categoryRepository,
+            IPostFileRepository postFileRepository,
+            IIGAccountRepository iGAccountRepository,
+            IFileManager fileManager,
+            IFileConverter fileConverter)
         {
             Logger = logger;
             AutoPostRepository = autoPostRepository;
+            CategoryRepository = categoryRepository;
+            PostFileRepository = postFileRepository;
+            IGAccountRepository = iGAccountRepository;
+            FileManager = fileManager;
+
 
             DOMEN = configuration.GetValue<string>("aws_host_url");
             availableHashtags = configuration.GetValue<int>("available_hashtags");
             availableTags = configuration.GetValue<int>("available_tags");
             sessionManager = new SessionManager(context);
             handler = new TaskDataCondition(log, sessionManager, new SessionStateHandler(context));
-            fileManager = new AwsUploader(log);
+            FileManager = new AwsUploader(log);
             access = new PackageCondition(context, log);
             converter = new ConverterFiles(log);
         }
@@ -124,9 +143,9 @@ namespace UseCases.AutoPosts
                 {
                     File.Delete(pathFile);
                 }
-                post.filePath = fileManager.SaveFile(stream, "auto-posts");
+                post.filePath = FileManager.SaveFile(stream, "auto-posts");
                 stream = converter.GetVideoThumbnail(pathFile + ".mp4");
-                post.videoThumbnail = fileManager.SaveFile(stream, "auto-posts");
+                post.videoThumbnail = FileManager.SaveFile(stream, "auto-posts");
                 File.Delete(pathFile + ".mp4");
                 return true;
             }
@@ -139,7 +158,7 @@ namespace UseCases.AutoPosts
 
             if (stream != null)
             {
-                post.filePath = fileManager.SaveFile(stream, "auto-posts");
+                post.filePath = FileManager.SaveFile(stream, "auto-posts");
                 return true;
             }
             message = "Unknow image format defined.";
@@ -348,9 +367,7 @@ namespace UseCases.AutoPosts
         {
             if (categoryId != 0)
             {
-                var category = context.Categories.Where(c => c.accountId == accountId
-                    && c.categoryId == categoryId
-                    && !c.categoryDeleted).FirstOrDefault();
+                var category = CategoryRepository.GetBy(accountId, categoryId, false);
                 if (category != null)
                 {
                     return true;
@@ -380,13 +397,7 @@ namespace UseCases.AutoPosts
         }
         public AutoPost GetNonDeletedPost(string userToken, long postId, ref string message)
         {
-            var post = (from p in context.AutoPosts
-                             join s in context.IGAccounts on p.sessionId equals s.accountId
-                             join u in context.Users on s.userId equals u.userId
-                             where u.userToken == userToken
-                                 && p.postId == postId
-                                 && p.postDeleted == false
-                             select p).FirstOrDefault();
+            var post = AutoPostRepository.GetBy(userToken, postId, false);
             if (post == null)
             {
                 message = "Server can't define post.";
@@ -395,15 +406,7 @@ namespace UseCases.AutoPosts
         }
         public AutoPost GetNonExecutedPost(string userToken, long postId, ref string message)
         {
-            AutoPost post = (from p in context.AutoPosts
-                             join s in context.IGAccounts on p.sessionId equals s.accountId
-                             join u in context.Users on s.userId equals u.userId
-                             where u.userToken == userToken
-                                 && p.postId == postId
-                                 && p.postDeleted == false
-                                 && p.postAutoDeleted == false
-                                 && p.postExecuted == false
-                             select p).FirstOrDefault();
+            var post = AutoPostRepository.GetBy(userToken, postId, false, false, false);
             if (post == null)
                 message = "Server can't define post by id -> " + postId;
             return post;
@@ -415,7 +418,7 @@ namespace UseCases.AutoPosts
                 case 1: return GetPosts(cache, false, false);
                 case 2: return GetPosts(cache, true, false);
                 case 3: return GetPosts(cache, true, true);
-                case 4: return GetUnpublishedPosts(cache);
+                case 4: return GetPosts(cache, false, false);
                 default:
                     Logger.Warning(message = "Server can't define category of posts.");
                     return null;
@@ -423,44 +426,21 @@ namespace UseCases.AutoPosts
         }
         public dynamic GetPosts(AutoPostCache cache, bool postExecuted, bool postAutoDeleted)
         {
-            log.Information("Get auto posts for ig account id -> " + cache.session_id);
-            return (from p in context.AutoPosts
-                    join s in context.IGAccounts on p.sessionId equals s.accountId
-                    join u in context.Users on s.userId equals u.userId
-                    join f in context.PostFiles on p.postId equals f.postId into files
-                    where u.userToken == cache.user_token
-                        && s.accountId == cache.session_id
-                        && p.postExecuted == postExecuted
-                        && p.postDeleted == false
-                        && p.postAutoDeleted == postAutoDeleted
-                        && p.executeAt > cache.@from
-                        && p.executeAt < cache.to
-                    orderby p.postId descending
-                    select new
-                    {
-                        post_id = p.postId,
-                        post_type = p.postType,
-                        created_at = p.createdAt,
-                        execute_at = p.executeAt.AddHours(p.timezone),
-                        auto_delete = p.autoDelete,
-                        delete_after = p.autoDelete ? p.deleteAfter.AddHours(p.timezone) : p.deleteAfter,
-                        post_location = p.postLocation,
-                        post_description = p.postDescription,
-                        post_comment = p.postComment,
-                        p.timezone,
-                        category_id = p.categoryId,
-                        category_name = p.categoryId == 0 ? ""
-                            : context.Categories.Where(x => x.categoryId == p.categoryId
-                                && !x.categoryDeleted).FirstOrDefault().categoryName ?? "",
-                        category_color = p.categoryId == 0 ? ""
-                            : context.Categories.Where(x => x.categoryId == p.categoryId
-                                && !x.categoryDeleted).FirstOrDefault().categoryColor ?? "",
-                        files = GetPostFilesToOutput(files)
-                    }).Skip(cache.next * cache.count).Take(cache.count).ToList();
-        }
-        public List<PostFile> GetNonDeleteFiles(long postId)
-        {
-            return context.PostFiles.Where(f => f.postId == postId && f.fileDeleted == false).OrderBy(f => f.fileOrder).ToList();
+            var command = new GetAutoPostsCommand
+            {
+                UserToken = cache.user_token,
+                SessionId = cache.session_id,
+                PostExecuted = postExecuted,
+                PostDeleted = false,
+                PostAutoDeleted = postAutoDeleted,
+                From = cache.from,
+                To = cache.to,
+                Since = cache.next,
+                Count = cache.count
+            };
+            Logger.Information("Get auto posts for ig account id -> " + cache.session_id);
+
+            return AutoPostRepository.GetBy(command);
         }
         public dynamic GetPostFilesToOutput(IEnumerable<PostFile> files)
         {
@@ -665,22 +645,6 @@ namespace UseCases.AutoPosts
             }
             return false;
         }
-        public List<AutoPost> GetUnpublishedPosts(AutoPostCache cache)
-        {
-            return (from p in context.AutoPosts
-                    join s in context.IGAccounts on p.sessionId equals s.accountId
-                    join u in context.Users on s.userId equals u.userId
-                    where u.userToken == cache.user_token
-                        && s.accountId == cache.session_id
-                        && p.postExecuted == false
-                        && p.postDeleted == false
-                        && p.postAutoDeleted == false
-                        && DateTimeOffset.UtcNow > p.executeAt
-                        && p.executeAt > cache.@from
-                        && p.executeAt < cache.to
-                    orderby p.postId descending
-                    select p).Skip(cache.next * cache.count).Take(cache.count).ToList();
-        }
         public List<PostFile> AddFilesToPost(AutoPostCache cache, ref string message)
         {
             var post = GetNonDeletedPost(cache.user_token, cache.post_id, ref message);
@@ -692,18 +656,17 @@ namespace UseCases.AutoPosts
             {
                 return null;
             }
-            var files = GetNonDeleteFiles(post.postId);
+            var files = PostFileRepository.GetBy(post.postId, false);
             if (files.Count + cache.files.Count <= 10)
             {
-                var postFiles = SavePostFiles(cache.files, (sbyte)(files.Count + 1), ref message)
+                var postFiles = SavePostFiles(cache.files, (sbyte)(files.Count + 1), ref message);
                 if (postFiles != null)
                 {
-                    foreach (PostFile file in postFiles)
+                    foreach (var file in postFiles)
                     {
                         file.postId = post.postId;
-                        context.PostFiles.Add(file);
+                        PostFileRepository.Create(file);
                     }
-                    context.SaveChanges();
                     return postFiles;
                 }
             }
@@ -722,9 +685,8 @@ namespace UseCases.AutoPosts
                 if (file != null)
                 {
                     file.fileDeleted = true;
-                    context.PostFiles.Update(file);
-                    context.SaveChanges();
-                    List<PostFile> files = GetNonDeleteFiles(post.postId);
+                    PostFileRepository.Update(file);
+                    var files = PostFileRepository.GetBy(post.postId, false);
                     if (files.Count == 0)
                     {
                         Delete(cache, ref message);
@@ -741,15 +703,14 @@ namespace UseCases.AutoPosts
         }
         public void ResortFiles(ICollection<PostFile> files, sbyte deleteOrder)
         {
-            foreach (PostFile file in files)
+            foreach (var file in files)
             {
                 if (file.fileOrder > deleteOrder)
                 {
                     --file.fileOrder;
                 }
             }
-            context.PostFiles.UpdateRange(files);
-            context.SaveChanges();
+            PostFileRepository.UpdateRange(files);
         }
         public bool UpdateOrderFile(AutoPostCache cache, ref string message)
         {
@@ -757,7 +718,7 @@ namespace UseCases.AutoPosts
 
             if (post != null)
             {
-                post.files = GetNonDeleteFiles(post.postId);
+                post.files = PostFileRepository.GetBy(post.postId, false);
                 if (FilesIdIsTrue(post.files, cache.files_id, ref message))
                 {
                     return ChangeOrderFiles(cache.files_id, post.files);
@@ -778,19 +739,18 @@ namespace UseCases.AutoPosts
                     }
                 }
             }
-            context.PostFiles.UpdateRange(files);
-            context.SaveChanges();
+            PostFileRepository.UpdateRange(files);
             return true;
         }
         public bool Recovery(AutoPostCache cache, ref string message)
         {
-            AutoPost post; IGAccount account; List<PostFile> files;
+            AutoPost post; List<PostFile> files;
 
             if ((post = GetNonDeletedPost(cache.user_token, cache.post_id, ref message)) != null)
             {
                 cache.session_id = post.sessionId;
                 cache.post_type = post.postType;
-                account = context.IGAccounts.Where(a => a.accountId == post.sessionId).First();
+                var account = IGAccountRepository.GetBy(post.sessionId);
                 if (cache.post_type ? access.PostsIsTrue(account.userId, ref message) :
                         access.StoriesIsTrue(account.userId, ref message))
                 {
@@ -798,13 +758,12 @@ namespace UseCases.AutoPosts
                     {
                         if (post.postType ? CheckToUpdatePost(cache, ref message) : CheckToUpdateStories(cache, ref message))
                         {
-                            post.files = GetNonDeleteFiles(post.postId);
+                            post.files = PostFileRepository.GetBy(post.postId, false);
                             if (FilesIdIsTrue(post.files, cache.files_id, ref message))
                             {
                                 files = CreateDuplicatePostFile(post.files);
                                 post.postDeleted = true;
-                                context.AutoPosts.Update(post);
-                                context.SaveChanges();
+                                AutoPostRepository.Update(post);
                                 post = SaveAutoPost(cache, files);
                                 ChangeOrderFiles(cache.files_id, post.files);
                                 Logger.Information("Recovery auto post, id -> " + post.postId);
@@ -844,7 +803,7 @@ namespace UseCases.AutoPosts
         {
             if (files.Count == filesId.Count)
             {
-                foreach (PostFile postFile in files)
+                foreach (var postFile in files)
                 {
                     if (!filesId.Contains(postFile.fileId))
                     {
@@ -862,10 +821,7 @@ namespace UseCases.AutoPosts
         }
         public PostFile GetNonDeleteFile(long fileId, long postId, ref string message)
         {
-            var file = context.PostFiles.Where(f => f.fileId == fileId
-                && f.postId == postId
-                && f.fileDeleted == false)
-                .FirstOrDefault();
+            var file = PostFileRepository.GetBy(fileId, postId, false);
             if (file == null)
             {
                 message = "Server can't define file.";
@@ -910,5 +866,29 @@ namespace UseCases.AutoPosts
             }
             return result;
         }
+    }
+    public struct AutoPostCache
+    {
+        public string user_token;
+        public long session_id;
+        public long post_id;
+        public bool post_type;
+        public List<IFormFile> files;
+        public List<long> files_id;
+        public DateTime execute_at;
+        public bool? auto_delete;
+        public DateTime delete_after;
+        public string location;
+        public string comment;
+        public string description;
+        public int category;
+        public long category_id;
+        public int next;
+        public int count;
+        public DateTime from;
+        public DateTime to;
+        public long file_id;
+        public sbyte order;
+        public int timezone;
     }
 }

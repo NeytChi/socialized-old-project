@@ -18,7 +18,4 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0"/>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.6"/>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ig-api\ig-api.csproj"/>
-  </ItemGroup>
 </Project>

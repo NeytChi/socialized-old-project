@@ -1,0 +1,5 @@
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.AssemblyInfoInputs.cache
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.AssemblyInfo.cs
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.csproj.CoreCompileInputs.cache
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.sourcelink.json

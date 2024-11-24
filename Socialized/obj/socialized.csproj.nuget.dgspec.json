@@ -32,11 +32,7 @@
         "frameworks": {
           "netcoreapp2.2": {
             "targetAlias": "netcoreapp2.2",
-            "projectReferences": {
-              "D:\\VS Projects\\Socialized\\ig-api\\ig-api.csproj": {
-                "projectPath": "D:\\VS Projects\\Socialized\\ig-api\\ig-api.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

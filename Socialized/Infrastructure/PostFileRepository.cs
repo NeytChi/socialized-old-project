@@ -1,9 +1,4 @@
 ﻿using Domain.AutoPosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure
 {
@@ -17,6 +12,14 @@ namespace Infrastructure
         public PostFile GetBy(long postId)
         {
             return Context.PostFiles.Where(p => p.postId == postId).FirstOrDefault();
+        }
+        public PostFile GetBy(long fileId, long postId, bool fileDeleted = false)
+        {
+            return Context.PostFiles.Where(f =>
+                f.fileId == fileId &&
+                f.postId == postId &&
+                f.fileDeleted == fileDeleted)
+                    .FirstOrDefault();
         }
         public ICollection<PostFile> GetBy(long postId, bool fileDeleted = false)
         {
@@ -39,5 +42,6 @@ namespace Infrastructure
                 && a.deleteAfter < deleteAfter
                 && a.postDeleted == postDeleted
             ).OrderBy(a => a.deleteAfter).ToList();
+        }
     }
 }

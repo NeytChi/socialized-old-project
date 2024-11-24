@@ -1,9 +1,9 @@
 ﻿using Serilog;
 using System.Diagnostics;
 
-namespace Infrastructure
+namespace FfmpegConverter
 {
-    public class ConverterVideoFiles
+    public class ConverterVideoFiles : IFileConverter
     {
         private ILogger Logger;
         private string FFmpegExe;

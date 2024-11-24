@@ -28,28 +28,4 @@ namespace Domain.AutoPosting
         public virtual IGAccount account { get; set; }
         public virtual ICollection<PostFile> files { get; set; }
     }
-    public struct AutoPostCache
-    {
-        public string user_token;
-        public long session_id;
-        public long post_id;
-        public bool post_type;
-        // public List<IFormFile> files;
-        public List<long> files_id;
-        public DateTime execute_at;
-        public bool? auto_delete;
-        public DateTime delete_after;
-        public string location;
-        public string comment;
-        public string description;
-        public int category;
-        public long category_id;
-        public int next;
-        public int count;
-        public DateTime from;
-        public DateTime to;
-        public long file_id;
-        public sbyte order;
-        public int timezone;
-    }
 }

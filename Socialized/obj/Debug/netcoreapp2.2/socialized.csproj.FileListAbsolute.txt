@@ -19,3 +19,11 @@
 /home/neytchi/projects/service-ag/socialized/obj/Debug/netcoreapp2.2/socialized.csproj.CopyComplete
 /home/neytchi/projects/service-ag/socialized/obj/Debug/netcoreapp2.2/socialized.dll
 /home/neytchi/projects/service-ag/socialized/obj/Debug/netcoreapp2.2/socialized.pdb
+D:\VS Projects\Socialized\Socialized\obj\Debug\netcoreapp2.2\socialized.csproj.AssemblyReference.cache
+D:\VS Projects\Socialized\Socialized\obj\Debug\netcoreapp2.2\socialized.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\Socialized\Socialized\obj\Debug\netcoreapp2.2\socialized.AssemblyInfoInputs.cache
+D:\VS Projects\Socialized\Socialized\obj\Debug\netcoreapp2.2\socialized.AssemblyInfo.cs
+D:\VS Projects\Socialized\Socialized\obj\Debug\netcoreapp2.2\socialized.csproj.CoreCompileInputs.cache
+D:\VS Projects\Socialized\Socialized\obj\Debug\netcoreapp2.2\socialized.RazorAssemblyInfo.cache
+D:\VS Projects\Socialized\Socialized\obj\Debug\netcoreapp2.2\socialized.RazorAssemblyInfo.cs
+D:\VS Projects\Socialized\Socialized\obj\Debug\netcoreapp2.2\socialized.sourcelink.json
