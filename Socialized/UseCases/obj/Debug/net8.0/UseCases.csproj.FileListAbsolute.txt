@@ -4,3 +4,9 @@ D:\VS Projects\socialized-old-project\service-ag-master\socialized\UseCases\obj\
 D:\VS Projects\socialized-old-project\service-ag-master\socialized\UseCases\obj\Debug\net8.0\UseCases.csproj.CoreCompileInputs.cache
 D:\VS Projects\socialized-old-project\service-ag-master\socialized\UseCases\obj\Debug\net8.0\UseCases.sourcelink.json
 D:\VS Projects\socialized-old-project\service-ag-master\socialized\UseCases\obj\Debug\net8.0\UseCases.csproj.AssemblyReference.cache
+D:\VS Projects\Socialized\Socialized\UseCases\obj\Debug\net8.0\UseCases.csproj.AssemblyReference.cache
+D:\VS Projects\Socialized\Socialized\UseCases\obj\Debug\net8.0\UseCases.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\Socialized\Socialized\UseCases\obj\Debug\net8.0\UseCases.AssemblyInfoInputs.cache
+D:\VS Projects\Socialized\Socialized\UseCases\obj\Debug\net8.0\UseCases.AssemblyInfo.cs
+D:\VS Projects\Socialized\Socialized\UseCases\obj\Debug\net8.0\UseCases.csproj.CoreCompileInputs.cache
+D:\VS Projects\Socialized\Socialized\UseCases\obj\Debug\net8.0\UseCases.sourcelink.json

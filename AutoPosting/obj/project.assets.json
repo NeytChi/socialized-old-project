@@ -5,7 +5,10 @@
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj",
+      "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\neyto\\.nuget\\packages\\": {},
@@ -14,11 +17,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\AutoPosting.csproj",
+      "projectUniqueName": "D:\\VS Projects\\Socialized\\AutoPosting\\AutoPosting.csproj",
       "projectName": "AutoPosting",
-      "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\AutoPosting.csproj",
+      "projectPath": "D:\\VS Projects\\Socialized\\AutoPosting\\AutoPosting.csproj",
       "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-      "outputPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\obj\\",
+      "outputPath": "D:\\VS Projects\\Socialized\\AutoPosting\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio SDK\\NuGetPackages"
@@ -39,7 +42,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj": {
+              "projectPath": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj"
+            },
+            "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -75,5 +85,25 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

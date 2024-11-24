@@ -1,24 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\UseCases\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized-old-project\\service-ag-master\\socialized\\usecases\\autoposts\\taskgsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\taskgsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized-old-project\\service-ag-master\\socialized\\usecases\\autoposts\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized-old-project\\service-ag-master\\socialized\\usecases\\autoposts\\autopostingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\autopostingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized-old-project\\service-ag-master\\socialized\\usecases\\packages\\packagecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:packages\\packagecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\Socialized\\UseCases\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,63 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PackageCondition.cs",
-              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\UseCases\\Packages\\PackageCondition.cs",
-              "RelativeDocumentMoniker": "Packages\\PackageCondition.cs",
-              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\UseCases\\Packages\\PackageCondition.cs",
-              "RelativeToolTip": "Packages\\PackageCondition.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAACEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T10:14:46.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskGSManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\UseCases\\AutoPosts\\TaskGSManager.cs",
-              "RelativeDocumentMoniker": "AutoPosts\\TaskGSManager.cs",
-              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\UseCases\\AutoPosts\\TaskGSManager.cs",
-              "RelativeToolTip": "AutoPosts\\TaskGSManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T10:03:37.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SessionManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\UseCases\\AutoPosts\\SessionManager.cs",
-              "RelativeDocumentMoniker": "AutoPosts\\SessionManager.cs",
-              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\UseCases\\AutoPosts\\SessionManager.cs",
-              "RelativeToolTip": "AutoPosts\\SessionManager.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T09:56:09.182Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AutoPostingManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\UseCases\\AutoPosts\\AutoPostingManager.cs",
-              "RelativeDocumentMoniker": "AutoPosts\\AutoPostingManager.cs",
-              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\UseCases\\AutoPosts\\AutoPostingManager.cs",
-              "RelativeToolTip": "AutoPosts\\AutoPostingManager.cs",
-              "ViewState": "AgIAAE4BAAAAAAAAAAAAAGQDAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T22:34:41.601Z",
-              "EditorCaption": ""
             }
           ]
         }

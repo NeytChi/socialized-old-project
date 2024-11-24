@@ -3,11 +3,13 @@
   <ItemGroup>
     <PackageReference Include="Braintree" Version="5.28.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Serilog" Version="4.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\..\InstagramSessionApi\ig-api.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

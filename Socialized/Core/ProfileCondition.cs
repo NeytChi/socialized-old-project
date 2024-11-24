@@ -157,7 +157,7 @@ namespace Core
                 Logger.Error("Input value is null, function HashPassword()");
                 return "";
             }
-            using (Rfc2898DeriveBytes bytes = new Rfc2898DeriveBytes(password, 0x10, 0x3e8)) {
+            using (var bytes = new Rfc2898DeriveBytes(password, 0x10, 0x3e8)) {
                 salt = bytes.Salt;
                 buffer2 = bytes.GetBytes(0x20);
             }

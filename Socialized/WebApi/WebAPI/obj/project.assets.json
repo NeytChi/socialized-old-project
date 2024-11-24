@@ -541,11 +541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "D:\\VS Projects\\Socialized\\Socialized\\WebApi\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\WebAPI.csproj",
+      "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\WebApi\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-      "outputPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\WebApi\\WebAPI\\obj\\",
+      "outputPath": "D:\\VS Projects\\Socialized\\Socialized\\WebApi\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio SDK\\NuGetPackages"

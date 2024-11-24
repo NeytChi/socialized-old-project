@@ -1,10 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\",
+  "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\AutoPosting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{918D14EF-0437-4D6E-A33B-287E4BC10CC3}|AutoPosting.csproj|d:\\vs projects\\socialized-old-project\\service-ag-master\\autoposting\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{918D14EF-0437-4D6E-A33B-287E4BC10CC3}|AutoPosting.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{918D14EF-0437-4D6E-A33B-287E4BC10CC3}|AutoPosting.csproj|d:\\vs projects\\socialized\\autoposting\\autodeleting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{918D14EF-0437-4D6E-A33B-287E4BC10CC3}|AutoPosting.csproj|solutionrelative:autodeleting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793D005-1B29-485E-85B1-E7B3869F05CA}|..\\AutoPostTests\\AutoPostTests.csproj|d:\\vs projects\\socialized\\autoposttests\\autopostingservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D793D005-1B29-485E-85B1-E7B3869F05CA}|..\\AutoPostTests\\AutoPostTests.csproj|d:\\vs projects\\socialized\\autoposttests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{918D14EF-0437-4D6E-A33B-287E4BC10CC3}|AutoPosting.csproj|d:\\vs projects\\socialized\\autoposting\\autoposting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{918D14EF-0437-4D6E-A33B-287E4BC10CC3}|AutoPosting.csproj|solutionrelative:autoposting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +24,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +32,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\Class1.cs",
-              "RelativeDocumentMoniker": "Class1.cs",
-              "ToolTip": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\Class1.cs",
-              "RelativeToolTip": "Class1.cs",
+              "DocumentIndex": 1,
+              "Title": "AutoPostingServiceTests.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\AutoPostTests\\AutoPostingServiceTests.cs",
+              "RelativeDocumentMoniker": "..\\AutoPostTests\\AutoPostingServiceTests.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\AutoPostTests\\AutoPostingServiceTests.cs",
+              "RelativeToolTip": "..\\AutoPostTests\\AutoPostingServiceTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T11:02:25.298Z",
+              "WhenOpened": "2024-11-24T13:43:40.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\AutoPostTests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\AutoPostTests\\UnitTest1.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\AutoPostTests\\UnitTest1.cs",
+              "RelativeToolTip": "..\\AutoPostTests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T13:43:15.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AutoPosting.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\AutoPosting\\AutoPosting.cs",
+              "RelativeDocumentMoniker": "AutoPosting.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\AutoPosting\\AutoPosting.cs",
+              "RelativeToolTip": "AutoPosting.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwB8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:34:44.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AutoDeleting.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\AutoPosting\\AutoDeleting.cs",
+              "RelativeDocumentMoniker": "AutoDeleting.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\AutoPosting\\AutoDeleting.cs",
+              "RelativeToolTip": "AutoDeleting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:32:55.798Z",
               "EditorCaption": ""
             }
           ]

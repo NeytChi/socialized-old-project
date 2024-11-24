@@ -145,11 +145,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\Core\\Core.csproj",
+      "projectUniqueName": "D:\\VS Projects\\Socialized\\Socialized\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\Core\\Core.csproj",
+      "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-      "outputPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\Core\\obj\\",
+      "outputPath": "D:\\VS Projects\\Socialized\\Socialized\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio SDK\\NuGetPackages"

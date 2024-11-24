@@ -1,13 +1,6 @@
-﻿using System;
-using System.IO;
-using System.Threading;
-using Microsoft.Extensions.Configuration;
-
-using nautoposting;
-using database.context;
-
-namespace auto_posting_gen
+﻿namespace AutoPosting
 {
+    /*
     class Program
     {
         static Semaphore semaphore = new Semaphore(1,1);
@@ -32,5 +25,5 @@ namespace auto_posting_gen
             }
             return configuration;
         }
-    }
+    }*/
 }

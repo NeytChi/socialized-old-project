@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\SocializedPdfGenerator\\SocializedPdfGenerator.csproj": {}
+    "D:\\VS Projects\\Socialized\\SocializedPdfGenerator\\SocializedPdfGenerator.csproj": {}
   },
   "projects": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\SocializedPdfGenerator\\SocializedPdfGenerator.csproj": {
+    "D:\\VS Projects\\Socialized\\SocializedPdfGenerator\\SocializedPdfGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\SocializedPdfGenerator\\SocializedPdfGenerator.csproj",
+        "projectUniqueName": "D:\\VS Projects\\Socialized\\SocializedPdfGenerator\\SocializedPdfGenerator.csproj",
         "projectName": "SocializedPdfGenerator",
-        "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\SocializedPdfGenerator\\SocializedPdfGenerator.csproj",
+        "projectPath": "D:\\VS Projects\\Socialized\\SocializedPdfGenerator\\SocializedPdfGenerator.csproj",
         "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\SocializedPdfGenerator\\obj\\",
+        "outputPath": "D:\\VS Projects\\Socialized\\SocializedPdfGenerator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio SDK\\NuGetPackages"

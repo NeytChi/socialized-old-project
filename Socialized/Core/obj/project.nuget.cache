@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i+PdVe0p4uQ=",
+  "dgSpecHash": "4rYCYzM2L0M=",
   "success": true,
-  "projectFilePath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\Core\\Core.csproj",
+  "projectFilePath": "D:\\VS Projects\\Socialized\\Socialized\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\neyto\\.nuget\\packages\\awssdk.core\\3.7.400.56\\awssdk.core.3.7.400.56.nupkg.sha512",
     "C:\\Users\\neyto\\.nuget\\packages\\awssdk.s3\\3.7.407\\awssdk.s3.3.7.407.nupkg.sha512",

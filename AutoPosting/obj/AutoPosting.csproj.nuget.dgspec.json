@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\AutoPosting.csproj": {}
+    "D:\\VS Projects\\Socialized\\AutoPosting\\AutoPosting.csproj": {}
   },
   "projects": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\AutoPosting.csproj": {
+    "D:\\VS Projects\\Socialized\\AutoPosting\\AutoPosting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\AutoPosting.csproj",
+        "projectUniqueName": "D:\\VS Projects\\Socialized\\AutoPosting\\AutoPosting.csproj",
         "projectName": "AutoPosting",
-        "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\AutoPosting.csproj",
+        "projectPath": "D:\\VS Projects\\Socialized\\AutoPosting\\AutoPosting.csproj",
         "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\AutoPosting\\obj\\",
+        "outputPath": "D:\\VS Projects\\Socialized\\AutoPosting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio SDK\\NuGetPackages"
@@ -32,7 +32,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj": {
+                "projectPath": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\ig-api.csproj"
+              },
+              "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

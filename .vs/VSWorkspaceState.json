@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\service-ag-master",
-    "\\service-ag-master\\socialized",
-    "\\service-ag-master\\socialized\\development",
-    "\\service-ag-master\\socialized\\development\\controllers",
-    "\\service-ag-master\\socialized\\development\\defaults",
-    "\\service-ag-master\\socialized\\development\\managment"
+    "\\AutoPosting\\AutoPostingTests",
+    "\\Socialized",
+    "\\Socialized\\development",
+    "\\Socialized\\development\\defaults",
+    "\\Socialized\\UseCases",
+    "\\Socialized\\UseCases\\AutoPosts"
   ],
-  "SelectedNode": "\\service-ag-master\\socialized\\server.json",
+  "SelectedNode": "\\Socialized\\UseCases\\AutoPosts\\SessionManager.cs",
   "PreviewInSolutionExplorer": false
 }

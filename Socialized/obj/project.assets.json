@@ -14571,7 +14571,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "D:\\VS Projects\\socialized-old-project\\service-ag-master\\ig-api\\ig-api.csproj",
+      "D:\\VS Projects\\Socialized\\ig-api\\ig-api.csproj",
       "Microsoft.AspNetCore.App >= 2.2.8",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NET.Test.Sdk >= 16.4.0",
@@ -14590,13 +14590,12 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\socialized.csproj",
+      "projectUniqueName": "D:\\VS Projects\\Socialized\\Socialized\\socialized.csproj",
       "projectName": "socialized",
-      "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\socialized.csproj",
+      "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\socialized.csproj",
       "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-      "outputPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\obj\\",
+      "outputPath": "D:\\VS Projects\\Socialized\\Socialized\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "D:\\Visual Studio SDK\\NuGetPackages"
       ],
@@ -14617,8 +14616,8 @@
         "netcoreapp2.2": {
           "targetAlias": "netcoreapp2.2",
           "projectReferences": {
-            "D:\\VS Projects\\socialized-old-project\\service-ag-master\\ig-api\\ig-api.csproj": {
-              "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\ig-api\\ig-api.csproj"
+            "D:\\VS Projects\\Socialized\\ig-api\\ig-api.csproj": {
+              "projectPath": "D:\\VS Projects\\Socialized\\ig-api\\ig-api.csproj"
             }
           }
         }
@@ -14700,10 +14699,10 @@
   },
   "logs": [
     {
-      "code": "NU1105",
+      "code": "NU1104",
       "level": "Error",
-      "message": "Unable to find project information for 'D:\\VS Projects\\socialized-old-project\\service-ag-master\\ig-api\\ig-api.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\ig-api\\ig-api.csproj",
+      "message": "Unable to find project 'D:\\VS Projects\\Socialized\\ig-api\\ig-api.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "D:\\VS Projects\\Socialized\\ig-api\\ig-api.csproj",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"
       ]

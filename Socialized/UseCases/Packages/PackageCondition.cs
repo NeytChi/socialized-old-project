@@ -1,15 +1,6 @@
 using System;
 using Serilog;
 using Braintree;
-using System.Linq;
-using Serilog.Core;
-using System.Collections.Generic;
-using Microsoft.Extensions.Configuration;
-
-using socialized;
-using database.context;
-using Models.Common;
-using Models.SessionComponents;
 using Domain.SessionComponents;
 
 namespace UseCases.Packages

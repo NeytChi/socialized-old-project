@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\Domain\\Domain.csproj": {}
+    "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\Domain\\Domain.csproj": {
+    "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\Domain\\Domain.csproj",
+        "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\socialized\\Domain\\obj\\",
+        "outputPath": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio SDK\\NuGetPackages"

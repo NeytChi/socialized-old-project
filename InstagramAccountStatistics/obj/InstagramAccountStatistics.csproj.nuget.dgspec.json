@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\InstagramAccountStatistics\\InstagramAccountStatistics.csproj": {}
+    "D:\\VS Projects\\Socialized\\InstagramAccountStatistics\\InstagramAccountStatistics.csproj": {}
   },
   "projects": {
-    "D:\\VS Projects\\socialized-old-project\\service-ag-master\\InstagramAccountStatistics\\InstagramAccountStatistics.csproj": {
+    "D:\\VS Projects\\Socialized\\InstagramAccountStatistics\\InstagramAccountStatistics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\InstagramAccountStatistics\\InstagramAccountStatistics.csproj",
+        "projectUniqueName": "D:\\VS Projects\\Socialized\\InstagramAccountStatistics\\InstagramAccountStatistics.csproj",
         "projectName": "InstagramAccountStatistics",
-        "projectPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\InstagramAccountStatistics\\InstagramAccountStatistics.csproj",
+        "projectPath": "D:\\VS Projects\\Socialized\\InstagramAccountStatistics\\InstagramAccountStatistics.csproj",
         "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Projects\\socialized-old-project\\service-ag-master\\InstagramAccountStatistics\\obj\\",
+        "outputPath": "D:\\VS Projects\\Socialized\\InstagramAccountStatistics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio SDK\\NuGetPackages"
