@@ -1,134 +1,14 @@
-﻿using Serilog;
-using System.Text;
+﻿using System.Text;
 using System.Security.Cryptography;
-using System.Text.RegularExpressions;
 
 namespace Core
 {
     public class ProfileCondition
     {
-        private readonly ILogger Logger;
-        private const sbyte minLength = 6;
-        private const sbyte maxLength = 20;
-        private readonly Regex onlyEnglish = new Regex("^[a-zA-Z0-9]*$", RegexOptions.Compiled);
         private Random random = new Random();
         private readonly string Alphavite = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         private readonly string sum_names = "abc123";
-        private readonly Regex emailChecker = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$"); 
         
-        public ProfileCondition(ILogger log)
-        {
-            Logger = log;
-        }
-        public bool EmailIsTrue(string email, ref string message)
-        {
-            if (!string.IsNullOrEmpty(email))
-            {
-                if (emailChecker.IsMatch(email))
-                {
-                    return true;
-                }
-                message = "invalid_email";
-            }
-            else
-            {
-                message = "empty_email";
-            }
-            Logger.Warning("Check email -> " + email ?? "");
-            return false;
-        } 
-        public bool UserNameIsTrue(string userName, ref string answer) 
-		{
-            if (!string.IsNullOrEmpty(userName))
-            {
-                if (Regex.IsMatch(userName, @"^[A-Za-z-А-Яа-я_']+\s?\s?[A-Za-z-А-Яа-я_']+"))
-                {
-                    return true;
-                }
-                else
-                {
-                    answer = "invalid_name";
-                }
-            }
-            else
-            {
-                answer = "empty_name";
-            }
-            return false;
-        }
-		public bool PasswordIsTrue(string password, ref string answer) 
-		{
-            if (string.IsNullOrEmpty(password))
-            {
-                answer = "empty_password";
-            }
-            if (RequiredLength(password, ref answer))
-            {
-                if (HasLetter(password, ref answer))
-                {
-                    if (HasDigit(password, ref answer))
-                    {
-                        return true;
-                    }
-                }
-            }
-            Logger.Warning(answer);
-            return false;
-        }
-        public bool RequiredLength(string password, ref string answer)
-        {
-            if (password.Length >= minLength) 
-            {
-                if (password.Length <= maxLength)
-                {
-                    return true;
-                }
-            } 
-            answer = "length_password";
-            return false;
-        }
-        public bool HasLetter(string password, ref string answer)
-        {
-            foreach (char c in password) 
-            {
-                if (char.IsLetter(c))
-                {
-                    return true;
-                }
-            }
-            answer = "letter_password";
-            return false;
-        }
-        public bool HasDigit(string password, ref string answer)
-        {
-            foreach (char c in password) 
-            {
-                if (char.IsDigit(c))
-                {
-                    return true;
-                }
-            }
-            answer = "digit_password";
-            return false;
-        }
-        public bool LoginIsTrue(string login, ref string answer)
-        {
-            bool result = false;
-            if (!string.IsNullOrEmpty(login) && login.Length >= 3) 
-            {
-                result = onlyEnglish.Match(login).Success;
-                if (!result)
-                {
-                    answer = "english_login";
-                }
-            }
-            else
-            {
-                answer = "length_login";
-            }
-            Logger.Information("Check login, result -> " + result);
-			return result;
-        }
         public string CreateHash(int lengthHash)
         {
             string hash = "";
@@ -153,10 +33,7 @@ namespace Core
         {
             byte[] salt;
             byte[] buffer2;
-            if (password == null) {
-                Logger.Error("Input value is null, function HashPassword()");
-                return "";
-            }
+            
             using (var bytes = new Rfc2898DeriveBytes(password, 0x10, 0x3e8)) {
                 salt = bytes.Salt;
                 buffer2 = bytes.GetBytes(0x20);
@@ -169,6 +46,7 @@ namespace Core
         public bool VerifyHashedPassword(string hashedPassword, string password)
         {
             byte[] hashedBuffer, buffer;
+            
             if (hashedPassword == null || password == null)
             {
                 return false;
@@ -178,12 +56,16 @@ namespace Core
             {
                 return false;
             }
-            byte[] dst = new byte[0x10];
+            var dst = new byte[0x10];
             Buffer.BlockCopy(src, 1, dst, 0, 0x10);
+            
             hashedBuffer = new byte[0x20];
             Buffer.BlockCopy(src, 0x11, hashedBuffer, 0, 0x20);
-            using (Rfc2898DeriveBytes bytes = new Rfc2898DeriveBytes(password, dst, 0x3e8))
+
+            using (var bytes = new Rfc2898DeriveBytes(password, dst, 0x3e8))
+            {
                 buffer = bytes.GetBytes(0x20);
+            }
             return ByteArraysEqual(ref hashedBuffer, ref buffer);
         }
         private bool ByteArraysEqual(ref byte[] b1, ref byte[] b2)
@@ -212,15 +94,15 @@ namespace Core
         public string Encrypt(string clearText)
         {
             byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
-            using (Aes encryptor = Aes.Create()) 
+            using (var encryptor = Aes.Create()) 
             {
-                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(sum_names,  new byte[] 
+                var pdb = new Rfc2898DeriveBytes(sum_names,  new byte[] 
                 { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
                 encryptor.Key = pdb.GetBytes(32);
                 encryptor.IV = pdb.GetBytes(16);
-                using (MemoryStream ms = new MemoryStream()) 
+                using (var ms = new MemoryStream()) 
                 {
-                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write)) 
+                    using (var cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write)) 
                     {
                         cs.Write(clearBytes, 0, clearBytes.Length);
                         cs.Close();
@@ -234,9 +116,9 @@ namespace Core
         {
             cipherText = cipherText.Replace(" ", "+");
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
-            using (Aes encryptor = Aes.Create()) 
+            using (var encryptor = Aes.Create()) 
             {
-                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(sum_names, new byte[] 
+                var pdb = new Rfc2898DeriveBytes(sum_names, new byte[] 
                 { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
                 encryptor.Key = pdb.GetBytes(32);
                 encryptor.IV = pdb.GetBytes(16);
