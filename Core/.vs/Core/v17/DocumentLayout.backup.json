@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\Core\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\profilecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:profilecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\smtpsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:smtpsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\filecontrol\\awsuploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:filecontrol\\awsuploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\filecontrol\\ifilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:filecontrol\\ifilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\profilecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:profilecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\smtpsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:smtpsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,6 +43,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MailSettings.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\MailSettings.cs",
+              "RelativeDocumentMoniker": "MailSettings.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\Core\\MailSettings.cs",
+              "RelativeToolTip": "MailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T13:46:06.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "IFileManager.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\FileControl\\IFileManager.cs",
               "RelativeDocumentMoniker": "FileControl\\IFileManager.cs",
@@ -46,12 +62,11 @@
               "RelativeToolTip": "FileControl\\IFileManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:35:08.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T13:35:08.221Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "FileManager.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\FileControl\\FileManager.cs",
               "RelativeDocumentMoniker": "FileControl\\FileManager.cs",
@@ -59,25 +74,23 @@
               "RelativeToolTip": "FileControl\\FileManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:34:34.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T13:34:34.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "SmtpSender.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\SmtpSender.cs",
               "RelativeDocumentMoniker": "SmtpSender.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\Core\\SmtpSender.cs",
               "RelativeToolTip": "SmtpSender.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:06:03.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T13:06:03.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AwsUploader.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\FileControl\\AwsUploader.cs",
               "RelativeDocumentMoniker": "FileControl\\AwsUploader.cs",
@@ -85,18 +98,17 @@
               "RelativeToolTip": "FileControl\\AwsUploader.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:05:12.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T13:05:12.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ProfileCondition.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\ProfileCondition.cs",
               "RelativeDocumentMoniker": "ProfileCondition.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\Core\\ProfileCondition.cs",
               "RelativeToolTip": "ProfileCondition.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAAJoAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T18:04:47.718Z",
               "EditorCaption": ""
