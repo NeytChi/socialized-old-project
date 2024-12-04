@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("socialized")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6659b22d3a3216ce9096e45b33adfaff92b379b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+061ded55ac9d6cb67072845478230b15138d22bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("socialized")]
 [assembly: System.Reflection.AssemblyTitleAttribute("socialized")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocializedTaskExecutorTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87a82e30a104b234b4482ec5d6ed94eb1941c0bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+061ded55ac9d6cb67072845478230b15138d22bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocializedTaskExecutorTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocializedTaskExecutorTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

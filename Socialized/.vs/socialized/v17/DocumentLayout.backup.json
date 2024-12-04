@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\Socialized\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7ED9F3C5-168D-49BA-8BDE-C4F0B75100DF}|UseCases\\UseCases.csproj|d:\\vs projects\\socialized\\socialized\\usecases\\usecases.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7ED9F3C5-168D-49BA-8BDE-C4F0B75100DF}|UseCases\\UseCases.csproj|solutionrelative:usecases\\usecases.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7ED9F3C5-168D-49BA-8BDE-C4F0B75100DF}|UseCases\\UseCases.csproj|d:\\vs projects\\socialized\\socialized\\usecases\\autoposts\\autopostingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7ED9F3C5-168D-49BA-8BDE-C4F0B75100DF}|UseCases\\UseCases.csproj|solutionrelative:usecases\\autoposts\\autopostingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7ED9F3C5-168D-49BA-8BDE-C4F0B75100DF}|UseCases\\UseCases.csproj|d:\\vs projects\\socialized\\socialized\\usecases\\usecases.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7ED9F3C5-168D-49BA-8BDE-C4F0B75100DF}|UseCases\\UseCases.csproj|solutionrelative:usecases\\usecases.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +18,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AutoPostingManager.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\UseCases\\AutoPosts\\AutoPostingManager.cs",
               "RelativeDocumentMoniker": "UseCases\\AutoPosts\\AutoPostingManager.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\UseCases\\AutoPosts\\AutoPostingManager.cs",
               "RelativeToolTip": "UseCases\\AutoPosts\\AutoPostingManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T16:46:42.22Z",
               "EditorCaption": ""
@@ -39,7 +39,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UseCases",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\UseCases\\UseCases.csproj",
               "RelativeDocumentMoniker": "UseCases\\UseCases.csproj",

@@ -6,10 +6,16 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Core
 {
-    public class SmtpSender
+    public interface ISmtpSender
+    {
+        void SendEmail(string email, string subject, string text);
+    }
+    public class SmtpSender : ISmtpSender
     {
         private MailSettings Settings { get; set; }
         public ILogger Logger;
+        private MailAddress from;
+        private SmtpClient smtp;
 
         public SmtpSender(ILogger logger, MailSettings mailSettings)
         {
@@ -17,9 +23,6 @@ namespace Core
             Settings = mailSettings;
             Setup();
         }
-        private MailAddress from;
-        private SmtpClient smtp;
-
         private void Setup()
         {
             smtp = new SmtpClient(Settings.SmtpAddress, Settings.SmtpPort);
@@ -50,15 +53,15 @@ namespace Core
             {
                 if (Settings.Enable)
                 {
-                    await smtp.SendMailAsync(message);
+                    smtp.SendMailAsync(message);
                 }
-                Logger.Information("Send message to " + email);
+                Logger.Information($"Був відправиленний лист на адресу={email}.");
             }
             catch (Exception e) 
             {
-                Logger.Error("Server can't send email to -> " + email );
-                Logger.Error("Exception, -> " + e.Message); 
-                Logger.Error("Inner exception, -> " + e.InnerException?.Message ?? "");
+                Logger.Error($"Сервер не може відправити листа по адресі={email}");
+                Logger.Error($"Виключення={e.Message}"); 
+                Logger.Error($"Внутрішне виключення={e.InnerException?.Message}");
             }
         }
     }
