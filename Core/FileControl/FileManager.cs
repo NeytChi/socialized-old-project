@@ -1,6 +1,6 @@
-using Serilog;
+using Serilog;.
 
-namespace Core
+namespace Core.FileControl
 {
     public class FileManager : IFileManager
     {
@@ -18,7 +18,7 @@ namespace Core
             string fileName = Guid.NewGuid().ToString();
             ChangeDailyPath();
             string fileRelativePath = "/" + RelativePath + dailyFolder;
-            CheckDirectory(fileRelativePath);            
+            CheckDirectory(fileRelativePath);
             if (SaveTo(file, fileRelativePath, fileName))
             {
                 return fileRelativePath + fileName;
@@ -27,27 +27,21 @@ namespace Core
         }
         public virtual bool SaveTo(Stream file, string relativePath, string fileName)
         {
-            if (!File.Exists(currentDirectory + relativePath + fileName))
+            if (File.Exists(currentDirectory + relativePath + fileName))
             {
-                using (var stream = new FileStream(currentDirectory + relativePath + fileName, FileMode.Create))
-                {
-                    file.CopyTo(stream);
-                }
-                Logger.Information("Create file, fileName ->" + fileName);
-                return true;
+                Logger.Error("Сервер не може зберегти в файловій системі файл з такою самою назвою.");
+                return false;
             }
-            else
+            using (var stream = new FileStream(currentDirectory + fileName, FileMode.Create))
             {
-                Logger.Error("Server can't save file with same file names.");
+                file.CopyTo(stream);
             }
-            return false;
+            Logger.Information($"Був створений новий файл={fileName}.");
+            return true;
         }
-        /// <summary>
-        /// Change daily path to save files in daily new folder. That need to save file without override another file.
-        /// <summary>
         public void ChangeDailyPath()
         {
-            if (currentTime.Day != DateTime.Now.Day) 
+            if (currentTime.Day != DateTime.Now.Day)
             {
                 currentTime = DateTime.Now;
                 dailyFolder = "/" + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day + "/";
@@ -62,7 +56,7 @@ namespace Core
         }
         public void DeleteFile(string relativePath)
         {
-            if (File.Exists(currentDirectory + relativePath)) 
+            if (File.Exists(currentDirectory + relativePath))
             {
                 File.Delete(currentDirectory + relativePath);
                 Logger.Information("File was deleted. Relative path ->/" + relativePath);

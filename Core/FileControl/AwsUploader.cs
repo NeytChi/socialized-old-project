@@ -3,7 +3,7 @@ using Amazon;
 using Amazon.S3;
 using Amazon.S3.Transfer;
 
-namespace Core
+namespace Core.FileControl
 {
     public class AwsUploader : FileManager, IFileManager
     {
@@ -16,7 +16,7 @@ namespace Core
         {
             Settings = settings;
             Region = RegionEndpoint.GetBySystemName(Settings.AwsBucketRegion);
-            S3Client = new AmazonS3Client(Settings.AwsAccessKeyId, Settings.AwsSecretKeyId, Region);          
+            S3Client = new AmazonS3Client(Settings.AwsAccessKeyId, Settings.AwsSecretKeyId, Region);
             FileTransferUtility = new TransferUtility(S3Client);
         }
         public override string SaveFile(Stream stream, string RelativePath)
@@ -32,9 +32,9 @@ namespace Core
         }
         public bool SaveTo(Stream stream, string relativeFilePath)
         {
-            try 
+            try
             {
-                var fileTransferUtilityRequest = new TransferUtilityUploadRequest 
+                var fileTransferUtilityRequest = new TransferUtilityUploadRequest
                 {
                     BucketName = Settings.AwsBucketName,
                     InputStream = stream,
@@ -46,46 +46,30 @@ namespace Core
                 fileTransferUtilityRequest.Metadata.Add("param1", "Value1");
                 fileTransferUtilityRequest.Metadata.Add("param2", "Value2");
                 FileTransferUtility.Upload(fileTransferUtilityRequest);
-                Logger.Information("Upload file to s3 bucket, file path -> " + relativeFilePath);
+                Logger.Information($"Був збережен новий файл на сервісі AWS S3 Bucket за таким шляхом={relativeFilePath}.");
                 return true;
             }
-            catch (AmazonS3Exception e) 
+            catch (AmazonS3Exception e)
             {
-                Logger.Error("Error encountered on server. Message:'{0}' when writing an object", e.Message);
+                Logger.Error($"Не вдалося зберігти файл на сервисі AWS S3 Bucket, AmazonS3 виключення={e.Message}");
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
-                Logger.Error("Unknown encountered on server. Message:'{0}' when writing an object", e.Message);
+                Logger.Error($"Не вдалося зберігти файл на сервисі AWS S3 Bucket, виключення={e.Message}");
             }
             return false;
         }
-        
+
         public bool SaveTo(string fullPathFile, string relativeFilePath)
         {
-            try 
+            try
             {
                 var stream = File.OpenRead(fullPathFile);
-                var fileTransferUtilityRequest = new TransferUtilityUploadRequest {
-                    BucketName = Settings.AwsBucketName,
-                    InputStream = stream,
-                    StorageClass = S3StorageClass.StandardInfrequentAccess,
-                    PartSize = stream.Length,
-                    Key = relativeFilePath,
-                    CannedACL = S3CannedACL.PublicRead
-                };
-                fileTransferUtilityRequest.Metadata.Add("param1", "Value1");
-                fileTransferUtilityRequest.Metadata.Add("param2", "Value2");
-                FileTransferUtility.Upload(fileTransferUtilityRequest);
-                Logger.Information("Upload file to s3 bucket, file path -> " + relativeFilePath);
-                return true;
+                SaveTo(stream, relativeFilePath);
             }
-            catch (AmazonS3Exception e) 
+            catch (Exception e)
             {
-                Logger.Error("Error encountered on server. Message:'{0}' when writing an object", e.Message);
-            }
-            catch (Exception e) 
-            {
-                Logger.Error("Unknown encountered on server. Message:'{0}' when writing an object", e.Message);
+                Logger.Error($"Не вдалося прочитати файл для збереження його по AWS S3 Bucket, виключення={e.Message}");
             }
             return false;
         }
