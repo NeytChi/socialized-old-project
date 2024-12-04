@@ -2,11 +2,11 @@
 {
     public interface IPostFileRepository
     {
-        void Create(PostFile postFile);
-        void Update(PostFile postFile);
-        void UpdateRange(ICollection<PostFile> posts);
-        PostFile GetBy(long postId);
-        PostFile GetBy(long fileId, long postId, bool fileDeleted = false);
-        ICollection<PostFile> GetBy(long postId, bool fileDeleted = false);
+        void Create(AutoPostFile postFile);
+        void Update(AutoPostFile postFile);
+        void UpdateRange(ICollection<AutoPostFile> posts);
+        AutoPostFile GetBy(long postId);
+        AutoPostFile GetBy(long fileId, long postId, bool fileDeleted = false);
+        ICollection<AutoPostFile> GetBy(long postId, bool fileDeleted = false);
     }
 }

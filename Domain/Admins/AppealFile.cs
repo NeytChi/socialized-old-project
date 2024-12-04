@@ -1,14 +1,9 @@
 namespace Domain.Admins
 {
-    public partial class AppealFile
+    public partial class AppealFile : BaseEntity
     {
-        public AppealFile()
-        {
-
-        }
-        public long fileId { get; set; }
-        public long messageId { get; set; }
-        public string relativePath { get; set; }
-        public virtual AppealMessage message { get; set; }
+        public long MessageId { get; set; }
+        public string RelativePath { get; set; }
+        public virtual AppealMessage Message { get; set; }
     }
 }

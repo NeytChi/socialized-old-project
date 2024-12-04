@@ -1,14 +1,9 @@
 namespace Domain.GettingSubscribes
 {
-    /// <summary>
-    /// History of work done on the tasks of getting subscribers.
-    /// </summary>
-    public partial class HistoryGS
+    public partial class HistoryGS : BaseEntity
     {
-        public long historyId { get; set; }
-        public long taskId { get; set; }
-        public long createdAt { get; set; }
-        public string historyUrl  { get; set; }
-        public virtual TaskGS task { get; set; }
+        public long TaskId { get; set; }
+        public string Url  { get; set; }
+        public virtual TaskGS Task { get; set; }
     }
 } 

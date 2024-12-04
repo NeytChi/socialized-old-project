@@ -1,11 +1,10 @@
 namespace Domain.Statistics
 {
-    public partial class CommentStatistics
+    public partial class CommentStatistics : BaseEntity
     {
-        public long commentId { get; set; }
-        public long mediaId { get; set; }
-        public string commentIGId { get; set; }
-        public DateTime timestamp { get; set; }
+        public long MediaId { get; set; }
+        public string InstagramId { get; set; }
+        public DateTime Timestamp { get; set; }
         public virtual PostStatistics Post { get; set; }       
     }
 }

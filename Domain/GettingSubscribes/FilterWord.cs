@@ -1,20 +1,10 @@
 namespace Domain.GettingSubscribes
 {
-    public partial class FilterWord
+    public partial class FilterWord : BaseEntity
     {
-        public FilterWord()
-        {
-            
-        }
-        public FilterWord(string wordValue, bool wordUse)
-        {
-            this.wordValue = wordValue;
-            this.wordUse = wordUse;
-        }
-        public long wordId { get; set; }
-        public long filterId { get; set; }
-        public string wordValue { get; set; }
-        public bool wordUse { get; set; }
+        public long FilterId { get; set; }
+        public string Value { get; set; }
+        public bool Use { get; set; }
         public virtual TaskFilter Filter { get; set; }
     }
 }

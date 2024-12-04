@@ -1,23 +1,19 @@
 ﻿namespace Domain.Admins
 {
-    public partial class Admin
+    public partial class Admin : BaseEntity
     {
         public Admin()
         {
-            posts = new HashSet<BlogPost>();
             messages = new HashSet<AppealMessage>();
         }
-        public int adminId { get; set; }
-        public string adminEmail { get; set; }
-        public string adminFullname { get; set; }
-        public string adminRole { get; set; }
-        public string adminPassword { get; set; }
-        public string passwordToken { get; set; }
-        public long createdAt { get; set; }
-        public long lastLoginAt { get; set; }
-        public int? recoveryCode { get; set; }
-        public bool deleted { get; set; }
-        public ICollection<BlogPost> posts { get; set; }
+        public string Email { get; set; }
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
+        public string Role { get; set; }
+        public string Password { get; set; }
+        public string TokenForStart { get; set; }
+        public DateTime LastLoginAt { get; set; }
+        public int? RecoveryCode { get; set; }
         public ICollection<AppealMessage> messages { get; set; }
     }
 

@@ -1,17 +1,12 @@
 namespace Domain.GettingSubscribes
 {
-    /// <summary>
-    /// This class provide data of handled Instagram medias.
-    /// For example, task with type -> Liking.
-    /// </summary>
-    public partial class MediaGS
+    public partial class MediaGS : BaseEntity
     {
-        public long mediaId { get; set; }
-        public long unitId { get; set; }
-        public string mediaPk { get; set; }
-        public int mediaQueue { get; set; }
-        public bool mediaHandled { get; set; }    
-        public long? handledAt { get; set; }    
-        public virtual UnitGS unit { get; set; }
+        public long UnitId { get; set; }
+        public string Pk { get; set; }
+        public int Queue { get; set; }
+        public bool Handled { get; set; }    
+        public long? HandledAt { get; set; }    
+        public virtual UnitGS Unit { get; set; }
     }
 } 

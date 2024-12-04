@@ -1,14 +1,9 @@
 namespace Domain.Users
 {
-    public partial class Culture
+    public partial class Culture : BaseEntity
     {
-        public Culture()
-        {
-           
-        }
-        public int cultureId { get; set; }
-        public string cultureKey { get; set; }
-        public string cultureValue { get; set; }
-        public string cultureName { get; set; }
+        public string Key { get; set; }
+        public string Value { get; set; }
+        public string Name { get; set; }
     }
 }

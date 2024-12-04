@@ -1,22 +1,17 @@
 namespace Domain.GettingSubscribes
 {
-    /// <summary>
-    /// This class provide data of Instagram users and their comment by optional.
-    /// This class is required for handling by one of ModeGS class.
-    /// </summary>
-    public partial class UnitGS
+    public partial class UnitGS : BaseEntity
     {
-        public long unitId { get; set; }
-        public long dataId { get; set; }
-        public long userPk { get; set; }
-        public bool userIsPrivate { get; set; }
-        public string username { get; set; }
-        public string commentPk { get; set; }
-        public long createdAt { get; set; }    
-        public bool unitHandled { get; set; }    
-        public long? handledAt { get; set; }    
-        public bool handleAgain { get; set; }    
+        public long DataId { get; set; }
+        public long UserPk { get; set; }
+        public bool UserIsPrivate { get; set; }
+        public string Username { get; set; }
+        public string CommentPk { get; set; }
+        public long CreatedAt { get; set; }    
+        public bool UnitHandled { get; set; }    
+        public long? HandledAt { get; set; }    
+        public bool HandleAgain { get; set; }    
         public virtual TaskData Data { get; set; }
-        public virtual ICollection<MediaGS> medias { get; set; }
+        public virtual ICollection<MediaGS> Medias { get; set; }
     }
 } 

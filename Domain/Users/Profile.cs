@@ -1,16 +1,10 @@
 namespace Domain.Users
 {
-    public partial class Profile
+    public partial class Profile : BaseEntity
     {
-        public Profile()
-        {
-           
-        }
-        public int userId { get; set; }
-        public int profileId { get; set; }
-        public string country { get; set; }
-        public long timezone { get; set; }
+        public long UserId { get; set; }
+        public string CountryName { get; set; }
+        public long TimeZone { get; set; }
         public virtual User user { get; set; }
-
     }
 }

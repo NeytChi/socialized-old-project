@@ -1,19 +1,17 @@
 namespace Domain.Admins
 {
-    public partial class AppealMessage
+    public partial class AppealMessage : BaseEntity
     {
         public AppealMessage()
         {
-            files = new HashSet<AppealFile>();
+            Files = new HashSet<AppealFile>();
         }
-        public long messageId { get; set; }
-        public int appealId { get; set; }
-        public int? adminId { get; set; }
-        public string messageText { get; set; }
-        public DateTimeOffset createdAt { get; set; }
-        public DateTimeOffset updatedAt { get; set; }
-        public virtual Appeal appeal { get; set; }
-        public virtual Admin admin { get; set; }
-        public virtual ICollection<AppealFile> files { get; set; }
+        public long AppealId { get; set; }
+        public long AdminId { get; set; }
+        public string Value { get; set; }
+        public DateTimeOffset UpdatedAt { get; set; }
+        public virtual Appeal Appeal { get; set; }
+        public virtual Admin Admin { get; set; }
+        public virtual ICollection<AppealFile> Files { get; set; }
     }
 }

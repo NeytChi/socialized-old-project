@@ -1,44 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\socialized\\domain\\autoposting\\ipostfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:autoposting\\ipostfilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\socialized\\domain\\autoposting\\iautopostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:autoposting\\iautopostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\socialized\\domain\\gettingsubscribes\\itaskgsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:gettingsubscribes\\itaskgsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\socialized\\domain\\gettingsubscribes\\itaskdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:gettingsubscribes\\itaskdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\socialized\\domain\\admins\\iappealmessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\iappealmessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\socialized\\domain\\admins\\iappealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\iappealrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\socialized\\domain\\users\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:users\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\socialized\\domain\\admins\\iemailfollowerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\iemailfollowerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\socialized\\domain\\admins\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\Domain\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -46,120 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IPostFileRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\AutoPosting\\IPostFileRepository.cs",
-              "RelativeDocumentMoniker": "AutoPosting\\IPostFileRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\AutoPosting\\IPostFileRepository.cs",
-              "RelativeToolTip": "AutoPosting\\IPostFileRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T12:23:45.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IAutoPostRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\AutoPosting\\IAutoPostRepository.cs",
-              "RelativeDocumentMoniker": "AutoPosting\\IAutoPostRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\AutoPosting\\IAutoPostRepository.cs",
-              "RelativeToolTip": "AutoPosting\\IAutoPostRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T10:19:16.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ITaskGsRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\GettingSubscribes\\ITaskGsRepository.cs",
-              "RelativeDocumentMoniker": "GettingSubscribes\\ITaskGsRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\GettingSubscribes\\ITaskGsRepository.cs",
-              "RelativeToolTip": "GettingSubscribes\\ITaskGsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T09:24:49.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ITaskDataRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\GettingSubscribes\\ITaskDataRepository.cs",
-              "RelativeDocumentMoniker": "GettingSubscribes\\ITaskDataRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\GettingSubscribes\\ITaskDataRepository.cs",
-              "RelativeToolTip": "GettingSubscribes\\ITaskDataRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T09:14:04.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IAppealMessageRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Admins\\IAppealMessageRepository.cs",
-              "RelativeDocumentMoniker": "Admins\\IAppealMessageRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Admins\\IAppealMessageRepository.cs",
-              "RelativeToolTip": "Admins\\IAppealMessageRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T22:59:34.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IAppealRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Admins\\IAppealRepository.cs",
-              "RelativeDocumentMoniker": "Admins\\IAppealRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Admins\\IAppealRepository.cs",
-              "RelativeToolTip": "Admins\\IAppealRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T22:41:51.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IEmailFollowerRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Admins\\IEmailFollowerRepository.cs",
-              "RelativeDocumentMoniker": "Admins\\IEmailFollowerRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Admins\\IEmailFollowerRepository.cs",
-              "RelativeToolTip": "Admins\\IEmailFollowerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T20:21:54.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Users\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Users\\IUserRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Users\\IUserRepository.cs",
-              "RelativeToolTip": "Users\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T19:58:53.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IAdminRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Admins\\IAdminRepository.cs",
-              "RelativeDocumentMoniker": "Admins\\IAdminRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Admins\\IAdminRepository.cs",
-              "RelativeToolTip": "Admins\\IAdminRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T17:12:44.664Z"
             }
           ]
         }

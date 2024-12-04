@@ -1,11 +1,12 @@
+using Domain.InstagramAccounts;
+
 namespace Domain.Statistics
 {
-    public partial class OnlineFollowers
+    public partial class OnlineFollowers : BaseEntity
     {
-        public long followersId { get; set; }
-        public long accountId { get; set; }
-        public long value { get; set; }
-        public DateTime endTime { get; set; }
+        public long AccountId { get; set; }
+        public long Value { get; set; }
+        public DateTime EndTime { get; set; }
         public virtual BusinessAccount Account { get; set; }
     }
 }

@@ -5,6 +5,6 @@
         void Create(AppealMessage message);
         void Update(AppealMessage message);
         void AddRange(HashSet<AppealFile> appealFiles);
-        AppealMessage[] GetAppealMessages(int appealId, int since, int count);
+        AppealMessage[] GetAppealMessages(long appealId, int since, int count);
     }
 }
