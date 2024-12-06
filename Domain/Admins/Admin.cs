@@ -8,7 +8,7 @@
         }
         public string Email { get; set; }
         public string FirstName { get; set; }
-        public string SecondName { get; set; }
+        public string LastName { get; set; }
         public string Role { get; set; }
         public string Password { get; set; }
         public string TokenForStart { get; set; }
@@ -16,5 +16,4 @@
         public int? RecoveryCode { get; set; }
         public ICollection<AppealMessage> messages { get; set; }
     }
-
 }

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\Core\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\filecontrol\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:filecontrol\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\profilecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:profilecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\smtpsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:smtpsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\filecontrol\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:filecontrol\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\profilecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|solutionrelative:profilecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9139CDDC-61E9-4DCC-8393-DCC467C42F98}|Core.csproj|d:\\vs projects\\socialized\\core\\filecontrol\\awsuploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MailSettings.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\MailSettings.cs",
               "RelativeDocumentMoniker": "MailSettings.cs",
@@ -66,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FileManager.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\FileControl\\FileManager.cs",
               "RelativeDocumentMoniker": "FileControl\\FileManager.cs",
@@ -74,20 +74,20 @@
               "RelativeToolTip": "FileControl\\FileManager.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAQwBgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:34:34.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T13:34:34.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SmtpSender.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\SmtpSender.cs",
               "RelativeDocumentMoniker": "SmtpSender.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\Core\\SmtpSender.cs",
               "RelativeToolTip": "SmtpSender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:06:03.828Z"
+              "WhenOpened": "2024-12-04T13:06:03.828Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -103,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProfileCondition.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Core\\ProfileCondition.cs",
               "RelativeDocumentMoniker": "ProfileCondition.cs",
@@ -111,8 +111,7 @@
               "RelativeToolTip": "ProfileCondition.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAAAgwIkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T18:04:47.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T18:04:47.718Z"
             }
           ]
         }

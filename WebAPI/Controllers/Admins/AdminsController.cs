@@ -1,24 +1,14 @@
-using System;
-using Serilog;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
-using Managment;
-using Models.AdminPanel;
-using database.context;
 
 namespace WebAPI.Controllers.Admins
 {
-    [Route("v1.0/[controller]/[action]/")]
-    [ApiController]
-    public class AdminsController : ControllerResponseHandler
+    public class AdminsController : ControllerResponseBase
     {
-        public Admins admins;
-        public AdminsController(Context context)
+        private IAdminManager AdminManager admins;
+        public AdminsController()
         {
-            this.context = context;
-            admins = new Admins(log, context);
         }
         [HttpPost]
         [ActionName("SignIn")]
@@ -34,7 +24,7 @@ namespace WebAPI.Controllers.Admins
         }
         [HttpPost]
         [Authorize]
-        [ActionName("CreateAdmin")]
+        [ActionName("Create")]
         public ActionResult<dynamic> CreateAdmin(AdminCache cache)
         {
             Admin admin;
@@ -85,7 +75,7 @@ namespace WebAPI.Controllers.Admins
             string message = null;
             if (admins.RecoveryPassword(cache.admin_email, ref message))
             {
-                return new
+                return new 
                 {
                     success = true,
                     message = "Every thing is fine. Check your email to get recovery code."

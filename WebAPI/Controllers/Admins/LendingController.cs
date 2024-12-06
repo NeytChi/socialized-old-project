@@ -10,13 +10,13 @@ namespace WebAPI.Controllers.Admins
 {
     [Route("v1.0/[controller]/[action]/")]
     [ApiController]
-    public class LendingController : ControllerResponseHandler
+    public class LendingController : ControllerResponseBase
     {
         ProfileCondition val;
 
         public LendingController()
         {
-            val = new ProfileCondition(log);
+            val = new ProfileCondition(Logger);
         }
         [HttpPost]
         [ActionName("followto")]
@@ -45,7 +45,7 @@ namespace WebAPI.Controllers.Admins
             Follower follower = context.Followers.Where(f => f.followerEmail == email).FirstOrDefault();
             if (follower != null)
             {
-                log.Information("Follower with this email already exist");
+                Logger.Information("Follower with this email already exist");
                 message = "exist_email";
             }
             return follower;

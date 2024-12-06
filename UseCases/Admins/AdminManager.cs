@@ -2,80 +2,56 @@ using Domain.Admins;
 using Core;
 using Serilog;
 using System.Web;
+using UseCases.AutoPosts.Commands;
+using UseCases.AutoPosts;
 
 namespace UseCases.Admins
 {
-    public class AdminManager
+    public interface IAdminManager
+    {
+        Admin Create(CreateAdminCommand command);
+    }
+    public class AdminManager : BaseManager, IAdminManager
     {
         private IAdminRepository adminRepository;
-        private ProfileCondition ProfileCondition { get; set; }
-        private SmtpSender SmtpSender { get;set; }
-        private readonly ILogger Logger;
+        private IAdminEmailManager AdminEmailManager;
+        private ProfileCondition ProfileCondition = new ProfileCondition();
         
-        public AdminManager(ILogger logger, MailSettings mailSettings)
+        public AdminManager(ILogger logger, IAdminEmailManager adminEmailManager) : base(logger)
         {
-            Logger = logger;
-            ProfileCondition = new ProfileCondition(logger);
-            SmtpSender = new SmtpSender(logger, mailSettings);
+            AdminEmailManager = adminEmailManager;
         }
-        public Admin CreateAdmin(AdminCache cache, ref string message)
+        public Admin Create(CreateAdminCommand command)
         {
-            if (CheckAdminInfo(cache.admin_email, cache.admin_fullname, ref message)) 
+            if (adminRepository.GetByEmail(command.Email) != null)
             {
-                var admin = new Admin() 
-                {
-                    adminEmail = cache.admin_email,
-                    adminFullname = HttpUtility.UrlDecode(cache.admin_fullname),
-                    adminPassword = ProfileCondition.HashPassword(cache.admin_password),
-                    adminRole = "default",
-                    passwordToken = ProfileCondition.CreateHash(10),
-                    createdAt = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
-                    lastLoginAt = 0,
-                };
-                
-                SetupPasswordMail(admin.passwordToken, admin.adminEmail);
-                Logger.Information("Add new admin, id ->" + admin.adminId);
-                return admin;
+                throw new DuplicateWaitObjectException($"Admin with email={command.Email} is already exist.");
             }
-            return null;
-        }
-        public bool CheckAdminInfo(string email, string fullname, ref string message)
-        {
-            if (ProfileCondition.EmailIsTrue(email, ref message))
+            var admin = new Admin
             {
-                if (ProfileCondition.UserNameIsTrue(HttpUtility.UrlDecode(fullname), ref message))
-                {
-                    if (GetNonDelete(email, ref message) == null)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        message = "Admin with this email is exist";
-                    }
-                }
-            }
-            return false;
+                Email = command.Email,
+                FirstName = HttpUtility.UrlDecode(command.FirstName),
+                LastName = HttpUtility.UrlDecode(command.LastName),
+                Password = ProfileCondition.HashPassword(command.Password),
+                Role = "default",
+                TokenForStart = ProfileCondition.CreateHash(10),
+                CreatedAt = DateTime.UtcNow,
+                LastLoginAt = DateTime.UtcNow
+            };
+            AdminEmailManager.SetupPassword(admin.TokenForStart, admin.Email);
+            Logger.Information($"Був створений новий адмін, id={admin.Id}.");
+            return admin;
         }
-        public bool SetupPassword(AdminCache cache, ref string message)
+
+        public bool SetupPassword(SetupPasswordCommand command)
         {
-            Admin admin = GetNonDeleteByToken(cache.password_token, ref message);
+            var admin = GetNonDeleteByToken(cache.password_token, ref message);
             if (admin != null) 
             {
-                if (cache.admin_password.Equals(cache.confirm_password))
-                {
-                    if (ProfileCondition.PasswordIsTrue(cache.admin_password, ref message))
-                    {
-                        admin.adminPassword = ProfileCondition.HashPassword(cache.admin_password);
-                        admin.passwordToken = null;
-                        adminRepository.Update(admin);
-                        return true;
-                    }
-                }
-                else
-                {
-                    message = "Passwords are not match to each other.";
-                }
+                admin.Password = ProfileCondition.HashPassword(command.Password);
+                admin.TokenForStart = null;
+                adminRepository.Update(admin);
+                return true;
             }
             return false;
         }
@@ -96,17 +72,13 @@ namespace UseCases.Admins
             }
             return null;
         }
-        public void SetupPasswordMail(string passwordToken, string adminEmail)
+        public bool Delete(DeleteAdminCommand command)
         {
-            SmtpSender.SendEmail(adminEmail, "Setup password", passwordToken);
-            Logger.Information("Send mail message to set up password.");
-        }
-        public bool DeleteAdmin(AdminCache cache, ref string message)
-        {
-            Admin admin = GetNonDelete(cache.admin_id, ref message);
+            Admin admin = GetNonDelete(command.AdminId, ref message);
             if (admin != null) 
             {
-                admin.deleted = true;
+                admin.IsDeleted = true;
+                admin.DeletedAt = DateTime.UtcNow;
                 adminRepository.Update(admin);
                 Logger.Information("Delete admin, id -> " + admin.adminId);
                 return true;
@@ -135,13 +107,6 @@ namespace UseCases.Admins
                 message = "Unknow admin id.";
             return admin;
         }
-        public Admin GetNonDelete(string adminEmail, ref string message)
-        {
-            Admin admin = adminRepository.GetByEmail(adminEmail);
-            if (admin == null)
-                message = "Unknow admin email.";
-            return admin;
-        }
         public Admin GetNonDeleteByToken(string passwordToken, ref string message)
         {
             Admin admin = adminRepository.GetByPasswordToken(passwordToken);
@@ -154,45 +119,25 @@ namespace UseCases.Admins
             var admin = GetNonDelete(adminEmail, ref message);
             if (admin != null) 
             {
-                admin.recoveryCode = ProfileCondition.CreateCode(6);
+                admin.RecoveryCode = ProfileCondition.CreateCode(6);
                 adminRepository.Update(admin);
-                RecoveryPasswordMail(admin.recoveryCode.Value, adminEmail);
-                Logger.Information("Create code for admin recovery password, id -> " + admin.adminId);
+                AdminEmailManager.RecoveryPassword(admin.RecoveryCode.Value, admin.Email);
+                Logger.Information($"Був створений новий код відновлення паролю адміна, id={admin.Id}.");
                 return true;
             }
             return false;
         }
-        public void RecoveryPasswordMail(int code, string adminEmail)
+        public void ChangePassword(ChangePasswordCommand command) 
         {
-            SmtpSender.SendEmail(adminEmail, "Recovery password", "Code: " + code);
-            Logger.Information("Send mail message to recovery password.");
-        }
-        public bool ChangePassword(AdminCache cache, ref string message) 
-        {
-            var admin = adminRepository.GetByRecoveryCode(cache.recovery_code);
-            if (admin != null)
+            var admin = adminRepository.GetByRecoveryCode(command.RecoveryCode);
+            if (admin == null)
             {
-                if (cache.admin_password.Equals(cache.confirm_password))
-                {
-                    if (ProfileCondition.PasswordIsTrue(cache.admin_password, ref message))
-                    {
-                        admin.adminPassword = ProfileCondition.HashPassword(cache.admin_password);
-                        admin.recoveryCode = null;
-                        adminRepository.Update(admin);
-                        Logger.Information("Change password for admin, id -> " + admin.adminId);
-                        return true;
-                    }
-                }
-                else
-                {
-                    message = "Passwords aren't equal to each other.";
-                }
-            }
-            else
-            {
-                message = "Incorrect code entered";
-            }
-            return false;
+                throw new ArgumentNullException("Сервер не визначив адміна по коду. Неправильний код.");
+            }    
+            admin.Password = ProfileCondition.HashPassword(command.Password);
+            admin.RecoveryCode = null;
+            adminRepository.Update(admin);
+            Logger.Information($"Був змінений пароль у адміна, id={admin.Id}.");
         }
     }
 }

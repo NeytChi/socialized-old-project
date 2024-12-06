@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS Projects\\Socialized\\Socialized\\WebApi\\WebAPI\\WebAPI.csproj": {}
+    "D:\\VS Projects\\Socialized\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\VS Projects\\Socialized\\Socialized\\WebApi\\WebAPI\\WebAPI.csproj": {
+    "D:\\VS Projects\\Socialized\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS Projects\\Socialized\\Socialized\\WebApi\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "D:\\VS Projects\\Socialized\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\WebApi\\WebAPI\\WebAPI.csproj",
+        "projectPath": "D:\\VS Projects\\Socialized\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Projects\\Socialized\\Socialized\\WebApi\\WebAPI\\obj\\",
+        "outputPath": "D:\\VS Projects\\Socialized\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio SDK\\NuGetPackages"
@@ -53,6 +53,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.21.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

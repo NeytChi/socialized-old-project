@@ -11,19 +11,12 @@ using Models.AutoPosting;
 
 namespace WebAPI.Controllers
 {
-    /// <summary>
-    /// This class is needed to provide an API for AutoPosting.
-    /// </summary>
     [Route("v1.0/[controller]/[action]/")]
     [ApiController]
     public class AutoPostController : ControllerBase
     {
-        private readonly Context context;
         private AutoPostingManager manager;
         private PackageCondition access;
-        public Logger log = new LoggerConfiguration()
-            .WriteTo.File("./logs/log", rollingInterval: RollingInterval.Day)
-            .CreateLogger();
 
         public AutoPostController(Context context)
         {

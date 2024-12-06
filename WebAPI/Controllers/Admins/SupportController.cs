@@ -12,7 +12,7 @@ namespace WebAPI.Controllers.Admins
 {
     [Route("v1.0/[controller]/[action]/")]
     [ApiController]
-    public class SupportController : ControllerResponseHandler
+    public class SupportController : ControllerResponseBase
     {
         public Support support;
 

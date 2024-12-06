@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "SUf3lYaXLMQ=",
+  "dgSpecHash": "8a3yUWqWPaY=",
   "success": true,
-  "projectFilePath": "D:\\VS Projects\\Socialized\\Socialized\\WebApi\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "D:\\VS Projects\\Socialized\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\neyto\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\neyto\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\neyto\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512",
+    "C:\\Users\\neyto\\.nuget\\packages\\serilog\\4.1.0\\serilog.4.1.0.nupkg.sha512",
     "C:\\Users\\neyto\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\neyto\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\neyto\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
