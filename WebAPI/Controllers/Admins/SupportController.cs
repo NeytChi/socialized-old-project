@@ -1,17 +1,8 @@
-using System;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-
-using Managment;
-using database.context;
-using Models.AdminPanel;
 
 namespace WebAPI.Controllers.Admins
 {
-    [Route("v1.0/[controller]/[action]/")]
-    [ApiController]
     public class SupportController : ControllerResponseBase
     {
         public Support support;
@@ -60,9 +51,7 @@ namespace WebAPI.Controllers.Admins
             [FromQuery] int since, [FromQuery] int count)
         {
             string message = string.Empty;
-            string userToken = HttpContext?.Request.Headers.Where(h
-                => h.Key == "Authorization").Select(h => h.Value)
-                .FirstOrDefault();
+            
 
             if (support.GetNonDeleteUser(userToken, ref message) != null)
             {

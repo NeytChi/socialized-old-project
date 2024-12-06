@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\WebAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized\\webapi\\controllers\\admins\\supportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:controllers\\admins\\supportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized\\webapi\\controllers\\admins\\controllerresponsebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:controllers\\admins\\controllerresponsebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ControllerResponseBase.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\Admins\\ControllerResponseBase.cs",
+              "RelativeDocumentMoniker": "Controllers\\Admins\\ControllerResponseBase.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\Admins\\ControllerResponseBase.cs",
+              "RelativeToolTip": "Controllers\\Admins\\ControllerResponseBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T11:55:14.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SupportController.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\Admins\\SupportController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Admins\\SupportController.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\Admins\\SupportController.cs",
+              "RelativeToolTip": "Controllers\\Admins\\SupportController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T11:54:31.312Z",
+              "EditorCaption": ""
             }
           ]
         }

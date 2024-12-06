@@ -34,8 +34,8 @@
               "Title": "AdminEmailManager.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AdminEmailManager.cs",
               "RelativeDocumentMoniker": "AutoPosts\\AdminEmailManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AdminEmailManager.cs*",
-              "RelativeToolTip": "AutoPosts\\AdminEmailManager.cs*",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AdminEmailManager.cs",
+              "RelativeToolTip": "AutoPosts\\AdminEmailManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T12:33:33.871Z",
@@ -51,8 +51,7 @@
               "RelativeToolTip": "AutoPosts\\Commands\\SetupPasswordCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T12:30:10.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T12:30:10.366Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Admins\\AdminManager.cs",
               "ViewState": "AgIAAGsAAAAAAAAAAAAQwIEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:04:45.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T13:04:45.386Z"
             }
           ]
         }
