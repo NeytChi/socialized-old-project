@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using WebAPI.Responses;
 
 
 namespace WebAPI.Controllers.Admins
@@ -18,7 +19,7 @@ namespace WebAPI.Controllers.Admins
             string authToken = admins.AuthToken(cache, ref message);
             if (!string.IsNullOrEmpty(authToken))
             {
-                return new { success = true, data = new { auth_token = authToken } };
+                return new SuccessResponse(true, new { auth_token = authToken });
             }
             return StatusCode500(message);
         }

@@ -1,4 +1,4 @@
-﻿namespace UseCases.AutoPosts.Commands
+﻿namespace UseCases.Admins.Commands
 {
     public class CreateAdminCommand
     {

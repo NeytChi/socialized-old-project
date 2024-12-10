@@ -2,8 +2,10 @@ using Domain.Admins;
 using Core;
 using Serilog;
 using System.Web;
-using UseCases.AutoPosts.Commands;
 using UseCases.AutoPosts;
+using UseCases.Exceptions;
+using UseCases.Admins.Commands;
+using Domain.Users;
 
 namespace UseCases.Admins
 {
@@ -42,90 +44,66 @@ namespace UseCases.Admins
             Logger.Information($"Був створений новий адмін, id={admin.Id}.");
             return admin;
         }
-
-        public bool SetupPassword(SetupPasswordCommand command)
+        public void SetupPassword(SetupPasswordCommand command)
         {
-            var admin = GetNonDeleteByToken(cache.password_token, ref message);
-            if (admin != null) 
+            var admin = adminRepository.GetByPasswordToken(command.Password);
+            if (admin == null)
             {
-                admin.Password = ProfileCondition.HashPassword(command.Password);
-                admin.TokenForStart = null;
-                adminRepository.Update(admin);
-                return true;
-            }
-            return false;
+                throw new NotFoundException("Не було знайдено адміна по токену для зміни паролю.");
+            }   
+            admin.Password = ProfileCondition.HashPassword(command.Password);
+            admin.TokenForStart = null;
+            adminRepository.Update(admin);
+            Logger.Information($"Був налаштован пароль для адміна id={admin.Id}.");
         }
-        public Admin AuthToken(AdminCache cache, ref string message)
+        public Admin Authentication(AuthenticationCommand command, ref string message)
         {
-            var admin = GetNonDelete(cache.admin_email, ref message);
-            if (admin != null) 
+            var admin = adminRepository.GetByEmail(command.Email);
+            if (admin == null)
             {
-                if (ProfileCondition.VerifyHashedPassword(admin.adminPassword, cache.admin_password))
-                {
-                    return admin;
-                    // return Token(admin);
-                }
-                else
-                {
-                    message = "Wrong password.";
-                }
+                throw new NotFoundException("Не було знайдено адміна по email-адресі.");
             }
-            return null;
-        }
-        public bool Delete(DeleteAdminCommand command)
-        {
-            Admin admin = GetNonDelete(command.AdminId, ref message);
-            if (admin != null) 
+            if (!ProfileCondition.VerifyHashedPassword(admin.Password, command.Password))
             {
-                admin.IsDeleted = true;
-                admin.DeletedAt = DateTime.UtcNow;
-                adminRepository.Update(admin);
-                Logger.Information("Delete admin, id -> " + admin.adminId);
-                return true;
+                throw new ValidationException("Невірний пароль.");
             }
-            return false;
+            Logger.Information($"Був аутентифікований адмін id={admin.Id}.");
+            return admin;
+            // return Token(admin);
         }
-        public dynamic[] GetNonDeleteAdmins(int adminId, int since, int count)
+        public void Delete(DeleteAdminCommand command)
         {
-            Logger.Information("Get admins, since ->" + since + " count ->" + count + ", admin id ->" + adminId);
+            var admin = adminRepository.GetByAdminId(command.AdminId);
+            if (admin == null)
+            {
+                throw new NotFoundException("Не було знайдено адміна по id.");
+            }
+            admin.IsDeleted = true;
+            admin.DeletedAt = DateTime.UtcNow;
+            adminRepository.Update(admin);
+            Logger.Information($"Адмін був видалений, id={admin.Id}.");
+        }
+        public Admin[] GetNonDeleteAdmins(int adminId, int since, int count)
+        {
+            Logger.Information($"Отримано список адмінів, з={since} по={count} адміном id={adminId}.");
             return adminRepository.GetActiveAdmins(adminId, since, count);
         }
-        public dynamic[] GetFollowers(int since, int count)
+        public User[] GetNonDeleteUsers(int since, int count)
         {
-            Logger.Information("Get followers, since -> " + since + " count -> " + count);
+            Logger.Information($"Отримано список користувачів, з={since} по={count}.");
             return adminRepository.GetFollowers(since, count);
         }
-        public dynamic[] GetNonDeleteUsers(int since, int count)
+        public void CreateCodeForRecoveryPassword(string adminEmail, ref string message)
         {
-            Logger.Information($"Get users, since -> {since} count -> {count}");
-            return adminRepository.GetFollowers(since, count);
-        }
-        public Admin GetNonDelete(int adminId, ref string message)
-        {
-            Admin admin = adminRepository.GetByAdminId(adminId);
+            var admin = adminRepository.GetByEmail(adminEmail);
             if (admin == null)
-                message = "Unknow admin id.";
-            return admin;
-        }
-        public Admin GetNonDeleteByToken(string passwordToken, ref string message)
-        {
-            Admin admin = adminRepository.GetByPasswordToken(passwordToken);
-            if (admin == null)
-                message = "Unknow admin password token.";
-            return admin;
-        }
-        public bool RecoveryPassword(string adminEmail, ref string message)
-        {
-            var admin = GetNonDelete(adminEmail, ref message);
-            if (admin != null) 
             {
-                admin.RecoveryCode = ProfileCondition.CreateCode(6);
-                adminRepository.Update(admin);
-                AdminEmailManager.RecoveryPassword(admin.RecoveryCode.Value, admin.Email);
-                Logger.Information($"Був створений новий код відновлення паролю адміна, id={admin.Id}.");
-                return true;
+                throw new NotFoundException("Не було знайдено адміна по email-адресі.");
             }
-            return false;
+            admin.RecoveryCode = ProfileCondition.CreateCode(6);
+            adminRepository.Update(admin);
+            AdminEmailManager.RecoveryPassword(admin.RecoveryCode.Value, admin.Email);
+            Logger.Information($"Був створений новий код відновлення паролю адміна, id={admin.Id}.");   
         }
         public void ChangePassword(ChangePasswordCommand command) 
         {

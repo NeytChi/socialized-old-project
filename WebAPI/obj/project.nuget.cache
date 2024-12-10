@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "8a3yUWqWPaY=",
-  "success": true,
+  "dgSpecHash": "JYPncXwR0sU=",
+  "success": false,
   "projectFilePath": "D:\\VS Projects\\Socialized\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\neyto\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -13,5 +13,15 @@
     "C:\\Users\\neyto\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "C:\\Users\\neyto\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

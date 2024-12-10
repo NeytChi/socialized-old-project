@@ -2,11 +2,11 @@ using Microsoft.Extensions.Primitives;
 
 namespace WebAPI.Middleware
 {
-    public class RequestWatchingMiddleware
+    public class RequestViewerMiddleware
     {
         private readonly RequestDelegate next;
 
-        public RequestWatchingMiddleware(RequestDelegate next)
+        public RequestViewerMiddleware(RequestDelegate next)
         {
             this.next = next;
         }
