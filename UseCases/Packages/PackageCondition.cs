@@ -39,7 +39,7 @@ namespace UseCases.Packages
         }
         public void SetPackage(int userId, int packageId, int monthCount)
         {
-            var access = context.ServiceAccess.Where(sa => sa.userId == userId).FirstOrDefault()
+            var access = context.ServiceAccess.Where(sa => sa.userId == userId).FirstOrDefault();
 
             if (access == null)
             {

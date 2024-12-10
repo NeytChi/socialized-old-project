@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\UseCases\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\appeals\\appealmessagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\appeals\\appealmessagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\appeals\\createappealmessagebyusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\appeals\\createappealmessagebyusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\appeals\\appealmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\appeals\\appealmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\appeals\\createappealmessagebyadmincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\appeals\\createappealmessagebyadmincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\appeals\\createappealmessagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\appeals\\createappealmessagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\packages\\packagecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:packages\\packagecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +46,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ValidationException.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Exceptions\\ValidationException.cs",
-              "RelativeDocumentMoniker": "Exceptions\\ValidationException.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Exceptions\\ValidationException.cs",
-              "RelativeToolTip": "Exceptions\\ValidationException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "CreateAppealMessageCommand.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\CreateAppealMessageCommand.cs",
+              "RelativeDocumentMoniker": "Admins\\Appeals\\CreateAppealMessageCommand.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\CreateAppealMessageCommand.cs",
+              "RelativeToolTip": "Admins\\Appeals\\CreateAppealMessageCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T21:07:33.898Z",
+              "WhenOpened": "2024-12-10T22:16:16.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateAppealMessageByAdminCommand.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\CreateAppealMessageByAdminCommand.cs",
+              "RelativeDocumentMoniker": "Admins\\Appeals\\CreateAppealMessageByAdminCommand.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\CreateAppealMessageByAdminCommand.cs",
+              "RelativeToolTip": "Admins\\Appeals\\CreateAppealMessageByAdminCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T22:08:33.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CreateAppealMessageByUserCommand.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\CreateAppealMessageByUserCommand.cs",
+              "RelativeDocumentMoniker": "Admins\\Appeals\\CreateAppealMessageByUserCommand.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\CreateAppealMessageByUserCommand.cs",
+              "RelativeToolTip": "Admins\\Appeals\\CreateAppealMessageByUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T22:08:14.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppealMessageManager.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\AppealMessageManager.cs",
+              "RelativeDocumentMoniker": "Admins\\Appeals\\AppealMessageManager.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\AppealMessageManager.cs",
+              "RelativeToolTip": "Admins\\Appeals\\AppealMessageManager.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAUwCcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T21:59:42.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppealManager.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\AppealManager.cs",
+              "RelativeDocumentMoniker": "Admins\\Appeals\\AppealManager.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\AppealManager.cs",
+              "RelativeToolTip": "Admins\\Appeals\\AppealManager.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAEkAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T21:34:37.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PackageCondition.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\PackageCondition.cs",
+              "RelativeDocumentMoniker": "Packages\\PackageCondition.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\PackageCondition.cs",
+              "RelativeToolTip": "Packages\\PackageCondition.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAAACkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T21:33:24.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AdminManager.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\AdminManager.cs",
               "RelativeDocumentMoniker": "Admins\\AdminManager.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\AdminManager.cs",
               "RelativeToolTip": "Admins\\AdminManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:04:45.386Z"
+              "WhenOpened": "2024-12-04T13:04:45.386Z",
+              "EditorCaption": ""
             }
           ]
         }

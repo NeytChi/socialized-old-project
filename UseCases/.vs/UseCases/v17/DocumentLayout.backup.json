@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\UseCases\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:exceptions\\validationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,34 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ValidationException.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Exceptions\\ValidationException.cs",
-              "RelativeDocumentMoniker": "Exceptions\\ValidationException.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Exceptions\\ValidationException.cs",
-              "RelativeToolTip": "Exceptions\\ValidationException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T21:07:33.898Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AdminManager.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\AdminManager.cs",
               "RelativeDocumentMoniker": "Admins\\AdminManager.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\AdminManager.cs",
               "RelativeToolTip": "Admins\\AdminManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T13:04:45.386Z",
               "EditorCaption": ""

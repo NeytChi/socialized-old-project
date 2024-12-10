@@ -8,7 +8,7 @@ namespace Domain.Admins
         {
             Messages = new HashSet<AppealMessage>();
         }
-        public int UserId { get; set; }
+        public long UserId { get; set; }
         public string Subject { get; set; }
         public int State { get; set; }
         public DateTimeOffset LastActivity { get; set; }

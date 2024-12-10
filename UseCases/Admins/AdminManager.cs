@@ -12,6 +12,13 @@ namespace UseCases.Admins
     public interface IAdminManager
     {
         Admin Create(CreateAdminCommand command);
+        Admin Authentication(AuthenticationCommand command);
+        void SetupPassword(SetupPasswordCommand command);
+        void Delete(DeleteAdminCommand command);
+        ICollection<Admin> GetAdmins(int adminId, int since, int count);
+        ICollection<User> GetUsers(int since, int count);
+        void CreateCodeForRecoveryPassword(string adminEmail);
+        void ChangePassword(ChangePasswordCommand command);
     }
     public class AdminManager : BaseManager, IAdminManager
     {
@@ -56,7 +63,7 @@ namespace UseCases.Admins
             adminRepository.Update(admin);
             Logger.Information($"Був налаштован пароль для адміна id={admin.Id}.");
         }
-        public Admin Authentication(AuthenticationCommand command, ref string message)
+        public Admin Authentication(AuthenticationCommand command)
         {
             var admin = adminRepository.GetByEmail(command.Email);
             if (admin == null)
@@ -83,17 +90,17 @@ namespace UseCases.Admins
             adminRepository.Update(admin);
             Logger.Information($"Адмін був видалений, id={admin.Id}.");
         }
-        public Admin[] GetNonDeleteAdmins(int adminId, int since, int count)
+        public ICollection<Admin> GetAdmins(int adminId, int since, int count)
         {
             Logger.Information($"Отримано список адмінів, з={since} по={count} адміном id={adminId}.");
             return adminRepository.GetActiveAdmins(adminId, since, count);
         }
-        public User[] GetNonDeleteUsers(int since, int count)
+        public ICollection<User> GetUsers(int since, int count)
         {
             Logger.Information($"Отримано список користувачів, з={since} по={count}.");
             return adminRepository.GetFollowers(since, count);
         }
-        public void CreateCodeForRecoveryPassword(string adminEmail, ref string message)
+        public void CreateCodeForRecoveryPassword(string adminEmail)
         {
             var admin = adminRepository.GetByEmail(adminEmail);
             if (admin == null)
