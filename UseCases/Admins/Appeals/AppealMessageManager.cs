@@ -35,12 +35,11 @@ namespace UseCases.Admins.Appeals
                 throw new NotFoundException("Звернення не було визначенно сервером по id.");
             }
 
-            if (AppealMessageIsTrue(cache, ref message))
-            {
+            
                 var appealMessage = new AppealMessage()
                 {
                     AppealId = appeal.Id,
-                    adminId = cache.admin_id,
+                    dminId = cache.admin_id,
                     messageText = string.IsNullOrEmpty(cache.appeal_message) ? "" : HttpUtility.UrlDecode(cache.appeal_message),
                     createdAt = DateTimeOffset.UtcNow,
                 };
@@ -48,8 +47,8 @@ namespace UseCases.Admins.Appeals
                 // appealMessage.files = AddFilesToMessage(cache.files, appealMessage.messageId);
                 Logger.Information("Add new appeal message, id -> " + appealMessage.appealId);
                 return appealMessage;
-            }
-            return null;
+            
+            
         }
         public dynamic[] GetAppealMessages(int appealId, int since, int count)
         {

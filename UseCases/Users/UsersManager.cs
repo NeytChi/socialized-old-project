@@ -6,16 +6,20 @@ using Domain.Users;
 using Domain.Admins;
 using Domain.SessionComponents;
 using UseCases.Packages;
+using UseCases.Users.Commands;
+using UseCases.Exceptions;
+using Amazon.Runtime.Internal.Util;
+using Domain.Packages;
 
 namespace UseCases.Users
 {
     public class UsersManager
     {
         public ILogger Logger;
-        public ProfileCondition ProfileCondition;
+        public ProfileCondition ProfileCondition = new ProfileCondition();
         public PackageCondition PackageCondition;
         private EmailMessanger EmailMessanger;
-        private IUserRepository Repository;
+        private IUserRepository UserRepository;
         private EmailFollowerManager EmailFollowerManager;
 
         public UsersManager(ILogger logger,
@@ -24,94 +28,52 @@ namespace UseCases.Users
             IEmailFollowerRepository followerRepository)
         {
             Logger = logger;
-            Repository = repository;
-            ProfileCondition = new ProfileCondition(logger);
+            UserRepository = repository;
             EmailMessanger = new EmailMessanger(new SmtpSender(logger, mailSettings));
             PackageCondition = new PackageCondition(context, logger);
             EmailFollowerManager = new EmailFollowerManager(followerRepository, logger);
         }
-        public bool RegistrationUser(UserCache cache, ref string message)
+        public void Create(CreateUserCommand command)
         {
-            if (!ProfileCondition.EmailIsTrue(cache.user_email, ref message))
+            var user = UserRepository.GetByEmail(command.Email);
+            if (user != null)
             {
-                return false;
+                if (user.IsDeleted)
+                {
+                    user.IsDeleted = false;
+                    user.TokenForUse = Guid.NewGuid().ToString();
+                    UserRepository.Update(user);
+                    Logger.Information($"Був востановлен видалений аккаунт, id={user.Id}.");
+                }
+                throw new NotFoundException("Користувач з таким email-адресом вже існує.");
             }
-            if (!ProfileCondition.PasswordIsTrue(cache.user_password, ref message))
+            user = new User
             {
-                return false;
-            }
-            if (!string.IsNullOrEmpty(cache.country))
-            {
-                Logger.Information("Country name is empty.");
-                message = "empty_country";
-                return false;
-            }
-            if (!(cache.country.Length > 0 && cache.country.Length < 100))
-            {
-                Logger.Information("Country name is required length from 0 to 100 symbols.");
-                message = "length_country";
-                return false;
-            }
-            if (!ProfileCondition.UserNameIsTrue(cache.user_fullname, ref message))
-            {
-                return false;
-            }
-            var currentUser = Repository.GetByEmail(cache.user_email);
-            if (currentUser == null)
-            {
-                currentUser = Registrate(cache);
-                EmailMessanger.SendConfirmEmail(currentUser.userEmail, cache.culture, currentUser.userHash);
-                return true;
-            }
-            return RestoreUser(currentUser, ref message);
-        }
-        public bool RestoreUser(User user, ref string message)
-        {
-            if (user.deleted)
-            {
-                user.deleted = false;
-                user.userToken = ProfileCondition.CreateHash(40);
-                Repository.Update(user);
-                Logger.Information("User account was restored, id -> " + user.userId);
-                return true;
-            }
-            else
-            {
-                message = "exist_email";
-            }
-            Logger.Warning("This email already exists.");
-            return false;
-        }
-        public User Registrate(UserCache cache)
-        {
-            var user = new User
-            {
-                userEmail = cache.user_email,
-                userFullName = HttpUtility.UrlDecode(cache.user_fullname),
-                userPassword = ProfileCondition.HashPassword(cache.user_password),
-                userHash = ProfileCondition.CreateHash(100),
-                createdAt = DateTimeOffset.Now.ToUnixTimeSeconds(),
-                lastLoginAt = DateTimeOffset.Now.ToUnixTimeSeconds(),
-                userToken = ProfileCondition.CreateHash(40),
+                Email = command.Email,
+                FirstName = HttpUtility.UrlDecode(command.FirstName),
+                LastName = HttpUtility.UrlDecode(command.LastName),
+                Password = ProfileCondition.HashPassword(command.Password),
+                HashForActivate = ProfileCondition.CreateHash(100),
+                CreatedAt = DateTime.UtcNow,
+                LastLoginAt = DateTime.UtcNow,
+                TokenForUse = ProfileCondition.CreateHash(40),
                 profile = new Profile
                 {
-                    country = HttpUtility.UrlDecode(cache.country),
-                    timezone = cache.timezone_seconds
+                    CountryName = HttpUtility.UrlDecode(command.CountryName),
+                    TimeZone = command.TimeZone
                 },
                 access = new ServiceAccess()
-            };
-            Repository.Create(user);
-            PackageCondition.CreateFreeAccess(user.userId);
-            EmailFollowerManager.UpdateExistFollower(user.userEmail, user.userId);
-            Logger.Information("Registrate new user, id -> " + user.userId);
-            return user;
+            };            
+            UserRepository.Create(user);
+            PackageCondition.CreateFreeAccess(user.Id);
+            EmailMessanger.SendConfirmEmail(user.Email, command.Culture, user.HashForActivate);
+            Logger.Information($"Новий користувач був створений, id={user.Id}.");
         }
-        
         public User GetByHash(string userHash, ref string message)
         {
             if (userHash != null)
             {
-                var user = Repository.GetByHash(userHash, false, false);
+                var user = UserRepository.GetByHash(userHash, false, false);
                 if (user != null)
                 {
                     return user;
@@ -125,7 +87,7 @@ namespace UseCases.Users
         {
             if (email != null)
             {
-                var user = Repository.GetByEmail(email, false);
+                var user = UserRepository.GetByEmail(email, false);
                 if (user != null)
                 {
                     return user;
@@ -139,7 +101,7 @@ namespace UseCases.Users
         {
             if (userToken != null)
             {
-                var user = Repository.GetByUserTokenNotDeleted(userToken);
+                var user = UserRepository.GetByUserTokenNotDeleted(userToken);
                 return user;
             }
             Logger.Information("Server can't define user by promotion token.");
@@ -150,7 +112,7 @@ namespace UseCases.Users
         {
             if (recoveryToken != null)
             {
-                var user = Repository.GetByRecoveryToken(recoveryToken, false);
+                var user = UserRepository.GetByRecoveryToken(recoveryToken, false);
                 return user;
             }
             Logger.Information("Server can't define user by promotion token.");
@@ -162,7 +124,7 @@ namespace UseCases.Users
         {
             if (userEmail != null)
             {
-                var user = Repository.GetByEmail(userEmail, false, true);
+                var user = UserRepository.GetByEmail(userEmail, false, true);
                 return user;
             }
             Logger.Information("Server can't define user by email.");
@@ -198,7 +160,7 @@ namespace UseCases.Users
                     if (ProfileCondition.VerifyHashedPassword(user.userPassword, cache.user_password))
                     {
                         user.lastLoginAt = DateTimeOffset.Now.ToUnixTimeSeconds();
-                        Repository.Update(user);
+                        UserRepository.Update(user);
                         Logger.Information("User login, id -> " + user.userId);
                         return user;
                     }
@@ -220,7 +182,7 @@ namespace UseCases.Users
             if (user != null)
             {
                 user.userToken = ProfileCondition.CreateHash(40);
-                Repository.Update(user);
+                UserRepository.Update(user);
                 Logger.Information("User log out, id -> " + user.userId);
                 return true;
             }
@@ -232,7 +194,7 @@ namespace UseCases.Users
             if (user != null)
             {
                 user.recoveryCode = ProfileCondition.CreateCode(6);
-                Repository.Update(user);
+                UserRepository.Update(user);
                 EmailMessanger.SendRecoveryEmail(user.userEmail, culture, (int)user.recoveryCode);
                 Logger.Information("Recovery password, id ->" + user.userId);
                 return true;
@@ -252,7 +214,7 @@ namespace UseCases.Users
                 {
                     user.recoveryToken = ProfileCondition.CreateHash(40);
                     user.recoveryCode = -1;
-                    Repository.Update(user);
+                    UserRepository.Update(user);
                     Logger.Information("Check user's recovery code, id ->" + user.userId);
                     return user.recoveryToken;
                 }
@@ -275,7 +237,7 @@ namespace UseCases.Users
                     {
                         user.userPassword = ProfileCondition.HashPassword(userPassword);
                         user.recoveryToken = "";
-                        Repository.Update(user);
+                        UserRepository.Update(user);
                         Logger.Information("Change user password, id ->" + user.userId);
                         return true;
                     }
@@ -299,7 +261,7 @@ namespace UseCases.Users
                     if (ProfileCondition.PasswordIsTrue(newPassword, ref message))
                     {
                         user.userPassword = ProfileCondition.HashPassword(newPassword);
-                        Repository.Update(user);
+                        UserRepository.Update(user);
                         Logger.Information("Change old password, id -> " + user.userId);
                         return true;
                     }
@@ -328,7 +290,7 @@ namespace UseCases.Users
             if (user != null)
             {
                 user.activate = true;
-                Repository.Update(user);
+                UserRepository.Update(user);
                 Logger.Information("Active user account, id ->" + user.userId);
                 EmailFollowerManager.BindWithFollower(user.userEmail, user.userId);
                 return true;
@@ -343,7 +305,7 @@ namespace UseCases.Users
             {
                 user.deleted = true;
                 user.userToken = null;
-                Repository.Update(user);
+                UserRepository.Update(user);
                 Logger.Information("Account was successfully deleted, id ->" + user.userId);
                 DeleteUsersData(user.userId);
                 return true;

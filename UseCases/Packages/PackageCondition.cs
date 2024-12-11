@@ -1,7 +1,7 @@
 using System;
 using Serilog;
 using Braintree;
-using Domain.SessionComponents;
+using Domain.Packages;
 
 namespace UseCases.Packages
 {
@@ -22,15 +22,15 @@ namespace UseCases.Packages
                 PrivateKey = treeSettings.PrivateKey
             };
         }
-        public ServiceAccess CreateFreeAccess(int userId)
+        public ServiceAccess CreateFreeAccess(long userId)
         {
             var package = packages[0];
             var access = new ServiceAccess()
             {
-                userId = userId,
-                available = true,
-                packageType = package.package_id,
-                paid = false
+                UserId = userId,
+                Available = true,
+                Type = package.package_id,
+                Paid = false
             };
             context.ServiceAccess.Add(access);
             context.SaveChanges();

@@ -2,7 +2,6 @@ using Domain.Admins;
 using Core;
 using Serilog;
 using System.Web;
-using UseCases.AutoPosts;
 using UseCases.Exceptions;
 using UseCases.Admins.Commands;
 using Domain.Users;

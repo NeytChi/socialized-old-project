@@ -1,4 +1,4 @@
-﻿namespace UseCases.AutoPosts
+﻿namespace UseCases.Admins
 {
     public interface IAdminEmailManager
     {

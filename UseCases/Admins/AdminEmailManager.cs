@@ -1,18 +1,18 @@
 ﻿using Core;
 using Serilog;
 
-namespace UseCases.AutoPosts
+namespace UseCases.Admins
 {
-    public class AdminEmailManager :  BaseManager, IAdminEmailManager
+    public class AdminEmailManager : BaseManager, IAdminEmailManager
     {
         private ISmtpSender SmtpSender;
-        public AdminEmailManager(ISmtpSender smtpSender, ILogger logger) : base (logger)
+        public AdminEmailManager(ISmtpSender smtpSender, ILogger logger) : base(logger)
         {
             SmtpSender = smtpSender;
         }
         public void SetupPassword(string tokenForStart, string email)
         {
-            SmtpSender.SendEmail(email, "Setup password", tokenForStart);
+            SmtpSender.SendEmail(email, "Створення паролю", tokenForStart);
             Logger.Information("Був відправлений URL для активації вашого адмін аккаунту.");
         }
         public void RecoveryPassword(int code, string email)

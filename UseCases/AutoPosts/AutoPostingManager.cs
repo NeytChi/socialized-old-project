@@ -4,9 +4,6 @@ using System.Text.RegularExpressions;
 using UseCases.Packages;
 using Domain.AutoPosting;
 using Microsoft.AspNetCore.Http;
-using Domain.SessionComponents;
-using Core;
-using FfmpegConverter;
 
 namespace UseCases.AutoPosts
 {
