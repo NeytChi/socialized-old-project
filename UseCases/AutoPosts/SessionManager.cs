@@ -1,12 +1,6 @@
-﻿using System.Text;
+﻿using Serilog;
+using System.Text;
 using System.Security.Cryptography;
-using Serilog;
-
-using socialized;
-using database.context;
-using Models.GettingSubscribes;
-using Models.SessionComponents;
-
 using InstagramApiSharp.API;
 using InstagramApiSharp.Classes;
 using InstagramApiSharp.API.Builder;

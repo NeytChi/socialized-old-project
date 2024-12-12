@@ -1,4 +1,5 @@
-﻿using Domain.Admins;
+﻿using Amazon.Runtime.Internal.Util;
+using Domain.Admins;
 using Microsoft.AspNetCore.Http;
 using Serilog;
 using System.Web;
@@ -6,6 +7,13 @@ using UseCases.Exceptions;
 
 namespace UseCases.Admins.Appeals
 {
+    public interface IAppealMessageManager
+    {
+        AppealMessage Create(CreateAppealMessageReplyCommand command);
+        AppealMessage Create(CreateAppealMessageByUserCommand command);
+
+
+    }
     public class AppealMessageManager : BaseManager
     {
         private IAppealRepository AppealRepository;
@@ -17,7 +25,7 @@ namespace UseCases.Admins.Appeals
             AppealManager = appealManager;
             AppealRepository = appealRepository;
         }
-        public AppealMessage Create(CreateAppealMessageByAdminCommand command)
+        public AppealMessage Create(CreateAppealMessageReplyCommand command)
         {
             var appeal = AppealRepository.GetBy(command.AppealId);
             if (appeal == null)
@@ -25,6 +33,14 @@ namespace UseCases.Admins.Appeals
                 throw new NotFoundException("Звернення не було визначенно сервером по id.");
             }
             AppealManager.UpdateAppealToAnswered(appeal);
+
+            var appealMessage = new AppealMessage()
+            {
+                AppealId = appeal.Id,
+                dminId = cache.admin_id,
+                messageText = string.IsNullOrEmpty(cache.appeal_message) ? "" : HttpUtility.UrlDecode(cache.appeal_message),
+                createdAt = DateTimeOffset.UtcNow,
+            };
 
         }
         public AppealMessage Create(CreateAppealMessageByUserCommand command)

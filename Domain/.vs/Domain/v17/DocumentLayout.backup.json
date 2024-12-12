@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\Domain\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\appealmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\appealmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\appealmessagereply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\appealmessagereply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\appealfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\appealfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\appeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\appeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,12 +33,51 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppealFile.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealFile.cs",
+              "RelativeDocumentMoniker": "Admins\\AppealFile.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealFile.cs",
+              "RelativeToolTip": "Admins\\AppealFile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T13:30:33.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppealMessage.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealMessage.cs",
+              "RelativeDocumentMoniker": "Admins\\AppealMessage.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealMessage.cs",
+              "RelativeToolTip": "Admins\\AppealMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T13:25:35.928Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "AppealMessageReply.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealMessageReply.cs",
+              "RelativeDocumentMoniker": "Admins\\AppealMessageReply.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealMessageReply.cs",
+              "RelativeToolTip": "Admins\\AppealMessageReply.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T13:30:16.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Appeal.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\Appeal.cs",
               "RelativeDocumentMoniker": "Admins\\Appeal.cs",
@@ -39,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Admin.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\Admin.cs",
               "RelativeDocumentMoniker": "Admins\\Admin.cs",
@@ -47,8 +98,7 @@
               "RelativeToolTip": "Admins\\Admin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T11:53:37.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T11:53:37.586Z"
             }
           ]
         }

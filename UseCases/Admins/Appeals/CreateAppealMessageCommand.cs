@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UseCases.Admins.Appeals
+﻿namespace UseCases.Admins.Appeals
 {
     public class CreateAppealMessageCommand
     {
         public long AppealId { get; set; }
-
+        public string Message { get; set; }
     }
 }
