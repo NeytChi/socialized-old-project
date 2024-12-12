@@ -1,34 +1,34 @@
 using Serilog;
 using System.Web;
 using Domain.Admins;
-using Microsoft.AspNetCore.Http;
 using Domain.AutoPosting;
 using Domain.Users;
 using UseCases.Exceptions;
+using UseCases.Appeals.Commands;
 
-namespace UseCases.Admins.Appeals
+namespace UseCases.Appeals
 {
     public interface IAppealManager
     {
         Appeal Create(CreateAppealCommand command);
         ICollection<Appeal> GetAppealsByUser(string userToken, int since, int count);
         ICollection<Appeal> GetAppealsByAdmin(int since, int count);
-        void UpdateAppealToClosed(int appealId);
-        void UpdateAppealToAnswered(Appeal appeal);
-        void UpdateAppealToRead(int appealId);
+        void UpdateAppealToClosed(long appealId);
+        void UpdateAppealToAnswered(long appealId);
+        void UpdateAppealToRead(long appealId);
     }
     public class AppealManager
     {
         private IAppealRepository AppealRepository;
         private IUserRepository UserRepository;
-        private IAppealMessageRepository AppealMessageRepository;
+        private Domain.Admins.IAppealMessageRepository AppealMessageRepository;
         private ICategoryRepository CategoryRepository;
         private ILogger Logger;
 
         public AppealManager(ILogger logger,
             IAppealRepository appealRepository,
             IUserRepository userRepository,
-            IAppealMessageRepository appealMessageRepository,
+            Domain.Admins.IAppealMessageRepository appealMessageRepository,
             ICategoryRepository categoryRepository)
         {
             Logger = logger;
@@ -66,7 +66,7 @@ namespace UseCases.Admins.Appeals
             Logger.Information($"Отримано список адміном, з={since} по={count}.");
             return AppealRepository.GetAppealsBy(since, count);
         }
-        public void UpdateAppealToClosed(int appealId)
+        public void UpdateAppealToClosed(long appealId)
         {
             var appeal = AppealRepository.GetBy(appealId);
             if (appeal == null)
@@ -77,8 +77,13 @@ namespace UseCases.Admins.Appeals
             AppealRepository.Update(appeal);
             Logger.Information($"Звернення було закрите, id={appeal.Id}.");
         }
-        public void UpdateAppealToAnswered(Appeal appeal)
+        public void UpdateAppealToAnswered(long appealId)
         {
+            var appeal = AppealRepository.GetBy(appealId);
+            if (appeal == null)
+            {
+                throw new NotFoundException("Звернення не було визначенно сервером по id.");
+            }
             if (appeal.State == 1 || appeal.State == 2)
             {
                 appeal.State = 3;

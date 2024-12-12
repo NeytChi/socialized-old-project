@@ -1,4 +1,4 @@
-﻿namespace UseCases.Admins.Appeals
+﻿namespace UseCases.Appeals.Replies.Commands
 {
     public class CreateAppealMessageReplyCommand
     {

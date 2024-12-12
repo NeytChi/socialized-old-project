@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\UseCases\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\appeals\\appealmessagereplymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\appeals\\appealmessagereplymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\appeals\\createappealmessagereplycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\appeals\\createappealmessagereplycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\admins\\appeals\\appealmessagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:admins\\appeals\\appealmessagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,47 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateAppealMessageReplyCommand.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\CreateAppealMessageReplyCommand.cs",
-              "RelativeDocumentMoniker": "Admins\\Appeals\\CreateAppealMessageReplyCommand.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\CreateAppealMessageReplyCommand.cs",
-              "RelativeToolTip": "Admins\\Appeals\\CreateAppealMessageReplyCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:42:38.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppealMessageReplyManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\AppealMessageReplyManager.cs",
-              "RelativeDocumentMoniker": "Admins\\Appeals\\AppealMessageReplyManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\AppealMessageReplyManager.cs",
-              "RelativeToolTip": "Admins\\Appeals\\AppealMessageReplyManager.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:34:21.016Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppealMessageManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\AppealMessageManager.cs",
-              "RelativeDocumentMoniker": "Admins\\Appeals\\AppealMessageManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Admins\\Appeals\\AppealMessageManager.cs",
-              "RelativeToolTip": "Admins\\Appeals\\AppealMessageManager.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:22:42.087Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
