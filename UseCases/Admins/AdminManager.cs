@@ -5,6 +5,7 @@ using System.Web;
 using UseCases.Exceptions;
 using UseCases.Admins.Commands;
 using Domain.Users;
+using UseCases.Appeals;
 
 namespace UseCases.Admins
 {

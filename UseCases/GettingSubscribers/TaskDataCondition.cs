@@ -9,17 +9,17 @@ using System.Collections.Generic;
 using InstagramApiSharp.API.Builder;
 using InstagramApiSharp.Classes.Models;
 using Domain.GettingSubscribes;
-using UseCases.AutoPosts;
+using UseCases.InstagramAccounts;
 
 namespace UseCases.Tasks
 {
     public class TaskDataCondition : BaseHandler, IHandlerGS
     {
         private InstagramApi api;
-        private SessionManager sessionManager;
+        private IGAccountManager sessionManager;
         private SessionStateHandler stateHandler;
         
-        public TaskDataCondition(Logger logger, SessionManager sessionManager, SessionStateHandler stateHandler) : base(logger)
+        public TaskDataCondition(Logger logger, IGAccountManager sessionManager, SessionStateHandler stateHandler) : base(logger)
         {
             this.sessionManager = sessionManager;
             this.api = InstagramApi.GetInstance();

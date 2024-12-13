@@ -11,11 +11,11 @@ namespace Infrastructure
         }
         public PostFile GetBy(long postId)
         {
-            return Context.PostFiles.Where(p => p.postId == postId).FirstOrDefault();
+            return Context.AutoPostFiles.Where(p => p.postId == postId).FirstOrDefault();
         }
         public PostFile GetBy(long fileId, long postId, bool fileDeleted = false)
         {
-            return Context.PostFiles.Where(f =>
+            return Context.AutoPostFiles.Where(f =>
                 f.fileId == fileId &&
                 f.postId == postId &&
                 f.fileDeleted == fileDeleted)
@@ -23,7 +23,7 @@ namespace Infrastructure
         }
         public ICollection<PostFile> GetBy(long postId, bool fileDeleted = false)
         {
-            return Context.PostFiles.Where(f =>
+            return Context.AutoPostFiles.Where(f =>
                 f.postId == postId &&
                 f.fileDeleted == fileDeleted)
                 .OrderBy(f => f.fileOrder).ToList();

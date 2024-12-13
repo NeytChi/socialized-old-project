@@ -13,23 +13,17 @@ namespace Infrastructure
             bool postExecuted = false,
             bool postDeleted = false)
         {
-            return Context.AutoPosts.Where(a =>
-                a.postExecuted == postExecuted &&
-                executeAt > a.executeAt &&
-                a.postDeleted == postDeleted
-                )
-                .OrderBy(a => a.executeAt)
-                .ToList();
+            return Context.AutoPosts.Where(a => a.Executed == postExecuted && executeAt > a.ExecuteAt && a.Deleted == postDeleted).OrderBy(a => a.ExecuteAt).ToList();
         }
         public AutoPost GetBy(string userToken, long postId, bool postDeleted = false)
         {
-            return (from p in Context.AutoPosts
-                    join s in Context.IGAccounts on p.sessionId equals s.accountId
-                    join u in Context.Users on s.userId equals u.userId
-                    where u.userToken == userToken
-                        && p.postId == postId
-                        && p.postDeleted == postDeleted
-                    select p).FirstOrDefault();
+            return (from autoPost in Context.AutoPosts
+                    join account in Context.IGAccounts on autoPost.AccountId equals account.Id
+                    join user in Context.Users on account.UserId equals user.Id
+                    where user.TokenForUse == userToken
+                        && autoPost.postId == postId
+                        && autoPost.postDeleted == postDeleted
+                    select autoPost).FirstOrDefault();
         }
         public AutoPost GetBy(string userToken, long postId, bool postDeleted, bool postAutoDeleted, bool postExecuted)
         {
@@ -48,7 +42,7 @@ namespace Infrastructure
             return (from p in Context.AutoPosts
                     join s in Context.IGAccounts on p.sessionId equals s.accountId
                     join u in Context.Users on s.userId equals u.userId
-                    join f in Context.PostFiles on p.postId equals f.postId into files
+                    join f in Context.AutoPostFiles on p.postId equals f.postId into files
                     where u.userToken == command.UserToken
                         && s.accountId == command.SessionId
                         && p.postExecuted == command.PostExecuted

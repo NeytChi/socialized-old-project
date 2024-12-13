@@ -216,26 +216,6 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
-      },
-      "Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Domain.dll": {}
-        }
-      },
-      "InstagramSessionApi/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/InstagramSessionApi.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/InstagramSessionApi.dll": {}
-        }
       }
     }
   },
@@ -606,22 +586,11 @@
         "system.diagnostics.diagnosticsource.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "Domain/1.0.0": {
-      "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
-    },
-    "InstagramSessionApi/1.0.0": {
-      "type": "project",
-      "path": "../../InstagramSessionApi/InstagramSessionApi.csproj",
-      "msbuildProject": "../../InstagramSessionApi/InstagramSessionApi.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Domain >= 1.0.0",
-      "InstagramSessionApi >= 1.0.0",
+      "D:\\VS Projects\\Socialized\\Domain\\Domain.csproj",
       "Microsoft.EntityFrameworkCore >= 9.0.0"
     ]
   },
@@ -632,11 +601,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VS Projects\\Socialized\\Socialized\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\VS Projects\\Socialized\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "D:\\VS Projects\\Socialized\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\neyto\\.nuget\\packages\\",
-      "outputPath": "D:\\VS Projects\\Socialized\\Socialized\\Infrastructure\\obj\\",
+      "outputPath": "D:\\VS Projects\\Socialized\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual Studio SDK\\NuGetPackages"
@@ -658,11 +627,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\VS Projects\\Socialized\\InstagramSessionApi\\InstagramSessionApi.csproj": {
-              "projectPath": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\InstagramSessionApi.csproj"
-            },
-            "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\VS Projects\\Socialized\\Socialized\\Domain\\Domain.csproj"
+            "D:\\VS Projects\\Socialized\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\VS Projects\\Socialized\\Domain\\Domain.csproj"
             }
           }
         }
@@ -706,5 +672,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\VS Projects\\Socialized\\Domain\\Domain.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\VS Projects\\Socialized\\Domain\\Domain.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

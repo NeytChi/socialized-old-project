@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\InstagramSessionApi\InstagramSessionApi.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

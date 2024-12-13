@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bs/HEYVaOVs=",
+  "success": true,
+  "projectFilePath": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\InstagramSessionApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\neyto\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\neyto\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

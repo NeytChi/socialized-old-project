@@ -6,7 +6,7 @@ namespace Domain.Packages
     {
         public long UserId { get; set; }
         public bool Available { get; set; }
-        public int Type { get; set; }
+        public long Type { get; set; }
         public bool Paid { get; set; }
         public DateTime PaidAt { get; set; }
         public DateTime DisableAt { get; set; }

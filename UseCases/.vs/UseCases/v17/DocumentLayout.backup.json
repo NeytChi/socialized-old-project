@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\UseCases\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\appeals\\messages\\appealmessagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:appeals\\messages\\appealmessagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\instagramaccounts\\igaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:instagramaccounts\\igaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\appeals\\messages\\commands\\updateappealmessagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:appeals\\messages\\commands\\updateappealmessagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\instagramaccounts\\iigaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:instagramaccounts\\iigaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\appeals\\messages\\commands\\deleteappealmessagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:appeals\\messages\\commands\\deleteappealmessagecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\instagramaccounts\\commands\\createigaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:instagramaccounts\\commands\\createigaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\appeals\\appealmessagereplymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:appeals\\appealmessagereplymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\appeals\\commands\\createappealmessagereplycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:appeals\\commands\\createappealmessagereplycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\appeals\\appealmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:appeals\\appealmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\appeals\\iappealmessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:appeals\\iappealmessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\usecases.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:usecases.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,102 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UseCases",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj",
+              "RelativeDocumentMoniker": "UseCases.csproj",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj",
+              "RelativeToolTip": "UseCases.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-13T12:08:38.007Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DeleteAppealMessageCommand.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\Messages\\Commands\\DeleteAppealMessageCommand.cs",
-              "RelativeDocumentMoniker": "Appeals\\Messages\\Commands\\DeleteAppealMessageCommand.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\Messages\\Commands\\DeleteAppealMessageCommand.cs",
-              "RelativeToolTip": "Appeals\\Messages\\Commands\\DeleteAppealMessageCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Title": "CreateIgAccountCommand.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\Commands\\CreateIgAccountCommand.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\Commands\\CreateIgAccountCommand.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\Commands\\CreateIgAccountCommand.cs",
+              "RelativeToolTip": "InstagramAccounts\\Commands\\CreateIgAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T14:40:24.105Z",
+              "WhenOpened": "2024-12-13T12:02:55.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateAppealMessageCommand.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\Messages\\Commands\\UpdateAppealMessageCommand.cs",
-              "RelativeDocumentMoniker": "Appeals\\Messages\\Commands\\UpdateAppealMessageCommand.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\Messages\\Commands\\UpdateAppealMessageCommand.cs",
-              "RelativeToolTip": "Appeals\\Messages\\Commands\\UpdateAppealMessageCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "IIGAccountRepository.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\IIGAccountRepository.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\IIGAccountRepository.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\IIGAccountRepository.cs",
+              "RelativeToolTip": "InstagramAccounts\\IIGAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T14:40:11.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IAppealMessageRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\IAppealMessageRepository.cs",
-              "RelativeDocumentMoniker": "Appeals\\IAppealMessageRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\IAppealMessageRepository.cs",
-              "RelativeToolTip": "Appeals\\IAppealMessageRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T14:35:46.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppealManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\AppealManager.cs",
-              "RelativeDocumentMoniker": "Appeals\\AppealManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\AppealManager.cs",
-              "RelativeToolTip": "Appeals\\AppealManager.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T14:22:41.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateAppealMessageReplyCommand.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\Commands\\CreateAppealMessageReplyCommand.cs",
-              "RelativeDocumentMoniker": "Appeals\\Commands\\CreateAppealMessageReplyCommand.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\Commands\\CreateAppealMessageReplyCommand.cs",
-              "RelativeToolTip": "Appeals\\Commands\\CreateAppealMessageReplyCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:42:38.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppealMessageReplyManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\AppealMessageReplyManager.cs",
-              "RelativeDocumentMoniker": "Appeals\\AppealMessageReplyManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\AppealMessageReplyManager.cs",
-              "RelativeToolTip": "Appeals\\AppealMessageReplyManager.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAQwCEAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:34:21.016Z",
+              "WhenOpened": "2024-12-13T11:59:33.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AppealMessageManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\Messages\\AppealMessageManager.cs",
-              "RelativeDocumentMoniker": "Appeals\\Messages\\AppealMessageManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\Messages\\AppealMessageManager.cs",
-              "RelativeToolTip": "Appeals\\Messages\\AppealMessageManager.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADYAAAAxAAAAAAAAAA==",
+              "Title": "IGAccountManager.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\IGAccountManager.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\IGAccountManager.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\IGAccountManager.cs",
+              "RelativeToolTip": "InstagramAccounts\\IGAccountManager.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAUwCUAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:22:42.087Z",
+              "WhenOpened": "2024-12-13T11:25:44.232Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }

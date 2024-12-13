@@ -17,7 +17,7 @@ namespace UseCases.Users
     {
         public ILogger Logger;
         public ProfileCondition ProfileCondition = new ProfileCondition();
-        public PackageCondition PackageCondition;
+        public PackageManager PackageCondition;
         private EmailMessanger EmailMessanger;
         private IUserRepository UserRepository;
         private EmailFollowerManager EmailFollowerManager;
@@ -65,7 +65,7 @@ namespace UseCases.Users
                 access = new ServiceAccess()
             };            
             UserRepository.Create(user);
-            PackageCondition.CreateFreeAccess(user.Id);
+            PackageCondition.CreateDefaultServiceAccess(user.Id);
             EmailMessanger.SendConfirmEmail(user.Email, command.Culture, user.HashForActivate);
             Logger.Information($"Новий користувач був створений, id={user.Id}.");
         }

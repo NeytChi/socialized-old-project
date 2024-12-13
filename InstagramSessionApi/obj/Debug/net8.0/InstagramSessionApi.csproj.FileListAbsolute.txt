@@ -1,0 +1,13 @@
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.AssemblyInfoInputs.cache
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.AssemblyInfo.cs
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.csproj.CoreCompileInputs.cache
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.sourcelink.json
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.csproj.AssemblyReference.cache
+D:\VS Projects\Socialized\InstagramSessionApi\bin\Debug\net8.0\InstagramSessionApi.deps.json
+D:\VS Projects\Socialized\InstagramSessionApi\bin\Debug\net8.0\InstagramSessionApi.dll
+D:\VS Projects\Socialized\InstagramSessionApi\bin\Debug\net8.0\InstagramSessionApi.pdb
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.dll
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\refint\InstagramSessionApi.dll
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\InstagramSessionApi.pdb
+D:\VS Projects\Socialized\InstagramSessionApi\obj\Debug\net8.0\ref\InstagramSessionApi.dll

@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\Domain\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\appealmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\appealmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\packages\\serviceaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:packages\\serviceaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\appeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\appeal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\packages\\discountpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:packages\\discountpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\appealstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\appealstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\instagramaccounts\\businessaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:instagramaccounts\\businessaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\appealmessagereply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\appealmessagereply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\appealfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\appealfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\admins\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:admins\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\instagramaccounts\\igaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:instagramaccounts\\igaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,76 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppealState.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealState.cs",
-              "RelativeDocumentMoniker": "Admins\\AppealState.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealState.cs",
-              "RelativeToolTip": "Admins\\AppealState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ServiceAccess.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Packages\\ServiceAccess.cs",
+              "RelativeDocumentMoniker": "Packages\\ServiceAccess.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Packages\\ServiceAccess.cs",
+              "RelativeToolTip": "Packages\\ServiceAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:56:10.824Z"
+              "WhenOpened": "2024-12-13T13:05:08.351Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppealFile.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealFile.cs",
-              "RelativeDocumentMoniker": "Admins\\AppealFile.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealFile.cs",
-              "RelativeToolTip": "Admins\\AppealFile.cs",
+              "DocumentIndex": 1,
+              "Title": "DiscountPackage.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Packages\\DiscountPackage.cs",
+              "RelativeDocumentMoniker": "Packages\\DiscountPackage.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Packages\\DiscountPackage.cs",
+              "RelativeToolTip": "Packages\\DiscountPackage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:30:33.551Z"
+              "WhenOpened": "2024-12-13T13:05:06.986Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppealMessage.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealMessage.cs",
-              "RelativeDocumentMoniker": "Admins\\AppealMessage.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealMessage.cs",
-              "RelativeToolTip": "Admins\\AppealMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BusinessAccount.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\InstagramAccounts\\BusinessAccount.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\BusinessAccount.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\InstagramAccounts\\BusinessAccount.cs",
+              "RelativeToolTip": "InstagramAccounts\\BusinessAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:25:35.928Z",
+              "WhenOpened": "2024-12-13T11:29:09.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AppealMessageReply.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealMessageReply.cs",
-              "RelativeDocumentMoniker": "Admins\\AppealMessageReply.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Admins\\AppealMessageReply.cs",
-              "RelativeToolTip": "Admins\\AppealMessageReply.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Title": "IGAccount.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\InstagramAccounts\\IGAccount.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\IGAccount.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\InstagramAccounts\\IGAccount.cs",
+              "RelativeToolTip": "InstagramAccounts\\IGAccount.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T13:30:16.089Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Appeal.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\Appeal.cs",
-              "RelativeDocumentMoniker": "Admins\\Appeal.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Admins\\Appeal.cs",
-              "RelativeToolTip": "Admins\\Appeal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T21:44:36.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Admins\\Admin.cs",
-              "RelativeDocumentMoniker": "Admins\\Admin.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Admins\\Admin.cs",
-              "RelativeToolTip": "Admins\\Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T11:53:37.586Z"
+              "WhenOpened": "2024-12-13T11:29:00.263Z"
             }
           ]
         }
