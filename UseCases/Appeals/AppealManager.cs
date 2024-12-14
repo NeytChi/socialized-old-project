@@ -21,14 +21,14 @@ namespace UseCases.Appeals
     {
         private IAppealRepository AppealRepository;
         private IUserRepository UserRepository;
-        private Domain.Admins.IAppealMessageRepository AppealMessageRepository;
+        private IAppealMessageRepository AppealMessageRepository;
         private ICategoryRepository CategoryRepository;
         private ILogger Logger;
 
         public AppealManager(ILogger logger,
             IAppealRepository appealRepository,
             IUserRepository userRepository,
-            Domain.Admins.IAppealMessageRepository appealMessageRepository,
+            IAppealMessageRepository appealMessageRepository,
             ICategoryRepository categoryRepository)
         {
             Logger = logger;

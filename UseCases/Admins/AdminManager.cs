@@ -1,4 +1,3 @@
-using Domain.Admins;
 using Core;
 using Serilog;
 using System.Web;
@@ -6,6 +5,7 @@ using UseCases.Exceptions;
 using UseCases.Admins.Commands;
 using Domain.Users;
 using UseCases.Appeals;
+using Domain;
 
 namespace UseCases.Admins
 {

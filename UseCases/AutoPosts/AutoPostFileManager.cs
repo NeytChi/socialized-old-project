@@ -10,6 +10,7 @@ namespace UseCases.AutoPosts
     {
         public AutoPostFileManager(ILogger logger) : base(logger)
         {
+
         }
         public ICollection<AutoPostFile> SavePostFiles(ICollection<IFormFile> files, sbyte startOrder, ref string message)
         {

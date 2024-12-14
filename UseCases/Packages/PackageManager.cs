@@ -3,6 +3,10 @@ using Domain.Packages;
 
 namespace UseCases.Packages
 {
+    public interface IPackageManager
+    {
+        ServiceAccess CreateDefaultServiceAccess(long userId);
+    }
     public class PackageManager : BaseManager
     {
         private IServiceAccessRepository ServiceAccessRepository;
@@ -19,8 +23,7 @@ namespace UseCases.Packages
             ServiceAccessRepository = serviceAccessRepository;
             PackageAccessRepository = packageAccessRepository;
             DiscountRepository = discountRepository;
-            CounterRepository = autoPostCounterRepository;
-            
+            CounterRepository = autoPostCounterRepository; 
         }
         public ServiceAccess CreateDefaultServiceAccess(long userId)
         {

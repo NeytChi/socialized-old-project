@@ -2,7 +2,12 @@
 
 namespace UseCases.Users
 {
-    public class EmailMessanger
+    public interface IEmailMessager
+    {
+        void SendConfirmEmail(string userEmail, string culture, string userHash);
+        void SendRecoveryEmail(string userEmail, string culture, int recoveryCode);
+    }
+    public class EmailMessanger : IEmailMessager
     {
         private SmtpSender SmtpSender;
 
@@ -12,6 +17,7 @@ namespace UseCases.Users
         }
         public void SendConfirmEmail(string userEmail, string culture, string userHash)
         {
+            /*
             int indexValue = 0;
             string confirmAccount, confirmValue, emailText, positionText, emailName = "eng.html";
 
@@ -26,10 +32,11 @@ namespace UseCases.Users
 
             indexValue = emailText.IndexOf(positionText);
             emailText = emailText.Insert(indexValue + positionText.Length, confirmValue);
-            SmtpSender.SendEmail(userEmail, confirmAccount, emailText);
+            SmtpSender.SendEmail(userEmail, confirmAccount, emailText);*/
         }
         public void SendRecoveryEmail(string userEmail, string culture, int recoveryCode)
         {
+            /*
             string recoveryPassword, tRecoveryCode;
             recoveryPassword = context.Cultures.Where(c
                 => c.cultureKey == "recovery_password"
@@ -38,6 +45,7 @@ namespace UseCases.Users
                 => c.cultureKey == "recovery_code"
                 && c.cultureName == culture).FirstOrDefault()?.cultureValue ?? "";
             SmtpSender.SendEmail(userEmail, recoveryPassword, tRecoveryCode + recoveryCode);
+            */
         }
     }
 }
