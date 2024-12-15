@@ -1,7 +1,11 @@
-﻿using Serilog;
-using Domain.InstagramAccounts;
-using UseCases.InstagramAccounts.Commands;
+﻿using Core;
+using Serilog;
+using InstagramApiSharp.API;
+using InstagramApiSharp.Classes;
 using InstagramApiSharp.API.Builder;
+using Domain.InstagramAccounts;
+using UseCases.Exceptions;
+using UseCases.InstagramAccounts.Commands;
 
 namespace UseCases.InstagramAccounts
 {
@@ -12,367 +16,219 @@ namespace UseCases.InstagramAccounts
     public class IGAccountManager : BaseManager, IIGAccountManager
     {
         private IIGAccountRepository AccountRepository;
+        private ITaskGettingSubscribesRepository TaskGettingSubscribesRepository;
+        private ProfileCondition ProfileCondition = new ProfileCondition();
         private InstagramApi api;
 
         public IGAccountManager(ILogger logger, 
-            IIGAccountRepository accountRepository) : base(logger)
+            IIGAccountRepository accountRepository,
+            ITaskGettingSubscribesRepository taskGettingSubscribesRepository) : base(logger)
         {
             AccountRepository = accountRepository;
+            TaskGettingSubscribesRepository = taskGettingSubscribesRepository;
             api = InstagramApi.GetInstance();
         }
-        
         public IGAccount Create(CreateIgAccountCommand command)
         {
-            command.InstagramUsername = command.InstagramUsername.Trim();
+            command.InstagramUserName = command.InstagramUserName.Trim();
 
-            var account = AccountRepository.GetBy(command.UserToken, command.InstagramUsername);
-            if (account == null)
-            {
-                var session = new Session(command.InstagramUsername, command.InstagramPassword);
-                session.userId = account.UserId;
-                var loginResult = LoginSession(session);
-                if (loginResult == InstaLoginResult.Success)
-                {
-                    return SaveSession(session, false, ref message);
-                }
-                if (loginResult == InstaLoginResult.ChallengeRequired)
-                {
-                    if (ChallengeRequired(ref session, false, ref message))
-                    {
-                        return SaveSession(session, true, ref message);
-                    }
-                }
-                return null;
-                return SetupSession(user, ref message);
-            }
-            else
-            {
-                account.State = context.States.Where(st => st.accountId == account.accountId).First();
-                return RecoverySession(account, user, ref message);
-            }
-        }
-        public IGAccount RecoverySession(IGAccount account, InstagramUser cache, ref string message)
-        {
-            if (account.accountDeleted)
-            {
-                account.State.stateRelogin = true;
-                context.States.Update(account.State);
-                context.SaveChanges();
-                return RestoreSession(account, cache, ref message);
-            }
-            message = "User has already this account.";
-            return null;
-        }
-        public IGAccount RestoreSession(IGAccount account, InstagramUser user, ref string message)
-        {
-            account = ReloginSession(account, user, ref message);
+            var account = AccountRepository.GetByWithState(command.UserToken, command.InstagramUserName);
             if (account != null)
             {
-                account.userId = user.user_id;
-                account.accountDeleted = false;
-                context.IGAccounts.Update(account);
-                context.SaveChanges();
-                Logger.Information("Session was successfully restored");
+                return RecoverySession(account, command);
             }
-            return account;
-        } 
-        public IGAccount SetupSession(InstagramUser cache, ref string message)
+            var session = new Session(command.InstagramUserName, command.InstagramPassword);
+            session.userId = account.UserId;
+            var loginResult = LoginSession(session);
+            if (loginResult == InstaLoginResult.Success)
+            {
+                return SaveSession(session, false);
+            }
+            if (loginResult == InstaLoginResult.ChallengeRequired)
+            {
+                ChallengeRequired(session, false);
+                return SaveSession(session, true);
+            }
+            return null;
+        }
+        public IGAccount RecoverySession(IGAccount account, IgAccountRequirements requirements)
         {
+            account.State.Relogin = true;
+
+            var session = RestoreInstagramSession(account);
             
-        }
-        public bool ChallengeRequired(ref Session session, bool replay, ref string message)
-        {
-            var challenge = api.GetChallengeRequireVerifyMethod(ref session);
-            if (challenge.Succeeded)
+            session.User.Password = requirements.InstagramPassword;
+            session.requestMessage.Password = requirements.InstagramPassword;
+            
+            var loginResult = LoginSession(session);
+            if (loginResult == InstaLoginResult.Success)
             {
-                var result = api.VerifyCodeToSMSForChallengeRequire(replay, ref session);
-                if (result.Succeeded)
-                {
-                    message = "Add session with challenge required state.";
-                    return true;
-                }
-                else
-                {
-                    Logger.Warning("Can't perform verify code to sms challenge require method.");
-                }
-            }
-            else
-            {
-                Logger.Warning("Can't get challenge require verify method.");
-            }
-            return false;
-        }
-        public IGAccount SaveSession(Session session, bool challengeRequired, ref string message)
-        {
-            if (context.IGAccounts.Where(s
-                    => s.userId == session.userId
-                    && s.accountUsername == session.User.UserName).FirstOrDefault() == null)
-            {
-                var state = new SessionState();
-                state.stateChallenger = challengeRequired;
-                state.stateUsable = challengeRequired ? false : true;
-
-                var timeAction = new TimeAction();
-                timeAction.accountOld = false;
-
-                var account = new IGAccount()
-                {
-                    userId = session.userId,
-                    accountUsername = session.User.UserName,
-                    createdAt = (int)DateTimeOffset.Now.ToUnixTimeSeconds(),
-                    State = state,
-                    timeAction = timeAction,
-                };
-                context.IGAccounts.Add(account);
-                context.SaveChanges();
-
-                session.sessionId = account.accountId;
-                account.sessionSave = Encrypt(api.GetStateDataAsString(ref session));
-                context.IGAccounts.Update(account);
-                context.SaveChanges();
-
-                Logger.Information("Server save session, id -> " + account.accountId);
+                var stateData = api.GetStateDataAsString(session);
+                account.State.SessionSave = ProfileCondition.Encrypt(stateData);
+                account.State.Usable = true;
+                account.State.Relogin = false;
+                account.State.Challenger = false;
+                AccountRepository.Update(account);
                 return account;
             }
-            message = "User has already this account.";
-            return null;
-        }
-        /// <summary>
-        /// Relogin instagram session. Load non-deleted session and try to login with it.
-        /// <summary>  
-        public IGAccount ReloginSession(IGAccount account, InstagramUser user, ref string message)
-        {
-            if (account.State.stateRelogin)
+            if (loginResult == InstaLoginResult.ChallengeRequired)
             {
-                var session = LoadNonDeleteSession(account);
-                session.User.Password = user.instagram_password;
-                session.requestMessage.Password = user.instagram_password;
-                var loginResult = LoginSession(session, ref message);
-                if (loginResult == InstaLoginResult.Success)
-                {
-                    UpdateUsableSession(session, account);
-                    return account;
-                }
-                if (loginResult == InstaLoginResult.ChallengeRequired)
-                {
-                    ChallengeRequired(ref session, true, ref message);
-                    UpdateChallengedSession(session, account);
-                    return account;
-                }
+                ChallengeRequired(session, true);
+                var stateData = api.GetStateDataAsString(session);
+                account.State.SessionSave = ProfileCondition.Encrypt(stateData);
+                account.State.Usable = false;
+                account.State.Relogin = false;
+                account.State.Challenger = true;
+                AccountRepository.Update(account);
+                return account;
             }
-            else
+
+            account.IsDeleted = false;
+            AccountRepository.Update(account);
+
+            Logger.Information($"Сесія була востановлена, id={account.Id}");
+            return account;
+        }
+        public void ChallengeRequired(Session session, bool replay)
+        {
+            var challenge = api.GetChallengeRequireVerifyMethod(ref session);
+            if (!challenge.Succeeded)
             {
-                message = "Session doesn't have relogin state.";
+                throw new IgAccountException("Сервер не може підтвердити Instagram аккаунт.");
             }
-            Logger.Warning(message);
-            return null;
+            var result = api.VerifyCodeToSMSForChallengeRequire(replay, ref session);
+            if (!result.Succeeded)
+            {
+                throw new IgAccountException("Сервер не може запустити верифікації аккаунту через SMS код.");
+            }
+            Logger.Information("Сесія Instagram аккаунту була пройдена через процедуру підтвердження.");
         }
-        public void UpdateUsableSession(Session session, IGAccount account)
+        public IGAccount SaveSession(Session session, bool challengeRequired)
         {
-            account.sessionSave = Encrypt(api.GetStateDataAsString(ref session));
-            account.State.stateUsable = true;
-            account.State.stateRelogin = false;
-            account.State.stateChallenger = false;
-            context.IGAccounts.Update(account);
-            context.States.Update(account.State);
-            context.SaveChanges();
+            var account = AccountRepository.GetByWithState(session.userId, session.User.UserName);
+            if (account != null)
+            {
+                throw new ValidationException("Користувач вже має такий самий аккаунт.");
+            }
+            account = new IGAccount()
+            {
+                UserId = session.userId,
+                Username = session.User.UserName,
+                CreatedAt = DateTime.UtcNow,
+                State = new SessionState
+                {
+                    Challenger = challengeRequired,
+                    Usable = challengeRequired ? false : true
+                }
+            };
+            AccountRepository.Create(account);
+            session.sessionId = account.Id;
+            var stateData = api.GetStateDataAsString(session);
+            var encryptData = ProfileCondition.Encrypt(stateData);
+            account.State.SessionSave = encryptData;
+            AccountRepository.Update(account);
+            Logger.Information($"Сесія Instagram аккаунту було збережено, id={account.Id}.");
+            return account;
         }
-        public void UpdateChallengedSession(Session session, IGAccount account)
+        public InstaLoginResult LoginSession(Session session)
         {
-            account.sessionSave = Encrypt(api.GetStateDataAsString(ref session));
-            account.State.stateUsable = false;
-            account.State.stateRelogin = false;
-            account.State.stateChallenger = true;
-            context.IGAccounts.Update(account);
-            context.States.Update(account.State);
-            context.SaveChanges();
-        }
-        public InstaLoginResult LoginSession(Session session, ref string message)
-        {
-            var loginResult = api.Login(ref session);
-            switch (loginResult)
+            string message = "";
+            var result = api.Login(ref session);
+            switch (result)
             {
                 case InstaLoginResult.Success:
-                    message = "Session was successfully login.";
-                    break;
+                    message = "Сесія Instagram аккаунт був успішно залогінен.";
+                    return result;
                 case InstaLoginResult.ChallengeRequired:
-                    message = "Session has challenge required state";
+                    message = "Сесія Instagram аккаунту потребує підтвердження по коду.";
                     break;
                 case InstaLoginResult.TwoFactorRequired:
-                    message = "User account has two factor authentication.";
+                    message = "Сесія Instagram аккаунту потребує проходження двох-факторної організації.";
                     break;
                 case InstaLoginResult.InactiveUser:
-                    message = "Inactive user account.";
+                    message = "Сесія Instagram аккаунту не активна.";
                     break;
                 case InstaLoginResult.InvalidUser:
-                    message = "Invalid user.";
+                    message = "Правильно введені данні для входу в аккаунт.";
                     break;
                 case InstaLoginResult.BadPassword:
-                    message = "Bad password.";
+                    message = "Неправильний пароль.";
                     break;
                 case InstaLoginResult.LimitError:
                 case InstaLoginResult.Exception:
                 default:
-                    message = "Unknow instagram login exception. Message:" + loginResult.ToString() + ".";
+                    message = $"Невідома помилка при спробі зайти(логін) в Instagram аккаунт. Виключення:{result.ToString()}.";
                     break;
             }
-            return loginResult;
+            throw new IgAccountException(message);
         }
-        public bool SmsVerifySession(long sessionId, int userId, string verifyCode, ref string message)
+        public void SmsVerifySession(long accountId, int userId, string verifyCode)
         {
-            IGAccount account;
-            Session session;
-
-            if (!string.IsNullOrEmpty(verifyCode))
-            {
-                if ((account = GetNonDeleteSession(sessionId, userId, ref message)) != null)
-                {
-                    if (account.State.stateChallenger == true)
-                    {
-                        session = LoadNonDeleteSession(account);
-                        var loginResult = api.VerifyCodeForChallengeRequire(verifyCode, ref session);
-                        if (loginResult == InstaLoginResult.Success)
-                        {
-                            UpdateUsableSession(session, account);
-                            Logger.Information("Verified challenged session, id -> " + account.accountId);
-                            return true;
-                        }
-                        else
-                        {
-                            message = "Invalid confirmation code.";
-                        }
-                    }
-                    else
-                    {
-                        message = "Session doesn't have challange required state.";
-                    }
-                }
-            }
-            else
-            {
-                message = "Verify code is null or empty.";
-            }
-            Logger.Warning(message);
-            return false;
-        }
-        public IGAccount GetNonDeleteSession(long accountId, int userId, ref string message)
-        {
-            IGAccount account = context.IGAccounts.Where(s
-                => s.accountId == accountId
-                && s.userId == userId
-                && s.accountDeleted == false).FirstOrDefault();
+            var account = AccountRepository.GetByWithState(accountId);
             if (account == null)
             {
-                message = "Server can't define ig account by account id & user id.";
-                Logger.Warning(message);
+                throw new NotFoundException("Сервер не визначив запис Instagram аккаунту по id.");
             }
-            else
-                account.State = context.States.Where(st
-                    => st.accountId == accountId).First();
-            return account;
-        }
-        public IGAccount GetUsableSession(string userToken, long accountId)
-        {
-            IGAccount account = (from s in context.IGAccounts
-                                 join u in context.Users on s.userId equals u.userId
-                                 join st in context.States on s.accountId equals st.accountId
-                                 where u.userToken == userToken
-                                     && s.accountId == accountId
-                                     && s.accountDeleted == false
-                                     && st.stateUsable == true
-                                 select s).FirstOrDefault();
-            if (account == null)
-                Logger.Warning("Server can't define usable ig account; id -> " + accountId);
-            return account;
-        }
-        public IGAccount GetUsableSession(long sessionId)
-        {
-            IGAccount session = (from s in context.IGAccounts
-                                 join st in context.States on s.accountId equals st.accountId
-                                 where s.accountId == sessionId
-                                     && s.accountDeleted == false
-                                     && st.stateUsable == true
-                                 select s).FirstOrDefault();
-            if (session == null)
-                Logger.Warning("Server can't define usable ig account, id ->" + sessionId);
-            return session;
-        }
-        public bool DeleteInstagramSession(long sessionId, int userId, ref string message)
-        {
-            IGAccount account = GetNonDeleteSession(sessionId, userId, ref message);
-            if (account != null)
+            if (!account.State.Challenger)
             {
-                EndSessionsTask(sessionId);
-                account.accountDeleted = true;
-                context.IGAccounts.Update(account);
-                context.SaveChanges();
-                Logger.Information("Delete user's instagram account, id ->" + userId);
-                return true;
+                throw new NotFoundException("Сесія Instagram аккаунту не потребує підтвердження аккаунту.");                
             }
-            return false;
+            var session = RestoreInstagramSession(account);
+            var loginResult = api.VerifyCodeForChallengeRequire(verifyCode, ref session);
+            if (loginResult != InstaLoginResult.Success)
+            {
+                throw new IgAccountException("Код підвердження Instagram аккаунту не вірний.");
+            }
+            var stateData = api.GetStateDataAsString(session);
+            account.State.SessionSave = ProfileCondition.Encrypt(stateData);
+            account.State.Usable = true;
+            account.State.Relogin = false;
+            account.State.Challenger = false;
+            AccountRepository.Update(account);
+            Logger.Information($"Сесія Instagram аккаунту було веріфікована, id={account.Id}.");
         }
-        public void EndSessionsTask(long sessionId)
+        public void Delete(long accountId)
         {
-            var tasks = context.TaskGS.Where(t
-                => t.sessionId == sessionId).ToList();
+            var account = AccountRepository.GetByWithState(accountId);
+            if (account == null)
+            {
+                throw new NotFoundException("Сервер не визначив запис Instagram аккаунту по id.");
+            }
+            account.IsDeleted = true;
+            AccountRepository.Update(account);
+            Logger.Information($"Instagram аккаунт був видалений, id={accountId}.");
+            StopTasksGettingSubscribes(accountId);
+        }
+        public void StopTasksGettingSubscribes(long accountId)
+        {
+            var tasks = TaskGettingSubscribesRepository.GetBy(accountId);
             foreach (var task in tasks)
             {
-                task.taskDeleted = true;
-                task.taskStopped = true;
-                task.taskUpdated = true;
+                task.Deleted = true;
+                task.Stopped = true;
+                task.Updated = true;
             }
-            context.TaskGS.UpdateRange(tasks);
-            context.SaveChanges();
-            Logger.Information("Delete all session's tasks.");
+            TaskGettingSubscribesRepository.Update(tasks);
+            Logger.Information($"Всі задачі були закриті по Instagram аккаунту, id={accountId}.");
         }
-        public Session LoadNonDeleteSession(IGAccount cache)
+        public Session RestoreInstagramSession(IGAccount account)
         {
-            Session session = new Session();
-            api.LoadStateDataFromString(Decrypt(cache.sessionSave), ref session);
-            session.sessionId = cache.accountId;
-            session.userId = cache.userId;
-            Logger.Information("Load session to server, id -> " + cache.userId);
+            var decryptedSessionSave = ProfileCondition.Decrypt(account.State.SessionSave);
+            var session = api.LoadStateDataFromString(decryptedSessionSave);
+            Logger.Information($"Інстаграм сесія була востановлена з тексту, id={account.Id}.");
             return session;
         }
-        public Session LoadSession(long sessionId)
+        public Session RestoreInstagramSession(long accountId)
         {
-            IGAccount account = GetUsableSession(sessionId);
-            if (account != null)
+            var account = AccountRepository.Get(accountId);
+            if (account == null)
             {
-                Session session = new Session();
-                api.LoadStateDataFromString(Decrypt(account.sessionSave), ref session);
-                session.sessionId = account.accountId;
-                session.userId = account.userId;
-                Logger.Information("Load session to server, id -> " + account.accountId);
-                return session;
+                throw new NotFoundException("Сервер не визначив запис Інстаграм аккаунту по id.");
             }
-            return null;
-        }
-        /// <summary>
-        /// Function for receiving instagram profile account data.
-        /// <param> Session id need to be long type of variable.</param>
-        /// <summary>
-        public void StartHandleInstagramProfile(object sessionId)
-        {
-            var session = LoadSession((long)sessionId);
-            var timeAction = context.timeAction.Where(a => a.accountId == session.sessionId).First();
-            var accountInfo = api.web.GetAccountInfo(ref session);
-            if (accountInfo.Succeeded)
-            {
-                timeAction.accountOld = accountInfo.Value.JoinedDate > DateTime.Now.AddMonths(-6);
-                context.timeAction.Attach(timeAction).Property(t => t.accountOld).IsModified = true; ;
-                context.SaveChanges();
-                Logger.Information("Server get account details by sessionId, id -> " + sessionId);
-            }
-            else
-            {
-                if (accountInfo.unexceptedResponse)
-                {
-                    //stateHandler.HandleState(accountInfo.unexceptedResponse, 
-                    //accountInfo.Info.ResponseType, session);
-                }
-                Logger.Warning("Server can't get account details by sessionId -> " + sessionId);
-            }
+            var decryptedSession = ProfileCondition.Decrypt(account.State.SessionSave);
+            var session = api.LoadStateDataFromString(decryptedSession);
+            Logger.Information($"Сессія Інстаграм аккаунту була востановлена, id={account.Id}.");
+            return session;
         }
     }
 }

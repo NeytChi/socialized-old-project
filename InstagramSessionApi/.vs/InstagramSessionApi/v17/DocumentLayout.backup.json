@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10BB88CB-FD7F-4CCC-919D-7E63DD274237}|InstagramSessionApi.csproj|d:\\vs projects\\socialized\\instagramsessionapi\\api\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10BB88CB-FD7F-4CCC-919D-7E63DD274237}|InstagramSessionApi.csproj|solutionrelative:api\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10BB88CB-FD7F-4CCC-919D-7E63DD274237}|InstagramSessionApi.csproj|d:\\vs projects\\socialized\\instagramsessionapi\\api\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BB88CB-FD7F-4CCC-919D-7E63DD274237}|InstagramSessionApi.csproj|solutionrelative:api\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10BB88CB-FD7F-4CCC-919D-7E63DD274237}|InstagramSessionApi.csproj|d:\\vs projects\\socialized\\instagramsessionapi\\api\\builder\\instaapibuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10BB88CB-FD7F-4CCC-919D-7E63DD274237}|InstagramSessionApi.csproj|solutionrelative:api\\builder\\instaapibuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BB88CB-FD7F-4CCC-919D-7E63DD274237}|InstagramSessionApi.csproj|d:\\vs projects\\socialized\\instagramsessionapi\\api\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BB88CB-FD7F-4CCC-919D-7E63DD274237}|InstagramSessionApi.csproj|solutionrelative:api\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10BB88CB-FD7F-4CCC-919D-7E63DD274237}|InstagramSessionApi.csproj|d:\\vs projects\\socialized\\instagramsessionapi\\api\\processors\\hashtagprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Api.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\API\\Api.cs",
+              "RelativeDocumentMoniker": "API\\Api.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\API\\Api.cs",
+              "RelativeToolTip": "API\\Api.cs",
+              "ViewState": "AgIAAMsBAAAAAAAAAAAAAOYBAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T21:44:08.953Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -36,14 +53,14 @@
               "RelativeDocumentMoniker": "API\\Builder\\InstaApiBuilder.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\API\\Builder\\InstaApiBuilder.cs",
               "RelativeToolTip": "API\\Builder\\InstaApiBuilder.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAEwCUAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T12:26:17.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "HashtagProcessor.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\API\\Processors\\HashtagProcessor.cs",
               "RelativeDocumentMoniker": "API\\Processors\\HashtagProcessor.cs",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Session.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\API\\Session.cs",
               "RelativeDocumentMoniker": "API\\Session.cs",

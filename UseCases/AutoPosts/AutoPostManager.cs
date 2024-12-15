@@ -6,6 +6,7 @@ using Domain.AutoPosting;
 using Microsoft.AspNetCore.Http;
 using UseCases.InstagramAccounts;
 using UseCases.AutoPosts.Commands;
+using Domain.InstagramAccounts;
 
 namespace UseCases.AutoPosts
 {
@@ -41,8 +42,20 @@ namespace UseCases.AutoPosts
         }
         public void Create(CreateAutoPostCommand command)
         {
-            var account = AccountManager.GetUsableSession(command.UserToken, command.AccountId);
+            var account = AccountManager.GetUsableAccount(command.UserToken, command.AccountId);
             
+            IGAccount account = (from s in context.IGAccounts
+                                 join u in context.Users on s.userId equals u.userId
+                                 join st in context.States on s.accountId equals st.accountId
+                                 where u.userToken == userToken
+                                     && s.accountId == accountId
+                                     && s.accountDeleted == false
+                                     && st.stateUsable == true
+                                 select s).FirstOrDefault();
+            if (account == null)
+                Logger.Warning("Server can't define usable ig account; id -> " + accountId);
+            return account;
+
             if (account == null)
             {
                 message = "Server can't define session.";
@@ -64,12 +77,12 @@ namespace UseCases.AutoPosts
             SaveAutoPost(command, postFiles);
             return true;
         }
-        public AutoPost SaveAutoPost(AutoPostCache cache, ICollection<PostFile> postFiles)
+        public AutoPost SaveAutoPost(AutoPostCache cache, ICollection<AutoPostFile> postFiles)
         {
             int timezone = cache.timezone > 0 ? -cache.timezone : cache.timezone * -1;
             var post = new AutoPost()
             {
-                sessionId = cache.session_id,
+                AccountId = cache.session_id,
                 postType = cache.post_type,
                 createdAt = DateTimeOffset.UtcNow,
                 executeAt = cache.execute_at.AddHours(timezone),

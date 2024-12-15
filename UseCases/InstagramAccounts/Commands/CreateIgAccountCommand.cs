@@ -1,9 +1,7 @@
 ﻿namespace UseCases.InstagramAccounts.Commands
 {
-    public class CreateIgAccountCommand
+    public class CreateIgAccountCommand : IgAccountRequirements
     {
         public string UserToken { get; set; }
-        public string InstagramUsername { get; set; }
-        public string InstagramPassword { get; set; }
     }
 }

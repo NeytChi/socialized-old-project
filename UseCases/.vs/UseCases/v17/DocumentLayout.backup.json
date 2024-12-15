@@ -3,60 +3,20 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\UseCases\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\autoposts\\autopostfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\autopostfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\users\\userloginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:users\\userloginmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\users\\usersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:users\\usersmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\users\\userpasswordrecoverymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:users\\userpasswordrecoverymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\users\\userremovermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:users\\userremovermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\packages\\packagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:packages\\packagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\packages\\iserviceaccessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:packages\\iserviceaccessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\packages\\ipackageaccessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:packages\\ipackageaccessrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\packages\\iforserveraccesscountingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:packages\\iforserveraccesscountingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\packages\\idiscountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:packages\\idiscountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\packages\\braintreesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:packages\\braintreesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\packages\\brainetreepayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:packages\\brainetreepayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\instagramaccounts\\igaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:instagramaccounts\\igaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\autoposts\\autopostmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\autopostmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\autoposts\\autopostcondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\autopostcondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\instagramaccounts\\iigaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:instagramaccounts\\iigaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\instagramaccounts\\itaskgettingsubscribesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:instagramaccounts\\itaskgettingsubscribesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,193 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserLoginManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UserLoginManager.cs",
-              "RelativeDocumentMoniker": "Users\\UserLoginManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UserLoginManager.cs",
-              "RelativeToolTip": "Users\\UserLoginManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T14:04:38.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserPasswordRecoveryManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UserPasswordRecoveryManager.cs",
-              "RelativeDocumentMoniker": "Users\\UserPasswordRecoveryManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UserPasswordRecoveryManager.cs",
-              "RelativeToolTip": "Users\\UserPasswordRecoveryManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T13:25:17.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsersManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UsersManager.cs",
-              "RelativeDocumentMoniker": "Users\\UsersManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UsersManager.cs",
-              "RelativeToolTip": "Users\\UsersManager.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAAGcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:29:21.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserRemoverManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UserRemoverManager.cs",
-              "RelativeDocumentMoniker": "Users\\UserRemoverManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UserRemoverManager.cs",
-              "RelativeToolTip": "Users\\UserRemoverManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:29:20.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PackageManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\PackageManager.cs",
-              "RelativeDocumentMoniker": "Packages\\PackageManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\PackageManager.cs",
-              "RelativeToolTip": "Packages\\PackageManager.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:29:06.489Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IServiceAccessRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\IServiceAccessRepository.cs",
-              "RelativeDocumentMoniker": "Packages\\IServiceAccessRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\IServiceAccessRepository.cs",
-              "RelativeToolTip": "Packages\\IServiceAccessRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:29:05.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IPackageAccessRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\IPackageAccessRepository.cs",
-              "RelativeDocumentMoniker": "Packages\\IPackageAccessRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\IPackageAccessRepository.cs",
-              "RelativeToolTip": "Packages\\IPackageAccessRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:29:04.36Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IForServerAccessCountingRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\IForServerAccessCountingRepository.cs",
-              "RelativeDocumentMoniker": "Packages\\IForServerAccessCountingRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\IForServerAccessCountingRepository.cs",
-              "RelativeToolTip": "Packages\\IForServerAccessCountingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:29:03.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IDiscountRepository.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\IDiscountRepository.cs",
-              "RelativeDocumentMoniker": "Packages\\IDiscountRepository.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\IDiscountRepository.cs",
-              "RelativeToolTip": "Packages\\IDiscountRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:29:02.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BrainTreeSettings.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\BrainTreeSettings.cs",
-              "RelativeDocumentMoniker": "Packages\\BrainTreeSettings.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\BrainTreeSettings.cs",
-              "RelativeToolTip": "Packages\\BrainTreeSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:29:01.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BraineTreePayer.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\BraineTreePayer.cs",
-              "RelativeDocumentMoniker": "Packages\\BraineTreePayer.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Packages\\BraineTreePayer.cs",
-              "RelativeToolTip": "Packages\\BraineTreePayer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:28:59.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "AutoPostManager.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostManager.cs",
               "RelativeDocumentMoniker": "AutoPosts\\AutoPostManager.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostManager.cs",
               "RelativeToolTip": "AutoPosts\\AutoPostManager.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwC4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:28:25.744Z",
+              "WhenOpened": "2024-12-14T18:39:04.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITaskGettingSubscribesRepository.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\ITaskGettingSubscribesRepository.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\ITaskGettingSubscribesRepository.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\ITaskGettingSubscribesRepository.cs",
+              "RelativeToolTip": "InstagramAccounts\\ITaskGettingSubscribesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T16:47:09.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IIGAccountRepository.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\IIGAccountRepository.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\IIGAccountRepository.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\IIGAccountRepository.cs",
+              "RelativeToolTip": "InstagramAccounts\\IIGAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T16:10:34.723Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AutoPostFileManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostFileManager.cs",
-              "RelativeDocumentMoniker": "AutoPosts\\AutoPostFileManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostFileManager.cs",
-              "RelativeToolTip": "AutoPosts\\AutoPostFileManager.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "IGAccountManager.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\IGAccountManager.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\IGAccountManager.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\IGAccountManager.cs",
+              "RelativeToolTip": "InstagramAccounts\\IGAccountManager.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAAAMoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:28:16.616Z",
+              "WhenOpened": "2024-12-14T15:33:45.283Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AutoPostCondition.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostCondition.cs",
-              "RelativeDocumentMoniker": "AutoPosts\\AutoPostCondition.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostCondition.cs",
-              "RelativeToolTip": "AutoPosts\\AutoPostCondition.cs",
-              "ViewState": "AgIAAPUAAAAAAAAAAAASwHUAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T12:26:49.149Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }

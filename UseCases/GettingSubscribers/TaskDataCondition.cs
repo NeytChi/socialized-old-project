@@ -58,7 +58,7 @@ namespace UseCases.Tasks
         public bool handle(TaskSubtype subtype, long sessionId, TaskData data, ref string message)
         {
             bool success = true;
-            var session = sessionManager.LoadSession(sessionId);
+            var session = sessionManager.RestoreInstagramSession(sessionId);
             switch(subtype)
             {
                 case TaskSubtype.ByLikers:
@@ -85,7 +85,7 @@ namespace UseCases.Tasks
         }
         public bool CheckUsernames(ICollection<TaskData> taskData, long sessionId, ref string message)
         {
-            var session = sessionManager.LoadSession(sessionId);
+            var session = sessionManager.RestoreInstagramSession(sessionId);
             if (taskData.Count != 0)
             {
                 foreach (var data in taskData)
@@ -105,7 +105,7 @@ namespace UseCases.Tasks
         }
         public bool CheckLocations(ICollection<TaskData> taskData, long sessionId, ref string message)
         {
-            var session = sessionManager.LoadSession(sessionId);
+            var session = sessionManager.RestoreInstagramSession(sessionId);
             if (taskData.Count != 0)
             {
                 foreach (TaskData data in taskData)
@@ -125,7 +125,7 @@ namespace UseCases.Tasks
         }
         public bool CheckHashtags(ICollection<TaskData> taskData, long sessionId, ref string message)
         {
-            var session = sessionManager.LoadSession(sessionId);
+            var session = sessionManager.RestoreInstagramSession(sessionId);
             if (taskData.Count != 0)
             {
                 foreach (var data in taskData)

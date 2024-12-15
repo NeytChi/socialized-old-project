@@ -1,15 +1,22 @@
 ﻿using Domain.InstagramAccounts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UseCases.InstagramAccounts
 {
     public interface IIGAccountRepository
     {
-        IGAccount GetBy(string userToken, string instagramUsername);
-
+        void Create(IGAccount account);
+        void Update(IGAccount account);
+        IGAccount Get(long accountId, bool isDeleted = false, bool usable = true);
+        IGAccount GetByWithState(long userId, string instagramUsername);
+        IGAccount GetByWithState(string userToken, string instagramUsername);
+        IGAccount GetByWithState(long accountId, bool accountDeleted = false);
     }
 }
+/*
+var session = (from s in context.IGAccounts
+        join st in context.States on s.accountId equals st.accountId
+        where s.accountId == sessionId
+            && s.accountDeleted == false
+            && st.stateUsable == true
+        select s).FirstOrDefault();
+*/
