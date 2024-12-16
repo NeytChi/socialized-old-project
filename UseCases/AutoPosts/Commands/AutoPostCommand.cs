@@ -4,6 +4,7 @@ namespace UseCases.AutoPosts.Commands
 {
     public class AutoPostCommand
     {
+        public long AccountId { get; set; }
         public bool AutoPostType { get; set; }
         public List<IFormFile> Files { get; set; }
         public List<long> FileIds { get; set; }

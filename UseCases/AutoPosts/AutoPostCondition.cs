@@ -1,11 +1,16 @@
 ﻿using Domain.AutoPosting;
 using Microsoft.AspNetCore.Http;
+using Serilog;
 using System.Text.RegularExpressions;
 
 namespace UseCases.AutoPosts
 {
-    public class AutoPostCondition
+    public class AutoPostCondition : BaseManager
     {
+        public AutoPostCondition(ILogger logger) : base (logger) 
+        {
+
+        }
         public bool CheckExecuteTime(DateTime executeAt, int timezone, ref string message)
         {
             timezone = timezone > 0 ? -timezone : timezone * -1;

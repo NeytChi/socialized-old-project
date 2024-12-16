@@ -10,8 +10,7 @@ namespace UseCases.AutoPosts.AutoPostFiles
         {
 
         }
-
-        public void FilesIdIsTrue(ICollection<AutoPostFile> files, List<long> filesId, ref string message)
+        public void FilesIdIsTrue(ICollection<AutoPostFile> files, List<long> filesId)
         {
             if (files.Count != filesId.Count)
             {

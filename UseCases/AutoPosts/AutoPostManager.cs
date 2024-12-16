@@ -1,22 +1,18 @@
 using Serilog;
 using System.Web;
-using System.Text.RegularExpressions;
-using UseCases.Packages;
 using Domain.AutoPosting;
 using Microsoft.AspNetCore.Http;
-using UseCases.InstagramAccounts;
 using UseCases.AutoPosts.Commands;
 using Domain.InstagramAccounts;
 using UseCases.Exceptions;
-using Braintree;
-using System.Xml.Linq;
-using System;
+using Amazon.Runtime.Internal.Util;
 
 namespace UseCases.AutoPosts
 {
     public class AutoPostManager : BaseManager
     {
         private IAutoPostRepository AutoPostRepository;
+        private IAutoPostFileManager AutoPostFileManager;
         private ICategoryRepository CategoryRepository;
         private IPostFileRepository PostFileRepository;
         private IIGAccountRepository IGAccountRepository;
@@ -25,11 +21,13 @@ namespace UseCases.AutoPosts
         public AutoPostManager(ILogger logger, 
             IAutoPostRepository autoPostRepository,
             ICategoryRepository categoryRepository,
+            IAutoPostFileManager autoPostFileManager,
             IPostFileRepository postFileRepository,
             IIGAccountRepository iGAccountRepository
             ) : base (logger)
         {
             Logger = logger;
+            AutoPostFileManager = autoPostFileManager;
             AutoPostRepository = autoPostRepository;
             CategoryRepository = categoryRepository;
             PostFileRepository = postFileRepository;
@@ -53,14 +51,10 @@ namespace UseCases.AutoPosts
                 return false;
             }
             */
-            var postFiles = SavePostFiles(command.files, 1, ref message);
-            if (postFiles == null)
-            {
-                return false;
-            }
+            var postFiles = AutoPostFileManager.Create(command.formFiles, 1);
             SaveAutoPost(command, postFiles);
         }
-        public AutoPost SaveAutoPost(CreateAutoPostCommand command, ICollection<AutoPostFile> postFiles)
+        public AutoPost SaveAutoPost(AutoPostCommand command, ICollection<AutoPostFile> postFiles)
         {
             int timezone = command.TimeZone > 0 ? -command.TimeZone : command.TimeZone * -1;
             var post = new AutoPost
@@ -105,7 +99,7 @@ namespace UseCases.AutoPosts
             {
                 throw new NotFoundException($"Сервер не визначив авто-пост по id={command.PostId}.");
             }
-            return post.Type ? UpdatePost(post, command) : UpdateStories(post, cache);
+            return post.Type ? UpdatePost(post, command) : UpdateStories(post, command);
         }
         public bool UpdatePost(AutoPost post, UpdateAutoPostCommand command)
         { 
@@ -119,12 +113,12 @@ namespace UseCases.AutoPosts
             }
             return false;
         }
-        public bool UpdateStories(AutoPost post, AutoPostCache cache)
+        public bool UpdateStories(AutoPost post, UpdateAutoPostCommand command)
         {
             cache.session_id = post.sessionId;
             if (CheckToUpdateStories(cache, ref message))
             {
-                UpdateCommonPost(ref post, cache);
+                UpdateCommonPost(post, command);
                 return true;
             }
             return false;
@@ -166,7 +160,7 @@ namespace UseCases.AutoPosts
             var files = PostFileRepository.GetBy(post.postId, false);
             if (files.Count + cache.files.Count <= 10)
             {
-                var postFiles = SavePostFiles(cache.files, (sbyte)(files.Count + 1), ref message);
+                var postFiles = AutoPostFileManager.Create(cache.files, (sbyte)(files.Count() + 1));
                 if (postFiles != null)
                 {
                     foreach (var file in postFiles)
@@ -213,40 +207,44 @@ namespace UseCases.AutoPosts
             PostFileRepository.UpdateRange(files);
             return true;
         }
-        public bool Recovery(AutoPostCache cache)
+        public bool Recovery(RecoveryAutoPostCommand command)
         {
-            List<PostFile> files;
+            if (!CheckExecuteTime(cache.execute_at, cache.timezone, ref message))
+            {
+                return false;
+            }
+            if (!FilesIdIsTrue(post.files, cache.files_id, ref message))
+            {
+                return false;
+            }
+            var updateResult = post.postType ? CheckToUpdatePost(cache, ref message) : CheckToUpdateStories(cache, ref message);
+            if (!updateResult)
+            {
+                return false;
+            }
 
-            var post = AutoPostRepository.GetBy(userToken, postId, false);
+            var post = AutoPostRepository.GetByWithUserAndFiles(command.UserToken, command.AutoPostId);
             if (post == null)
             {
-                throw new NotFoundException($"Сервер не визначив авто-пост по id={postId}.");
+                throw new NotFoundException($"Сервер не визначив авто-пост по id={command.AutoPostId}.");
             }
-            cache.session_id = post.sessionId;
-            cache.post_type = post.postType;
-            var account = IGAccountRepository.GetBy(post.sessionId);
-            if (cache.post_type ? access.PostsIsTrue(account.userId, ref message) :
-                    access.StoriesIsTrue(account.userId, ref message))
+            var account = IGAccountRepository.Get(post.AccountId);
+
+            var accessResult = post.Type ? access.PostsIsTrue(account.UserId) : access.StoriesIsTrue(account.UserId)
+            if (!accessResult)
             {
-                if (CheckExecuteTime(cache.execute_at, cache.timezone, ref message))
-                {
-                    if (post.postType ? CheckToUpdatePost(cache, ref message) : CheckToUpdateStories(cache, ref message))
-                    {
-                        post.files = PostFileRepository.GetBy(post.postId, false);
-                        if (FilesIdIsTrue(post.files, cache.files_id, ref message))
-                        {
-                            files = CreateDuplicatePostFile(post.files);
-                            post.postDeleted = true;
-                            AutoPostRepository.Update(post);
-                            post = SaveAutoPost(cache, files);
-                            ChangeOrderFiles(cache.files_id, post.files);
-                            Logger.Information("Recovery auto post, id -> " + post.postId);
-                            return true;
-                        }
-                    }
-                }
+                return false;
             }
-            return false;
+           
+            post.files = PostFileRepository.GetBy(post.postId, false);
+            
+            var files = CreateDuplicatePostFile(post.files);
+            post.Deleted = true;
+            AutoPostRepository.Update(post);
+            post = SaveAutoPost(command, files);
+            ChangeOrderFiles(cache.files_id, post.files);
+            Logger.Information("Recovery auto post, id -> " + post.postId);
+            return true;
         }
         public List<AutoPostFile> CreateDuplicatePostFile(ICollection<AutoPostFile> files)
         {
@@ -289,29 +287,5 @@ namespace UseCases.AutoPosts
             return false;
         }
         */
-    }
-    public struct AutoPostCache
-    {
-        public string user_token;
-        public long session_id;
-        public long post_id;
-        public bool post_type;
-        public List<IFormFile> files;
-        public List<long> files_id;
-        public DateTime execute_at;
-        public bool? auto_delete;
-        public DateTime delete_after;
-        public string location;
-        public string comment;
-        public string description;
-        public int category;
-        public long category_id;
-        public int next;
-        public int count;
-        public DateTime from;
-        public DateTime to;
-        public long file_id;
-        public sbyte order;
-        public int timezone;
     }
 }

@@ -1,6 +1,4 @@
-﻿using Domain.InstagramAccounts;
-
-namespace UseCases.InstagramAccounts
+﻿namespace Domain.InstagramAccounts
 {
     public interface IIGAccountRepository
     {

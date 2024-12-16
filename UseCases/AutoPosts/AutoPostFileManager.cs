@@ -8,7 +8,11 @@ using UseCases.Exceptions;
 
 namespace UseCases.AutoPosts
 {
-    public class AutoPostFileManager : BaseManager
+    public interface IAutoPostFileManager
+    {
+        ICollection<AutoPostFile> Create(ICollection<IFormFile> files, sbyte startOrder);
+    }
+    public class AutoPostFileManager : BaseManager, IAutoPostFileManager
     {
         private IAutoPostRepository AutoPostRepository;
         private IAutoPostFileRepository AutoPostFileRepository;
@@ -53,7 +57,7 @@ namespace UseCases.AutoPosts
                 Logger.Information($"Файл був видалений з автопосту, файл id={file.Id}.");
             }
         }
-        public ICollection<AutoPostFile> SavePostFiles(ICollection<IFormFile> files, sbyte startOrder, ref string message)
+        public ICollection<AutoPostFile> Create(ICollection<IFormFile> files, sbyte startOrder)
         {
             var postFiles = new List<AutoPostFile>();
 
@@ -69,14 +73,14 @@ namespace UseCases.AutoPosts
                 {
                     if (!CreateVideoFile(post, file, ref message))
                     {
-                        return null;
+                        throw new IgAccountException("Сервер не зміг зберегти відео файл.");
                     }
                 }
                 else
                 {
                     if (!CreateImageFile(post, file, ref message))
                     {
-                        return null;
+                        throw new IgAccountException("Сервер не зміг зберегти зображення.");
                     }
                 }
                 postFiles.Add(post);

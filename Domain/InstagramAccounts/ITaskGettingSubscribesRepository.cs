@@ -1,6 +1,4 @@
-﻿using Domain.GettingSubscribes;
-
-namespace UseCases.InstagramAccounts
+﻿namespace Domain.GettingSubscribes
 {
     public interface ITaskGettingSubscribesRepository
     {

@@ -1,6 +1,6 @@
 ﻿using Domain.Admins;
 
-namespace UseCases.Appeals
+namespace Domain.Appeals
 {
     public interface IAppealRepository
     {

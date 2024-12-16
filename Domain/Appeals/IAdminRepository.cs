@@ -1,6 +1,4 @@
-﻿using Domain;
-
-namespace UseCases.Appeals
+﻿namespace Domain.Appeals
 {
     public interface IAdminRepository
     {
