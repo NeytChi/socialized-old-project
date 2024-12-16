@@ -83,17 +83,16 @@ namespace UseCases.AutoPosts
             var post = new AutoPost()
             {
                 AccountId = cache.session_id,
-                postType = cache.post_type,
-                createdAt = DateTimeOffset.UtcNow,
-                executeAt = cache.execute_at.AddHours(timezone),
-                autoDelete = cache.auto_delete != null ? (bool)cache.auto_delete : false,
-                deleteAfter = cache.auto_delete == true
-                    ? cache.delete_after.AddHours(timezone) : cache.delete_after,
-                postLocation = HttpUtility.UrlDecode(cache.location),
-                postDescription = HttpUtility.UrlDecode(cache.description),
-                postComment = HttpUtility.UrlDecode(cache.comment),
-                timezone = cache.timezone,
-                categoryId = cache.category_id,
+                Type = cache.post_type,
+                CreatedAt = DateTime.UtcNow,
+                ExecuteAt = cache.execute_at.AddHours(timezone),
+                AutoDelete = cache.auto_delete != null ? (bool)cache.auto_delete : false,
+                DeleteAfter = cache.auto_delete == true ? cache.delete_after.AddHours(timezone) : cache.delete_after,
+                Location = HttpUtility.UrlDecode(cache.location),
+                Description = HttpUtility.UrlDecode(cache.description),
+                Comment = HttpUtility.UrlDecode(cache.comment),
+                TimeZone = cache.timezone,
+                CategoryId = cache.category_id,
                 files = postFiles
             };
             AutoPostRepository.Add(post);
@@ -111,11 +110,11 @@ namespace UseCases.AutoPosts
             {
                 if (post.postStopped)
                 {
-                    post.postStopped = false;
+                    post.Stopped = false;
                 }
                 else
                 {
-                    post.postStopped = true;
+                    post.Stopped = true;
                 }
                 AutoPostRepository.Update(post);
                 return true;

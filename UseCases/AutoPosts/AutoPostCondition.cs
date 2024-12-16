@@ -8,18 +8,18 @@ namespace UseCases.AutoPosts
     {
         public bool CheckAutoPost(AutoPostCache cache, ref string message)
         {
-            if (CheckFiles(cache.files, ref message))
+            if (!CheckFiles(cache.files, ref message))
             {
-                if (cache.post_type)
-                {
-                    return CheckPost(cache, ref message);
-                }
-                else
-                {
-                    return CheckStories(cache, ref message);
-                }
+                return false;
             }
-            return false;
+            if (cache.post_type)
+            {
+                return CheckPost(cache, ref message);
+            }
+            else
+            {
+                return CheckStories(cache, ref message);
+            }
         }
         public bool CheckStories(AutoPostCache cache, ref string message)
         {
