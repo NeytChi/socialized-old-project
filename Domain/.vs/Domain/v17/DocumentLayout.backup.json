@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\Domain\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\packages\\serviceaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:packages\\serviceaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\packages\\discountpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:packages\\discountpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\instagramaccounts\\businessaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:instagramaccounts\\businessaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\instagramaccounts\\igaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:instagramaccounts\\igaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|d:\\vs projects\\socialized\\domain\\autoposting\\getautopostscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26781B3E-9C19-4C8E-8E00-B5E8C2E83F65}|Domain.csproj|solutionrelative:autoposting\\getautopostscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,53 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServiceAccess.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Packages\\ServiceAccess.cs",
-              "RelativeDocumentMoniker": "Packages\\ServiceAccess.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Packages\\ServiceAccess.cs",
-              "RelativeToolTip": "Packages\\ServiceAccess.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T13:05:08.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DiscountPackage.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\Packages\\DiscountPackage.cs",
-              "RelativeDocumentMoniker": "Packages\\DiscountPackage.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\Packages\\DiscountPackage.cs",
-              "RelativeToolTip": "Packages\\DiscountPackage.cs",
+              "Title": "GetAutoPostsCommand.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\AutoPosting\\GetAutoPostsCommand.cs",
+              "RelativeDocumentMoniker": "AutoPosting\\GetAutoPostsCommand.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\AutoPosting\\GetAutoPostsCommand.cs",
+              "RelativeToolTip": "AutoPosting\\GetAutoPostsCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T13:05:06.986Z",
+              "WhenOpened": "2024-12-16T11:00:37.434Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BusinessAccount.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\InstagramAccounts\\BusinessAccount.cs",
-              "RelativeDocumentMoniker": "InstagramAccounts\\BusinessAccount.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\InstagramAccounts\\BusinessAccount.cs",
-              "RelativeToolTip": "InstagramAccounts\\BusinessAccount.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T11:29:09.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IGAccount.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\Domain\\InstagramAccounts\\IGAccount.cs",
-              "RelativeDocumentMoniker": "InstagramAccounts\\IGAccount.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\Domain\\InstagramAccounts\\IGAccount.cs",
-              "RelativeToolTip": "InstagramAccounts\\IGAccount.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T11:29:00.263Z"
             }
           ]
         }

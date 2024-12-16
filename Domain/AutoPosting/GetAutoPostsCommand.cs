@@ -3,7 +3,7 @@
     public class GetAutoPostsCommand
     {
         public string UserToken { get; set; }
-        public long SessionId { get; set; }
+        public long AccountId { get; set; }
         public bool PostExecuted { get; set; }
         public bool PostDeleted { get; set; }
         public bool PostAutoDeleted { get; set; }

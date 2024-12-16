@@ -1,9 +1,12 @@
-﻿namespace Domain.AutoPosting
+﻿using Domain.AutoPosting;
+
+namespace UseCases.AutoPosts
 {
     public interface IAutoPostRepository
     {
         void Add(AutoPost autoPost);
         void Update(AutoPost autoPost);
+        AutoPost GetByWithFiles(long autoPostFileId, bool postDeleted = false);
         AutoPost GetBy(string userToken, long postId, bool postDeleted = false);
         AutoPost GetBy(string userToken, long postId, bool postDeleted, bool postAutoDeleted, bool postExecuted);
         ICollection<AutoPost> GetBy(GetAutoPostsCommand command);
