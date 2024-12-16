@@ -16,10 +16,10 @@ namespace UseCases.Tasks
     public class TaskDataCondition : BaseHandler, IHandlerGS
     {
         private InstagramApi api;
-        private IGAccountManager sessionManager;
+        private CreateIGAccountManager sessionManager;
         private SessionStateHandler stateHandler;
         
-        public TaskDataCondition(Logger logger, IGAccountManager sessionManager, SessionStateHandler stateHandler) : base(logger)
+        public TaskDataCondition(Logger logger, CreateIGAccountManager sessionManager, SessionStateHandler stateHandler) : base(logger)
         {
             this.sessionManager = sessionManager;
             this.api = InstagramApi.GetInstance();

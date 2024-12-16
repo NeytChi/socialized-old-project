@@ -26,8 +26,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,14 +40,10 @@
               "RelativeDocumentMoniker": "API\\Api.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\API\\Api.cs",
               "RelativeToolTip": "API\\Api.cs",
-              "ViewState": "AgIAAMsBAAAAAAAAAAAAAOYBAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T21:44:08.953Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
@@ -55,8 +55,7 @@
               "RelativeToolTip": "API\\Builder\\InstaApiBuilder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T12:26:17.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T12:26:17.843Z"
             },
             {
               "$type": "Document",
@@ -66,7 +65,7 @@
               "RelativeDocumentMoniker": "API\\Processors\\HashtagProcessor.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\API\\Processors\\HashtagProcessor.cs",
               "RelativeToolTip": "API\\Processors\\HashtagProcessor.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAABBwBwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T12:25:02.416Z"
             },
@@ -78,10 +77,9 @@
               "RelativeDocumentMoniker": "API\\Session.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\InstagramSessionApi\\API\\Session.cs",
               "RelativeToolTip": "API\\Session.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAABBwAsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T12:21:17.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T12:21:17.38Z"
             }
           ]
         }

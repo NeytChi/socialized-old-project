@@ -14,7 +14,16 @@ using InstagramApiSharp.Classes.Android.DeviceInfo;
 
 namespace InstagramApiSharp.API
 {
-    public class InstagramApi
+    public interface IInstagramApi
+    {
+        InstaLoginResult Login(Session session, bool isNewLogin = true);
+        Session LoadStateDataFromString(string json);
+        InstaLoginResult VerifyCodeForChallengeRequire(string verifyCode, Session session);
+        IResult<InstaChallengeRequireSMSVerify> VerifyCodeToSMSForChallengeRequire(bool replayChallenge, Session session);
+        IResult<InstaChallengeRequireVerifyMethod> GetChallengeRequireVerifyMethod(Session _user);
+        string GetStateDataAsString(Session session);
+    }
+    public class InstagramApi : IInstagramApi
     {
         private InstagramApi()
         {
@@ -91,7 +100,7 @@ namespace InstagramApiSharp.API
         ///     Exception --> Something wrong happened
         ///     ChallengeRequired --> You need to pass Instagram challenge
         /// </returns>
-        public InstaLoginResult Login(ref Session session, bool isNewLogin = true)
+        public InstaLoginResult Login(Session session, bool isNewLogin = true)
         {
             try
             {
@@ -198,7 +207,7 @@ namespace InstagramApiSharp.API
         /// <summary>
         ///     Get challenge require (checkpoint required) options
         /// </summary>
-        public IResult<InstaChallengeRequireVerifyMethod> GetChallengeRequireVerifyMethod(ref Session _user)
+        public IResult<InstaChallengeRequireVerifyMethod> GetChallengeRequireVerifyMethod(Session _user)
         {
             if (_user.challengeinfo == null)
                 return Result.Fail("challenge require info is empty.\r\ntry to call LoginAsync function first.", (InstaChallengeRequireVerifyMethod)null);
@@ -227,12 +236,12 @@ namespace InstagramApiSharp.API
         ///     Request verification code sms for challenge require (checkpoint required)
         /// </summary>
         /// <param name="replayChallenge">true if Instagram should resend verification code to you</param>
-        public IResult<InstaChallengeRequireSMSVerify> VerifyCodeToSMSForChallengeRequire(bool replayChallenge, ref Session _user)
+        public IResult<InstaChallengeRequireSMSVerify> VerifyCodeToSMSForChallengeRequire(bool replayChallenge,Session _user)
         {
-            return RequestVerifyCodeToSMSForChallengeRequire(replayChallenge,ref _user);
+            return RequestVerifyCodeToSMSForChallengeRequire(replayChallenge, _user);
         }
 
-        private IResult<InstaChallengeRequireSMSVerify> RequestVerifyCodeToSMSForChallengeRequire(bool replayChallenge, ref Session _user, string phoneNumber = null)
+        private IResult<InstaChallengeRequireSMSVerify> RequestVerifyCodeToSMSForChallengeRequire(bool replayChallenge, Session _user, string phoneNumber = null)
         {
             if (_user.challengeinfo == null)
                 return Result.Fail("challenge require info is empty.\r\ntry to call LoginAsync function first.", (InstaChallengeRequireSMSVerify)null);
@@ -289,28 +298,28 @@ namespace InstagramApiSharp.API
         ///     Verify verification code for challenge require (checkpoint required)
         /// </summary>
         /// <param name="verifyCode">Verification code</param>
-        public InstaLoginResult VerifyCodeForChallengeRequire(string verifyCode,ref Session _user)
+        public InstaLoginResult VerifyCodeForChallengeRequire(string verifyCode, Session session)
         {
-            if (_user.challengeinfo == null)
+            if (session.challengeinfo == null)
                 return Result.Fail("challenge require info is empty.\r\ntry to call Login function first.", InstaLoginResult.Exception).Value;
 
             try
             {
-                var cookies = _user.httpHandler.CookieContainer.GetCookies(_user.httpClient.BaseAddress);
+                var cookies = session.httpHandler.CookieContainer.GetCookies(session.httpClient.BaseAddress);
                 var csrftoken = cookies[InstaApiConstants.CSRFTOKEN]?.Value ?? string.Empty;
-                _user.User.CsrfToken = csrftoken;
-                var instaUri = UriCreator.GetChallengeRequireUri(_user.challengeinfo.ApiPath);
+                session.User.CsrfToken = csrftoken;
+                var instaUri = UriCreator.GetChallengeRequireUri(session.challengeinfo.ApiPath);
 
                 var data = new JObject
                 {
                     {"security_code", verifyCode},
-                    {"_csrftoken", _user.User.CsrfToken},
-                    {"guid", _user.device.DeviceGuid.ToString()},
-                    {"device_id", _user.device.DeviceId},
+                    {"_csrftoken", session.User.CsrfToken},
+                    {"guid", session.device.DeviceGuid.ToString()},
+                    {"device_id", session.device.DeviceId},
                 };
-                var request = httpHelper.GetSignedRequest(HttpMethod.Post, instaUri, _user.device, data);
+                var request = httpHelper.GetSignedRequest(HttpMethod.Post, instaUri, session.device, data);
                 request.Headers.Add("Host", "i.instagram.com");
-                var response =  httpRequestProcessor.SendAsync(request, _user.httpClient);
+                var response =  httpRequestProcessor.SendAsync(request, session.httpClient);
                 var json = response.Content.ReadAsStringAsync().Result;
                 if (response.StatusCode != HttpStatusCode.OK)
                 {
@@ -329,7 +338,7 @@ namespace InstagramApiSharp.API
                 {
                     if (obj.LoggedInUser != null)
                     {
-                        ValidateUserAsync(ref _user, obj.LoggedInUser, csrftoken);
+                        ValidateUserAsync(ref session, obj.LoggedInUser, csrftoken);
                         Task.Delay(3000);
                         return Result.Success(InstaLoginResult.Success).Value;
                     }
@@ -338,7 +347,7 @@ namespace InstagramApiSharp.API
                     {
                         // we should wait at least 15 seconds and then trying to login again
                         Task.Delay(15000);
-                        return Login(ref _user, false);
+                        return Login(session, false);
                     }
                 }
                 return Result.Fail(obj?.Message, InstaLoginResult.Exception).Value;

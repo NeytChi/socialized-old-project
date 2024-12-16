@@ -20,7 +20,7 @@ namespace UseCases.AutoPosts
         private IFileConverter FileConverter;
 
         
-        public IGAccountManager AccountManager;
+        public CreateIGAccountManager AccountManager;
         public PackageManager access;
         public TaskDataCondition handler;
         public ConverterFiles converter;

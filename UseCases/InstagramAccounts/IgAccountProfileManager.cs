@@ -1,4 +1,5 @@
-﻿using Serilog;
+﻿using InstagramApiSharp.API;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace UseCases.InstagramAccounts
 {
-    public class IgAccountProfileManager : BaseManager
+    public class IgAccountProfileManager : IGAccountManager
     {
-        public IgAccountProfileManager(ILogger logger) : base(logger)
+        public IgAccountProfileManager(ILogger logger,
+            IInstagramApi api,
+            IIGAccountRepository accountRepository) : base(logger, api, accountRepository)
         {
 
         }
+        /*
         /// <summary>
         /// Function for receiving instagram profile account data.
         /// <param> Session id need to be long type of variable.</param>
@@ -39,5 +43,6 @@ namespace UseCases.InstagramAccounts
                 Logger.Warning("Server can't get account details by sessionId -> " + sessionId);
             }
         }
+        */
     }
 }
