@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.response;
 
-namespace WebAPI.Controllers.Admins
+namespace WebAPI.Controllers
 {
     [Route(Version.Current + "/[controller]/[action]/")]
     [ApiController]

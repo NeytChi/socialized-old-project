@@ -5,6 +5,7 @@ using Domain.AutoPosting;
 using Domain.Users;
 using UseCases.Exceptions;
 using UseCases.Appeals.Commands;
+using Domain.Appeals;
 
 namespace UseCases.Appeals
 {

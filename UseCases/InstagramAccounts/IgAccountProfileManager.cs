@@ -1,4 +1,5 @@
-﻿using InstagramApiSharp.API;
+﻿using Domain.InstagramAccounts;
+using InstagramApiSharp.API;
 using Serilog;
 using System;
 using System.Collections.Generic;

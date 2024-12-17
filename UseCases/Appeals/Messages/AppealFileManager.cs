@@ -2,6 +2,7 @@
 using Core.FileControl;
 using Domain.Admins;
 using Microsoft.AspNetCore.Http;
+using Domain.Appeals.Messages;
 
 namespace UseCases.Appeals.Messages
 {

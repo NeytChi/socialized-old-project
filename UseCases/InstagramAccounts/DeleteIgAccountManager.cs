@@ -1,4 +1,6 @@
-﻿using Serilog;
+﻿using Domain.GettingSubscribes;
+using Domain.InstagramAccounts;
+using Serilog;
 using UseCases.Exceptions;
 
 namespace UseCases.InstagramAccounts

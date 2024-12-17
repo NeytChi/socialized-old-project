@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
-namespace WebAPI.Controllers.Admins
+namespace WebAPI.Controllers
 {
     public class SupportController : ControllerResponseBase
     {
@@ -51,7 +51,7 @@ namespace WebAPI.Controllers.Admins
             [FromQuery] int since, [FromQuery] int count)
         {
             string message = string.Empty;
-            
+
 
             if (support.GetNonDeleteUser(userToken, ref message) != null)
             {

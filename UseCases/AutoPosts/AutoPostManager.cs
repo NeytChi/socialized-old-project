@@ -14,7 +14,7 @@ namespace UseCases.AutoPosts
         private IAutoPostRepository AutoPostRepository;
         private IAutoPostFileManager AutoPostFileManager;
         private ICategoryRepository CategoryRepository;
-        private IAutoPostFilesManager AutoPostFilesManager;
+        private IAutoPostFileManager AutoPostFilesManager;
         private AutoPostCondition AutoPostCondition;
         
         
@@ -103,7 +103,7 @@ namespace UseCases.AutoPosts
             post.CategoryId = command.CategoryId;
             post.Description = HttpUtility.UrlDecode(command.Description);
             post.Comment = HttpUtility.UrlDecode(command.Comment);
-            AutoPostFilesManager.UpdateAutoPostFile(command.Files, post.files);
+            AutoPostFileManager.Update(command.Files, post.files);
             AutoPostRepository.Update(post);
         }
         public void Delete(DeleteAutoPostCommand command)

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using WebAPI.Responses;
 
-namespace WebAPI.Controllers.Admins
+namespace WebAPI.Controllers
 {
     public class AdminsController : ControllerResponseBase
     {
@@ -75,7 +75,7 @@ namespace WebAPI.Controllers.Admins
             string message = null;
             if (admins.RecoveryPassword(cache.admin_email, ref message))
             {
-                return new 
+                return new
                 {
                     success = true,
                     message = "Every thing is fine. Check your email to get recovery code."

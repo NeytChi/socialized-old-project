@@ -10,6 +10,7 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\InstagramSessionApi\InstagramSessionApi.csproj" />
+    <ProjectReference Include="..\FfmpegConverter\FfmpegConverter.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

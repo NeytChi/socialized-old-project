@@ -32,11 +32,7 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj": {
-                "projectPath": "D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

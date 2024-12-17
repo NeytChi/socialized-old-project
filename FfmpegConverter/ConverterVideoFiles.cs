@@ -23,7 +23,7 @@ namespace FfmpegConverter
             {
                 streamFile.CopyTo(stream);
             }
-            if (ConvertImage(contentType, pathFile))
+            if (ConvertByImageType(contentType, pathFile))
             {
                 using (var stream = File.Open(pathFile + ".jpg", FileMode.Open))
                 {
@@ -53,25 +53,26 @@ namespace FfmpegConverter
             File.Delete(pathFile);
             return null;
         }
-        // public bool ConvertImage(string contentType, string pathFile)
-        // {
-        //     string arguments;
+        public bool ConvertByImageType(string contentType, string pathFile)
+        {
+            string arguments;
 
-        //     switch (contentType) {
-        //         case "image/tiff": 
-        //         case "image/png": 
-        //         case "image/gif":
-        //             arguments = pathFile + " " +  pathFile + ".jpg";
-        //             return ConvertImageMagick(arguments);
-        //         case "image/jpeg": 
-        //             File.Move(pathFile, pathFile + ".jpg");
-        //             return true;
-        //         default : 
-        //             log.Information("Can't define file type to convert file for auto-posting.");
-        //             return false;
-        //     }
-        // }
-        public bool ConvertImage(string contentType, string pathFile)
+            switch (contentType)
+            {
+                case "image/tiff":
+                case "image/png":
+                case "image/gif":
+                    arguments = pathFile + " " + pathFile + ".jpg";
+                    return ConvertImageMagick(arguments);
+                case "image/jpeg":
+                    File.Move(pathFile, pathFile + ".jpg");
+                    return true;
+                default:
+                    Logger.Information("Can't define file type to convert file for auto-posting.");
+                    return false;
+            }
+        }
+        public bool ConvertByImageTypeOld(string contentType, string pathFile)
         {
             string arguments;
 
@@ -118,24 +119,27 @@ namespace FfmpegConverter
                     return false;
             }
         }
-        // public Stream GetVideoThumbnail(string pathFile)
-        // {
-        //     MemoryStream convertedFile = null;
-        //     string thumbnailPath, arguments;
+        public Stream GetVideoThumbnail(string pathFile)
+        {
+            MemoryStream convertedFile = null;
+            string thumbnailPath, arguments;
 
-        //     thumbnailPath = Directory.GetCurrentDirectory() + "/" + DateTime.Now.Ticks.ToString() + "-tn.jpg";
-        //     arguments = pathFile + "[1] " + thumbnailPath;
+            thumbnailPath = Directory.GetCurrentDirectory() + "/" + DateTime.Now.Ticks.ToString() + "-tn.jpg";
+            arguments = pathFile + "[1] " + thumbnailPath;
 
-        //     if (ConvertImageMagick(arguments)) {
-        //         using (Stream stream = File.Open(thumbnailPath, FileMode.Open)) {
-        //             convertedFile = new MemoryStream();
-        //             stream.CopyTo(convertedFile);
-        //             convertedFile.Seek(0, SeekOrigin.Begin);
-        //         }
-        //         File.Delete(thumbnailPath);
-        //     }
-        //     return convertedFile;
-        // }
+            if (ConvertImageMagick(arguments))
+            {
+                using (Stream stream = File.Open(thumbnailPath, FileMode.Open))
+                {
+                    convertedFile = new MemoryStream();
+                    stream.CopyTo(convertedFile);
+                    convertedFile.Seek(0, SeekOrigin.Begin);
+                }
+                File.Delete(thumbnailPath);
+            }
+            return convertedFile;
+        }
+        /*
         public Stream GetVideoThumbnail(string pathFile)
         {
             var convertedFile = new MemoryStream();
@@ -154,7 +158,7 @@ namespace FfmpegConverter
                 File.Delete(thumbnailPath);
             }
             return convertedFile;
-        }
+        }*/
         public bool ConvertImageMagick(string args)
         {
             try
@@ -194,6 +198,11 @@ namespace FfmpegConverter
                 Logger.Error("Can't convert file with args -> " + args + ". Message -> " + e.Message);
             }
             return false;
+        }
+
+        public bool ConvertImage(string contentType, string pathFile)
+        {
+            throw new NotImplementedException();
         }
     }
 }

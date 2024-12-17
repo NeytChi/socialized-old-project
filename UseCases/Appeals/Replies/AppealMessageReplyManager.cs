@@ -2,6 +2,8 @@
 using Domain.Admins;
 using UseCases.Exceptions;
 using UseCases.Appeals.Replies.Commands;
+using Domain.Appeals;
+using Domain.Appeals.Replies;
 
 namespace UseCases.Appeals.Replies
 {

@@ -4,8 +4,8 @@ using System.Web;
 using UseCases.Exceptions;
 using UseCases.Admins.Commands;
 using Domain.Users;
-using UseCases.Appeals;
 using Domain;
+using Domain.Appeals;
 
 namespace UseCases.Admins
 {
