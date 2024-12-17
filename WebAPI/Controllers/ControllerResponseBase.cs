@@ -13,6 +13,10 @@ namespace WebAPI.Controllers
         {
             return HttpContext?.Request.Headers.Where(h => h.Key == "Authorization").Select(h => h.Value).FirstOrDefault();
         }
+        public string GetCulture()
+        {
+            return Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US";
+        }
         public long GetAdminIdByToken()
         {
             return long.Parse(HttpContext.User.Claims.First().Value);

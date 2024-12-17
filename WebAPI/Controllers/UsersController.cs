@@ -1,196 +1,110 @@
-﻿using Serilog;
-using Serilog.Core;
-using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using System.Collections.Generic;
-
-using Managment;
-using Models.Common;
-using database.context;
+﻿using Microsoft.AspNetCore.Mvc;
+using UseCases.Users;
+using UseCases.Users.Commands;
+using WebAPI.Responses;
 
 namespace WebAPI.Controllers
 {
-    [Route("v1.0/[controller]/[action]/")]
-    [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController : ControllerResponseBase
     {
-        public UsersManager manager;
-        public UsersController(Context context)
+        private IUsersManager UserManager;
+        private IUserLoginManager UserLoginManager;
+        private IUserPasswordRecoveryManager UserPasswordRecoveryManager;
+
+        public UsersController(IUsersManager usersManager, 
+            IUserLoginManager userLoginManager,
+            IUserPasswordRecoveryManager userPasswordRecoveryManager)
         {
-            this.context = context;
-            manager = new UsersManager(log, context);
+            UserManager = usersManager;
+            UserLoginManager = userLoginManager;
+            UserPasswordRecoveryManager = userPasswordRecoveryManager;
         }
         [HttpPost]
         [ActionName("Registration")]
-        public ActionResult<dynamic> Registration(UserCache user)
+        public ActionResult<dynamic> Registration(CreateUserCommand command)
         {
-            string message = string.Empty;
-            user.culture = Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US";
-            if (manager.RegistrationUser(user, ref message))
-                return new
-                {
-                    success = true,
-                    message = GetMessage("registration", Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US")
-                };
-            return Return500Error(message);
+            UserManager.Create(command);
+
+            return new SuccessResponse(true);
         }
         [HttpPost]
         [ActionName("RegistrationEmail")]
-        public ActionResult<dynamic> RegistrationEmail(UserCache user)
+        public ActionResult<dynamic> RegistrationEmail([FromQuery] string email)
         {
-            string message = null;
-            if (manager.RegistrationEmail(user.user_email, Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US", ref message))
-                return new
-                {
-                    success = true,
-                    message = GetMessage("confirm_email", Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US")
-                };
-            return Return500Error(message);
+            var culture = GetCulture();
+
+            UserManager.RegistrationEmail(email, culture);
+
+            return new SuccessResponse(true);
         }
         [HttpPost]
         [ActionName("Login")]
-        public ActionResult<dynamic> Login(UserCache cache)
+        public ActionResult<dynamic> Login(LoginUserCommand command)
         {
-            string message = null;
-            User user = manager.Login(cache, ref message);
-            if (user != null)
-            {
-                return new
-                {
-                    success = true,
-                    data = new
-                    {
-                        user = new
-                        {
-                            user_id = user.userId,
-                            user_fullname = user.userFullName,
-                            user_token = user.userToken,
-                            user_email = user.userEmail,
-                            created_at = user.createdAt,
-                            last_login_at = user.lastLoginAt
-                        }
-                    }
-                };
-            }
-            return Return500Error(message);
+            var result = UserLoginManager.Login(command);
+            
+            return new DataResponse(true, result);
         }
         [HttpPost]
         [ActionName("LogOut")]
-        public ActionResult<dynamic> LogOut(UserCache user)
+        public ActionResult<dynamic> LogOut()
         {
-            string message = null;
-            if (manager.LogOut(user.user_token, ref message))
-                return new { success = true };
-            return Return500Error(message);
+            var token = GetAutorizationToken();
+
+            UserLoginManager.LogOut(token);
+
+            return new SuccessResponse(true);
         }
         [HttpPost]
         [ActionName("RecoveryPassword")]
-        public ActionResult<dynamic> RecoveryPassword(UserCache user)
+        public ActionResult<dynamic> RecoveryPassword([FromQuery] string email)
         {
-            string message = null;
-            if (manager.RecoveryPassword(user.user_email, Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US", ref message))
-                return new
-                {
-                    success = true,
-                    message = GetMessage("code_email", Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US")
-                };
-            return Return500Error(message);
+            var culture = GetCulture();
+
+            UserPasswordRecoveryManager.RecoveryPassword(email, culture);
+
+            return new SuccessResponse(true);
         }
         [HttpPost]
         [ActionName("CheckRecoveryCode")]
-        public ActionResult<dynamic> CheckRecoveryCode(UserCache user)
+        public ActionResult<dynamic> CheckRecoveryCode(CheckRecoveryCodeCommand command)
         {
-            string message = null;
-            string recoveryToken = manager.CheckRecoveryCode(user.user_email,
-                user.recovery_code, ref message);
-            if (recoveryToken != null)
-                return new { success = true, data = new { recovery_token = recoveryToken } };
-            return Return500Error(message);
+            string recoveryToken = UserPasswordRecoveryManager.CheckRecoveryCode(command);
+
+            return new DataResponse(true, new { recovery_token = recoveryToken });
         }
         [HttpPost]
         [ActionName("ChangePassword")]
-        public ActionResult<dynamic> ChangePassword(UserCache user)
+        public ActionResult<dynamic> ChangePassword(ChangePasswordCommand command)
         {
-            string message = null;
-            if (manager.ChangePassword(user.recovery_token,
-                user.user_password, user.user_confirm_password, ref message))
-                return new { success = true };
-            return Return500Error(message);
+            UserPasswordRecoveryManager.ChangePassword(command);
+
+            return new SuccessResponse(true);
         }
         [HttpPost]
         [ActionName("ChangeOldPassword")]
-        public ActionResult<dynamic> ChangeOldPassword(UserCache user)
+        public ActionResult<dynamic> ChangeOldPassword(ChangeOldPasswordCommand command)
         {
-            string message = null;
-            if (manager.ChangeOldPassword(user.user_token, user.old_password, user.new_password, ref message))
-                return new { success = true };
-            return Return500Error(message);
+            UserPasswordRecoveryManager.ChangeOldPassword(command);
+
+            return new SuccessResponse(true);
         }
         [HttpGet]
         [ActionName("Activate")]
         public ActionResult<dynamic> Activate([FromQuery] string hash)
         {
-            string message = null;
-            if (manager.Activate(hash, ref message))
-                return new
-                {
-                    success = true,
-                    message = GetMessage("activate", Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US")
-                };
-            return Return500Error(message);
-        }
-        [HttpPost]
-        [ActionName("Delete")]
-        public ActionResult<dynamic> Delete(UserCache user)
-        {
-            string message = null;
-            if (manager.Delete(user.user_token, ref message))
-                return new { success = true };
-            return Return500Error(message);
-        }
-        [HttpGet]
-        [ActionName("Locations")]
-        public ActionResult<dynamic> Locations()
-        {
-            string culture = "en_US";
-            if (Request.Headers.ContainsKey("Accept-Language"))
-            {
-                culture = Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US";
-            }
-            if (culture == "en_US")
-                return new { countries = context.countries.OrderBy(x => x.english).Select(x => x.english).ToArray() };
-            else
-                return new { countries = context.countries.OrderBy(x => x.name).Select(x => x.name).ToArray() };
-        }
-        public dynamic Return500Error(string key)
-        {
-            string culture = "en_US";
-            if (Response != null)
-                Response.StatusCode = 500;
-            if (Request.Headers.ContainsKey("Accept-Language"))
-            {
-                culture = Request.Headers["Accept-Language"].FirstOrDefault() ?? "en_US";
-            }
-            log.Warning(key + " IP -> " +
-                HttpContext?.Connection.RemoteIpAddress.ToString() ?? "");
-            return new
-            {
-                success = false,
-                message = GetMessage(key, culture)
-            };
-        }
-        public string GetMessage(string key, string culture)
-        {
-            string value;
+            UserManager.Activate(hash);
 
-            value = context.Cultures.Where(c
-                => c.cultureKey == key
-                && c.cultureName == culture).FirstOrDefault()?.cultureValue ?? null;
-            if (value == null)
-                value = context.Cultures.Where(c
-                => c.cultureKey == key
-                && c.cultureName == "en_US").First().cultureValue;
-            return value;
+            return new SuccessResponse(true);
+        }
+        [HttpDelete]
+        public ActionResult<dynamic> Delete()
+        {
+            var userToken = GetAutorizationToken();
+
+            UserManager.Delete(userToken);
+
+            return new SuccessResponse(true);
         }
     }
 }

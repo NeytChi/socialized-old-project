@@ -2,15 +2,16 @@
 using Domain.Users;
 using Serilog;
 using UseCases.Exceptions;
+using UseCases.Users.Commands;
 
 namespace UseCases.Users
 {
     public interface IUserPasswordRecoveryManager
     {
         void RecoveryPassword(string userEmail, string culture);
-        string CheckRecoveryCode(string userEmail, int recoveryCode);
-        void ChangePassword(string recoveryToken, string userPassword, string userConfirmPassword);
-        void ChangeOldPassword(string userToken, string oldPassword, string newPassword);
+        string CheckRecoveryCode(CheckRecoveryCodeCommand command);
+        void ChangePassword(ChangePasswordCommand command);
+        void ChangeOldPassword(ChangeOldPasswordCommand command);
     }
     public class UserPasswordRecoveryManager : BaseManager, IUserPasswordRecoveryManager
     {
@@ -38,14 +39,14 @@ namespace UseCases.Users
             EmailMessager.SendRecoveryEmail(user.Email, culture, (int)user.RecoveryCode);
             Logger.Information($"Пароль був востановлений для користувача, id={user.Id}.");
         }
-        public string CheckRecoveryCode(string userEmail, int recoveryCode)
+        public string CheckRecoveryCode(CheckRecoveryCodeCommand command)
         {
-            var user = UserRepository.GetByEmail(userEmail);
+            var user = UserRepository.GetByEmail(command.UserEmail);
             if (user == null)
             {
                 throw new NotFoundException("Сервер не визначив користувача по email для перевірки коду востановлення паролю.");
             }
-            if (user.RecoveryCode != recoveryCode)
+            if (user.RecoveryCode != command.RecoveryCode)
             {
                 throw new ValidationException("Код востановлення паролю не вірний.");
             }
@@ -55,34 +56,34 @@ namespace UseCases.Users
             Logger.Information($"Перевірен був код востановлення паролю користувача, id={user.Id}.");
             return user.RecoveryToken;
         }
-        public void ChangePassword(string recoveryToken, string userPassword, string userConfirmPassword)
+        public void ChangePassword(ChangePasswordCommand command)
         {            
-            var user = UserRepository.GetByRecoveryToken(recoveryToken, false);
+            var user = UserRepository.GetByRecoveryToken(command.RecoveryToken, false);
             if (user == null)
             {
                 throw new NotFoundException("Сервер не визначив користувача по токену востановлення для зміни паролю.");
             }
-            if (!userPassword.Equals(userConfirmPassword))
+            if (!command.UserPassword.Equals(command.UserConfirmPassword))
             {
                 throw new ValidationException("Паролі не співпадають одне з одним.");
             }
-            user.Password = ProfileCondition.HashPassword(userPassword);
+            user.Password = ProfileCondition.HashPassword(command.UserPassword);
             user.RecoveryToken = "";
             UserRepository.Update(user);
             Logger.Information($"Пароль користувача було зміненно, id={user.Id}.");
         }
-        public void ChangeOldPassword(string userToken, string oldPassword, string newPassword)
+        public void ChangeOldPassword(ChangeOldPasswordCommand command)
         {
-            var user = UserRepository.GetByUserTokenNotDeleted(userToken);
+            var user = UserRepository.GetByUserTokenNotDeleted(command.UserToken);
             if (user == null)
             {
                 throw new NotFoundException("Сервер не визначив користувача по токену для зміни старого паролю користувача.");
             }
-            if (!ProfileCondition.VerifyHashedPassword(user.Password, oldPassword))
+            if (!ProfileCondition.VerifyHashedPassword(user.Password, command.OldPassword))
             {
                 throw new ValidationException("Пароль користувача не співпадає з паролем на сервері для заміни старого паролю.");
             }
-            user.Password = ProfileCondition.HashPassword(newPassword);
+            user.Password = ProfileCondition.HashPassword(command.NewPassword);
             UserRepository.Update(user);
             Logger.Information($"Старий пароль користувача було зміненно, id={user.Id}.");
         }
