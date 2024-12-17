@@ -10,14 +10,14 @@ namespace UseCases.AutoPosts.AutoPostFiles
     {
         ICollection<AutoPostFile> Create(ICollection<CreateAutoPostFileCommand> files, sbyte startOrder);
         void Update(ICollection<UpdateAutoPostFileCommand> commandFiles, ICollection<AutoPostFile> autoPost);
+        void Delete(DeleteAutoPostFileCommand command);
     }
     public class AutoPostFileManager : BaseManager, IAutoPostFileManager
     {
         private IAutoPostRepository AutoPostRepository;
         private IAutoPostFileRepository AutoPostFileRepository;
         private IAutoPostFileSave AutoPostFileSave;
-        
-
+       
         public AutoPostFileManager(ILogger logger,
             IAutoPostRepository autoPostRepository,
             IFileManager fileManager,

@@ -8,7 +8,14 @@ using UseCases.AutoPosts.AutoPostFiles;
 
 namespace UseCases.AutoPosts
 {
-    public class AutoPostManager : BaseManager
+    public interface IAutoPostManager
+    {
+        void Create(CreateAutoPostCommand command);
+        ICollection<AutoPost> Get(GetAutoPostsCommand command);
+        void Update(UpdateAutoPostCommand command);
+        void Delete(DeleteAutoPostCommand command);
+    }
+    public class AutoPostManager : BaseManager, IAutoPostManager
     {
         private IIGAccountRepository IGAccountRepository;
         private IAutoPostRepository AutoPostRepository;
@@ -52,7 +59,7 @@ namespace UseCases.AutoPosts
             var postFiles = AutoPostFileManager.Create(command.Files, 1);
             Save(command, postFiles);
         }
-        public AutoPost Save(AutoPostCommand command, ICollection<AutoPostFile> postFiles)
+        private AutoPost Save(AutoPostCommand command, ICollection<AutoPostFile> postFiles)
         {
             int timezone = command.TimeZone > 0 ? -command.TimeZone : command.TimeZone * -1;
             var post = new AutoPost

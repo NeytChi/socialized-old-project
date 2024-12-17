@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
-using UseCases.AutoPosts.Commands;
 
 namespace UseCases.AutoPosts.AutoPostFiles.Commands
 {
-    public class CreateAutoPostFileCommand : AutoPostCommand
+    public class CreateAutoPostFileCommand : AutoPostFileCommand
     {
         public IFormFile FormFile { get; set; }
     }

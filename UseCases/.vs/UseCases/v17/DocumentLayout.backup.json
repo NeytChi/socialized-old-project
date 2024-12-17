@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\UseCases\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\users\\userpasswordrecoverymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:users\\userpasswordrecoverymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\autoposts\\autopostfiles\\autopostfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\autopostfiles\\autopostfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\users\\commands\\checkrecoverycodecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:users\\commands\\checkrecoverycodecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\autoposts\\autopostmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\autopostmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\appeals\\appealmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:appeals\\appealmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,32 +27,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserPasswordRecoveryManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UserPasswordRecoveryManager.cs",
-              "RelativeDocumentMoniker": "Users\\UserPasswordRecoveryManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Users\\UserPasswordRecoveryManager.cs",
-              "RelativeToolTip": "Users\\UserPasswordRecoveryManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA6AAAAAAAAAA==",
+              "Title": "AutoPostFileManager.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostFiles\\AutoPostFileManager.cs",
+              "RelativeDocumentMoniker": "AutoPosts\\AutoPostFiles\\AutoPostFileManager.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostFiles\\AutoPostFileManager.cs",
+              "RelativeToolTip": "AutoPosts\\AutoPostFiles\\AutoPostFileManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T18:57:35.526Z",
+              "WhenOpened": "2024-12-17T19:42:52.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AutoPostManager.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostManager.cs",
+              "RelativeDocumentMoniker": "AutoPosts\\AutoPostManager.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostManager.cs",
+              "RelativeToolTip": "AutoPosts\\AutoPostManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T19:15:55.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppealManager.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\AppealManager.cs",
+              "RelativeDocumentMoniker": "Appeals\\AppealManager.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\AppealManager.cs",
+              "RelativeToolTip": "Appeals\\AppealManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T19:14:16.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CheckRecoveryCodeCommand.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Users\\Commands\\CheckRecoveryCodeCommand.cs",
-              "RelativeDocumentMoniker": "Users\\Commands\\CheckRecoveryCodeCommand.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Users\\Commands\\CheckRecoveryCodeCommand.cs",
-              "RelativeToolTip": "Users\\Commands\\CheckRecoveryCodeCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T19:00:49.95Z",
-              "EditorCaption": ""
             }
           ]
         }
