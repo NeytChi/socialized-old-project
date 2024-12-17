@@ -566,6 +566,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "D:\\VS Projects\\Socialized\\Domain\\Domain.csproj",
+      "D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
       "Serilog >= 4.1.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
@@ -603,7 +605,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\VS Projects\\Socialized\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\VS Projects\\Socialized\\Domain\\Domain.csproj"
+            },
+            "D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj": {
+              "projectPath": "D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -656,5 +665,25 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\VS Projects\\Socialized\\Domain\\Domain.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\VS Projects\\Socialized\\Domain\\Domain.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\VS Projects\\Socialized\\UseCases\\UseCases.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

@@ -6,8 +6,8 @@ namespace WebAPI.response
         public string Message { get; set; }
         public AnswerResponse(bool success, string message)
         {
-            this.Success = success;
-            this.Message = message;
+            Success = success;
+            Message = message;
         }
     }
 }

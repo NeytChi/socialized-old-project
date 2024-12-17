@@ -3,6 +3,7 @@ using Core;
 using InstagramApiSharp.API;
 using InstagramApiSharp.Classes;
 using UseCases.Exceptions;
+using Domain.InstagramAccounts;
 
 namespace UseCases.InstagramAccounts
 {

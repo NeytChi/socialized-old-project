@@ -1,14 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using WebAPI.Responses;
+using UseCases.Admins;
+using UseCases.Admins.Commands;
 
 namespace WebAPI.Controllers
 {
     public class AdminsController : ControllerResponseBase
     {
-        private IAdminManager AdminManager admins;
-        public AdminsController()
+        private IAdminManager AdminManager;
+        public AdminsController(IAdminManager adminManager)
         {
+            AdminManager = adminManager;
         }
         [HttpPost]
         [ActionName("SignIn")]
@@ -25,25 +28,13 @@ namespace WebAPI.Controllers
         [HttpPost]
         [Authorize]
         [ActionName("Create")]
-        public ActionResult<dynamic> CreateAdmin(AdminCache cache)
+        public ActionResult<dynamic> Create(CreateAdminCommand command)
         {
-            Admin admin;
             string message = string.Empty;
-
-            if ((admin = admins.CreateAdmin(cache, ref message)) != null)
+            var admin = AdminManager.Create(command);
+            if (() != null)
             {
-                return new
-                {
-                    success = true,
-                    data = new
-                    {
-                        admin_id = admin.adminId,
-                        admin_email = admin.adminEmail,
-                        admin_fullname = admin.adminFullname,
-                        admin_role = admin.adminRole,
-                        created_at = admin.createdAt
-                    }
-                };
+                return new DataResponse(true, admin);
             }
             return StatusCode500(message);
         }
@@ -58,10 +49,9 @@ namespace WebAPI.Controllers
             return StatusCode500(message);
         }
 
-        [HttpPost]
+        [HttpDelete]
         [Authorize]
-        [ActionName("DeleteAdmin")]
-        public ActionResult<dynamic> DeleteAdmin(AdminCache cache)
+        public ActionResult<dynamic> Delete(AdminCache cache)
         {
             string message = string.Empty;
             if (admins.DeleteAdmin(cache, ref message))

@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized\\webapi\\controllers\\supportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:controllers\\supportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized\\webapi\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized\\webapi\\controllers\\accesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:controllers\\accesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized\\webapi\\middleware\\requestviewermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:middleware\\requestviewermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|d:\\vs projects\\socialized\\webapi\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD36440-927A-4681-96AC-67584574919D}|WebAPI.csproj|solutionrelative:middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,65 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccessController.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\AccessController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccessController.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\AccessController.cs",
-              "RelativeToolTip": "Controllers\\AccessController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T12:29:15.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AdminsController.cs",
               "DocumentMoniker": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\AdminsController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminsController.cs",
               "ToolTip": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\AdminsController.cs",
               "RelativeToolTip": "Controllers\\AdminsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T20:19:06.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RequestViewerMiddleware.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\WebAPI\\Middleware\\RequestViewerMiddleware.cs",
-              "RelativeDocumentMoniker": "Middleware\\RequestViewerMiddleware.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\WebAPI\\Middleware\\RequestViewerMiddleware.cs",
-              "RelativeToolTip": "Middleware\\RequestViewerMiddleware.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T19:59:47.938Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ExceptionHandlingMiddleware.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\WebAPI\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "RelativeDocumentMoniker": "Middleware\\ExceptionHandlingMiddleware.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\WebAPI\\Middleware\\ExceptionHandlingMiddleware.cs",
-              "RelativeToolTip": "Middleware\\ExceptionHandlingMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T19:59:25.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SupportController.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\SupportController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SupportController.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\WebAPI\\Controllers\\SupportController.cs",
-              "RelativeToolTip": "Controllers\\SupportController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T11:54:31.312Z",
               "EditorCaption": ""
             }
           ]
