@@ -1,7 +1,5 @@
 ﻿using Domain.AutoPosting;
-using Microsoft.AspNetCore.Http;
 using Serilog;
-using System.Text.RegularExpressions;
 
 namespace UseCases.AutoPosts
 {
@@ -11,38 +9,28 @@ namespace UseCases.AutoPosts
         {
 
         }
-        public bool CheckExecuteTime(DateTime executeAt, int timezone, ref string message)
+        public bool IsExecuteTimeTrue(DateTime executeAt, int timezone)
         {
             timezone = timezone > 0 ? -timezone : timezone * -1;
             if (executeAt.AddHours(timezone) > DateTimeOffset.UtcNow)
             {
                 return true;
             }
-            message = "Auto post can't be execute in past.";
+            Logger.Error("Авто пост не може бути виконаний в минулому.");
             return false;
-        }
-        public bool CheckLocation(string location, long sessionId, ref string message)
+        }/*
+        public bool IsLocationTrue(string location, long accountId)
         {
-            if (!string.IsNullOrEmpty(location))
+            if (string.IsNullOrEmpty(location))
             {
-                var session = AccountManager.LoadSession(sessionId);
-                if (session != null)
-                {
-                    return handler.CheckExistLocation(ref session, location, 0, 0, ref message);
-                }
-                else
-                {
-                    message = "Server can't define session.";
-                }
+                return true;
             }
-            else
-            {
-                message = "Location can't be null or empty.";
-            }
+            var session = AccountManager.LoadSession(accountId);
+            return handler.CheckExistLocation(ref session, location, 0, 0);
             Logger.Warning(message);
             return false;
         }
-        /*
+        
         public bool CheckDescription(string description, ref string message)
         {
             if (!string.IsNullOrEmpty(description))
@@ -157,8 +145,8 @@ namespace UseCases.AutoPosts
                 message = "Option 'auto_delete' is null.";
             }
             return false;
-        }*/
-        public bool CheckCategory(long accountId, long categoryId, ref string message)
+        }
+        public bool IsCategoryTrue(long accountId, long categoryId, ref string message)
         {
             if (categoryId != 0)
             {
@@ -171,7 +159,7 @@ namespace UseCases.AutoPosts
                 return false;
             }
             return true;
-        }
+        }*/
         /*
         public bool CheckToUpdateTimezone(int timezone, ref string message)
         {

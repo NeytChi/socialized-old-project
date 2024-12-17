@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4uuY86qt/ng=",
+  "success": true,
+  "projectFilePath": "D:\\VS Projects\\Socialized\\FfmpegConverter\\FfmpegConverter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\neyto\\.nuget\\packages\\serilog\\4.1.0\\serilog.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
