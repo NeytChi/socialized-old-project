@@ -15,7 +15,7 @@ namespace UseCases.Admins
         Admin Authentication(AuthenticationCommand command);
         void SetupPassword(SetupPasswordCommand command);
         void Delete(DeleteAdminCommand command);
-        ICollection<Admin> GetAdmins(int adminId, int since, int count);
+        ICollection<Admin> GetAdmins(long adminId, int since, int count);
         ICollection<User> GetUsers(int since, int count);
         void CreateCodeForRecoveryPassword(string adminEmail);
         void ChangePassword(ChangePasswordCommand command);
@@ -90,7 +90,7 @@ namespace UseCases.Admins
             adminRepository.Update(admin);
             Logger.Information($"Адмін був видалений, id={admin.Id}.");
         }
-        public ICollection<Admin> GetAdmins(int adminId, int since, int count)
+        public ICollection<Admin> GetAdmins(long adminId, int since, int count)
         {
             Logger.Information($"Отримано список адмінів, з={since} по={count} адміном id={adminId}.");
             return adminRepository.GetActiveAdmins(adminId, since, count);

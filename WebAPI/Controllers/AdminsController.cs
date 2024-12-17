@@ -3,111 +3,88 @@ using Microsoft.AspNetCore.Authorization;
 using WebAPI.Responses;
 using UseCases.Admins;
 using UseCases.Admins.Commands;
+using WebAPI.Middleware;
 
 namespace WebAPI.Controllers
 {
     public class AdminsController : ControllerResponseBase
     {
         private IAdminManager AdminManager;
+        private JwtAdmins JwtAdmins = new JwtAdmins();
         public AdminsController(IAdminManager adminManager)
         {
             AdminManager = adminManager;
         }
         [HttpPost]
-        [ActionName("SignIn")]
-        public ActionResult<dynamic> SignIn(AdminCache cache)
-        {
-            string message = string.Empty;
-            string authToken = admins.AuthToken(cache, ref message);
-            if (!string.IsNullOrEmpty(authToken))
-            {
-                return new SuccessResponse(true, new { auth_token = authToken });
-            }
-            return StatusCode500(message);
-        }
-        [HttpPost]
         [Authorize]
         [ActionName("Create")]
-        public ActionResult<dynamic> Create(CreateAdminCommand command)
+        public ActionResult<DataResponse> Create(CreateAdminCommand command)
         {
-            string message = string.Empty;
             var admin = AdminManager.Create(command);
-            if (() != null)
-            {
-                return new DataResponse(true, admin);
-            }
-            return StatusCode500(message);
+
+            return new DataResponse(true, admin);
+        }
+        [HttpPost]
+        [ActionName("Authentication")]
+        public ActionResult<DataResponse> Authentication(AuthenticationCommand command)
+        {
+            var result = AdminManager.Authentication(command);
+
+            var token = JwtAdmins.Token(result);
+
+            return new DataResponse(true, new { AdminToken = token });
         }
         [HttpPost]
         [ActionName("SetupPassword")]
-        public ActionResult<dynamic> SetupPassword(AdminCache cache)
+        public ActionResult<dynamic> SetupPassword(SetupPasswordCommand command)
         {
-            string message = string.Empty;
+            AdminManager.SetupPassword(command);
 
-            if (admins.SetupPassword(cache, ref message))
-                return new { success = true, data = new { message = "New password added." } };
-            return StatusCode500(message);
+            return new SuccessResponse(true);
         }
-
         [HttpDelete]
         [Authorize]
-        public ActionResult<dynamic> Delete(AdminCache cache)
+        public ActionResult<dynamic> Delete(DeleteAdminCommand command)
         {
-            string message = string.Empty;
-            if (admins.DeleteAdmin(cache, ref message))
-                return new { success = true, data = new { message = "Admin was deleted." } };
-            return StatusCode500(message);
+            AdminManager.Delete(command);
+
+            return new SuccessResponse(true);
         }
         [HttpPost]
         [ActionName("RecoveryPassword")]
-        public ActionResult<dynamic> RecoveryPassword(AdminCache cache)
+        public ActionResult<dynamic> RecoveryPassword(string adminEmail)
         {
-            string message = null;
-            if (admins.RecoveryPassword(cache.admin_email, ref message))
-            {
-                return new
-                {
-                    success = true,
-                    message = "Every thing is fine. Check your email to get recovery code."
-                };
-            }
-            return StatusCode500(message);
+            AdminManager.CreateCodeForRecoveryPassword(adminEmail);
+
+            return new SuccessResponse(true);
         }
         [HttpPost]
         [ActionName("ChangePassword")]
-        public ActionResult<dynamic> ChangePassword(AdminCache cache)
+        public ActionResult<dynamic> ChangePassword(ChangePasswordCommand command)
         {
-            string message = null;
-            if (admins.ChangePassword(cache, ref message))
-            {
-                return new { success = true, message = "Your password was changed." };
-            }
-            return StatusCode500(message);
+            AdminManager.ChangePassword(command);
+
+            return new SuccessResponse(true);
         }
         [HttpGet]
         [Authorize]
         [ActionName("Admins")]
         public ActionResult<dynamic> GetAdmins([FromQuery] int since = 0, [FromQuery] int count = 10)
         {
-            int adminId = int.Parse(HttpContext.User.Claims.First().Value);
-            var output = admins.GetNonDeleteAdmins(adminId, since, count);
-            return new { success = true, data = output };
-        }
-        [HttpGet]
-        [Authorize]
-        [ActionName("Followers")]
-        public ActionResult<dynamic> GetFollowers([FromQuery] int since = 0, [FromQuery] int count = 10)
-        {
-            var output = admins.GetFollowers(since, count);
-            return new { success = true, data = output };
+            long adminId = GetAdminIdByToken();
+
+            var result = AdminManager.GetAdmins(adminId, since, count);
+
+            return new DataResponse(true, result);
         }
         [HttpGet]
         [Authorize]
         [ActionName("Users")]
         public ActionResult<dynamic> GetUsers([FromQuery] int since = 0, [FromQuery] int count = 10)
         {
-            var output = admins.GetNonDeleteUsers(since, count);
-            return new { success = true, data = output };
+            var result = AdminManager.GetUsers(since, count);
+
+            return new DataResponse(true, result);
         }
     }
 }

@@ -17,7 +17,7 @@ public class CustomBadRequest : ValidationProblemDetails
         foreach (var keyModelStatePair in context.ModelState)
         {
             string key = keyModelStatePair.Key;
-            ModelErrorCollection errors = keyModelStatePair.Value.Errors;
+            var errors = keyModelStatePair.Value.Errors;
             if (errors != null && errors.Count > 0)
             {
                 if (errors.Count == 1)
