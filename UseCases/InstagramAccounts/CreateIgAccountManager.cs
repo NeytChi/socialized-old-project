@@ -11,7 +11,7 @@ namespace UseCases.InstagramAccounts
 {
     public interface IIGAccountManager
     {
-
+        IGAccount Create(CreateIgAccountCommand command);
     }
     public class CreateIGAccountManager : IGAccountManager, IIGAccountManager
     {

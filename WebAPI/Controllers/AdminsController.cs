@@ -17,7 +17,6 @@ namespace WebAPI.Controllers
         }
         [HttpPost]
         [Authorize]
-        [ActionName("Create")]
         public ActionResult<DataResponse> Create(CreateAdminCommand command)
         {
             var admin = AdminManager.Create(command);

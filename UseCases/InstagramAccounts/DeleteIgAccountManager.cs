@@ -5,7 +5,11 @@ using UseCases.Exceptions;
 
 namespace UseCases.InstagramAccounts
 {
-    public class DeleteIgAccountManager : BaseManager
+    public interface IDeleteIgAccountManager
+    {
+        void Delete(long accountId);
+    }
+    public class DeleteIgAccountManager : BaseManager, IDeleteIgAccountManager
     {
         private IIGAccountRepository AccountRepository;
         private ITaskGettingSubscribesRepository TaskGettingSubscribesRepository;

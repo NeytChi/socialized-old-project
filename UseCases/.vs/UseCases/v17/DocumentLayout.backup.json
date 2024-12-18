@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\VS Projects\\Socialized\\UseCases\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\autoposts\\autopostfiles\\autopostfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\autopostfiles\\autopostfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\instagramaccounts\\smsverifyigaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:instagramaccounts\\smsverifyigaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\autoposts\\autopostmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:autoposts\\autopostmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\instagramaccounts\\commands\\smsvefiryigaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:instagramaccounts\\commands\\smsvefiryigaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\appeals\\appealmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:appeals\\appealmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|d:\\vs projects\\socialized\\usecases\\instagramaccounts\\createigaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{852F7E72-BE83-4267-9C3E-46B3C6343664}|UseCases.csproj|solutionrelative:instagramaccounts\\createigaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AutoPostFileManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostFiles\\AutoPostFileManager.cs",
-              "RelativeDocumentMoniker": "AutoPosts\\AutoPostFiles\\AutoPostFileManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostFiles\\AutoPostFileManager.cs",
-              "RelativeToolTip": "AutoPosts\\AutoPostFiles\\AutoPostFileManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "SmsVefiryIgAccountCommand.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\Commands\\SmsVefiryIgAccountCommand.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\Commands\\SmsVefiryIgAccountCommand.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\Commands\\SmsVefiryIgAccountCommand.cs",
+              "RelativeToolTip": "InstagramAccounts\\Commands\\SmsVefiryIgAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T19:42:52.743Z",
+              "WhenOpened": "2024-12-18T10:34:04.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AutoPostManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostManager.cs",
-              "RelativeDocumentMoniker": "AutoPosts\\AutoPostManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\AutoPosts\\AutoPostManager.cs",
-              "RelativeToolTip": "AutoPosts\\AutoPostManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "SmsVerifyIgAccountManager.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\SmsVerifyIgAccountManager.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\SmsVerifyIgAccountManager.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\SmsVerifyIgAccountManager.cs",
+              "RelativeToolTip": "InstagramAccounts\\SmsVerifyIgAccountManager.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAwAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T19:15:55.185Z",
+              "WhenOpened": "2024-12-18T10:32:52.639Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AppealManager.cs",
-              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\AppealManager.cs",
-              "RelativeDocumentMoniker": "Appeals\\AppealManager.cs",
-              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\Appeals\\AppealManager.cs",
-              "RelativeToolTip": "Appeals\\AppealManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CreateIgAccountManager.cs",
+              "DocumentMoniker": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\CreateIgAccountManager.cs",
+              "RelativeDocumentMoniker": "InstagramAccounts\\CreateIgAccountManager.cs",
+              "ToolTip": "D:\\VS Projects\\Socialized\\UseCases\\InstagramAccounts\\CreateIgAccountManager.cs",
+              "RelativeToolTip": "InstagramAccounts\\CreateIgAccountManager.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAABkAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T19:14:16.117Z",
+              "WhenOpened": "2024-12-18T09:29:28.99Z",
               "EditorCaption": ""
             },
             {

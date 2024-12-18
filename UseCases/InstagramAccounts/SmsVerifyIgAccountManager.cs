@@ -4,10 +4,15 @@ using InstagramApiSharp.API;
 using InstagramApiSharp.Classes;
 using UseCases.Exceptions;
 using Domain.InstagramAccounts;
+using UseCases.InstagramAccounts.Commands;
 
 namespace UseCases.InstagramAccounts
 {
-    public class SmsVerifyIgAccountManager : IGAccountManager
+    public interface ISmsVerifyIgAccountManager
+    {
+        void SmsVerifySession(SmsVefiryIgAccountCommand command);
+    }
+    public class SmsVerifyIgAccountManager : IGAccountManager, ISmsVerifyIgAccountManager
     {
         public SmsVerifyIgAccountManager(ILogger logger, 
             IInstagramApi api, 
@@ -15,9 +20,9 @@ namespace UseCases.InstagramAccounts
         {
 
         }
-        public void SmsVerifySession(long accountId, int userId, string verifyCode)
+        public void SmsVerifySession(SmsVefiryIgAccountCommand command)
         {
-            var account = AccountRepository.GetByWithState(accountId);
+            var account = AccountRepository.Get(command.UserToken, command.AccountId);
             if (account == null)
             {
                 throw new NotFoundException("Сервер не визначив запис Instagram аккаунту по id.");
@@ -27,7 +32,7 @@ namespace UseCases.InstagramAccounts
                 throw new NotFoundException("Сесія Instagram аккаунту не потребує підтвердження аккаунту.");
             }
             var session = RestoreInstagramSession(account);
-            var loginResult = Api.VerifyCodeForChallengeRequire(verifyCode, session);
+            var loginResult = Api.VerifyCodeForChallengeRequire(command.VerifyCode.ToString(), session);
             if (loginResult != InstaLoginResult.Success)
             {
                 throw new IgAccountException("Код підвердження Instagram аккаунту не вірний.");
