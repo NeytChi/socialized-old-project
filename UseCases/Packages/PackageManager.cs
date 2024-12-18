@@ -1,13 +1,18 @@
 using Serilog;
 using Domain.Packages;
+using UseCases.Packages.Command;
 
 namespace UseCases.Packages
 {
     public interface IPackageManager
     {
         ServiceAccess CreateDefaultServiceAccess(long userId);
+        ICollection<PackageAccess> GetPackageAccess();
+        ICollection<DiscountPackage> GetDiscountPackageAccess();
+        string GetClientTokenForPay(string userToken);
+        void PayForPackage(PayForPackageCommand command);
     }
-    public class PackageManager : BaseManager
+    public class PackageManager : BaseManager, IPackageManager
     {
         private IServiceAccessRepository ServiceAccessRepository;
         private IPackageAccessRepository PackageAccessRepository;
@@ -17,13 +22,13 @@ namespace UseCases.Packages
         public PackageManager(ILogger logger,
             IServiceAccessRepository serviceAccessRepository,
             IPackageAccessRepository packageAccessRepository,
-            IDiscountRepository discountRepository, 
+            IDiscountRepository discountRepository,
             IForServerAccessCountingRepository autoPostCounterRepository) : base(logger)
         {
             ServiceAccessRepository = serviceAccessRepository;
             PackageAccessRepository = packageAccessRepository;
             DiscountRepository = discountRepository;
-            CounterRepository = autoPostCounterRepository; 
+            CounterRepository = autoPostCounterRepository;
         }
         public ServiceAccess CreateDefaultServiceAccess(long userId)
         {
@@ -65,8 +70,8 @@ namespace UseCases.Packages
             }
             var package = PackageAccessRepository.GetBy(access.Type);
 
-            if (package.IGAccounts == -1 
-                && package.Stories == -1 
+            if (package.IGAccounts == -1
+                && package.Stories == -1
                 && package.Posts == -1)
             {
                 return true;
@@ -115,7 +120,46 @@ namespace UseCases.Packages
             Logger.Information($"Порахована ціна на сервісний пакет, id={package.Id}.");
             return (decimal)package.Price * monthCount - discountPrice;
         }
-        
+        public void PayForPackage(PayForPackageCommand command)
+        {
+            /*
+            var user = GetNonDeletedUser(command.UserToken);
+            if (user != null)
+            {
+
+            }
+            var package = access.GetPackageById(command.PackageId);
+
+            if (package == null)
+            { 
+                message = "Server can't define package by package id.";
+            }
+
+            var price = access.CalcPackagePrice(package, command.MonthCount);
+
+            if (!access.PayForPackage(price, command.NonceToken, deviceData))
+            {
+
+            }
+
+            access.SetPackage(user.userId, package.package_id, command.MonthCount);
+            */
+        }
+
+        public ICollection<PackageAccess> GetPackageAccess()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICollection<DiscountPackage> GetDiscountPackageAccess()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetClientTokenForPay(string userToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
